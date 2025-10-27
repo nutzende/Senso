@@ -16,7 +16,7 @@ run_game = 0         #direkter Start nach Menü
 last_press_time = 0
 now = 0
 texthoehe = 0
-senso_run = False
+senso_run = True
 skill_level = 2      #Skill level 1-4
 
 # Debug Funktion
@@ -179,5 +179,5 @@ def mainloop():
         # LEDs ausschalten, wenn Zeit abgelaufen und keine Sequenz läuft
         if time.ticks_diff(led_timer, now) <= 0 and runde != 1:
             leds_off()
-senso_run = True
-mainloop()
+            
+#mainloop()
