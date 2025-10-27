@@ -1,4 +1,4 @@
-import time, pin, display as d, game_senso
+import time, pin, display as d#, game_senso
 
 show_display = True   
 logondisplay = False
@@ -86,4 +86,4 @@ if eingabe == 4:
     for p in ["", ".", "..", "..."]:
         menutext(f"Spiel startet{p}", "center", "center", 0.5)
 d.oled.fill(0)
-game_senso.mainloop()
+#game_senso.mainloop()
