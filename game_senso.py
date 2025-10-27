@@ -16,6 +16,8 @@ run_game = 0         #direkter Start nach Menü
 last_press_time = 0
 now = 0
 texthoehe = 0
+senso_run = False
+skill_level = 2      #Skill level 1-4
 
 # Debug Funktion
 def log(msg):
@@ -124,6 +126,18 @@ def spiel():
                     runde = 3          # NEUES FLAG: warte-Pause
                     led_timer = now + 800  # 0,8 Sek Pause vor der nächsten Runde
                     leds_off()
+                if len(sequence) == 8 and skill_level == 1:
+                    log("Glückwunsch: Spiel beendet")
+                    senso_run = False
+                if len(sequence) == 14 and skill_level == 2:
+                    log("Glückwunsch: Spiel beendet")
+                    senso_run = False
+                if len(sequence) == 20 and skill_level == 3:
+                    log("Glückwunsch: Spiel beendet")
+                    senso_run = False
+                if len(sequence) == 31 and skill_level == 4:
+                    log("Glückwunsch: Spiel beendet")
+                    senso_run = False
             else:  # Game Over, Variablen reset und LEDs blinken
                 all_led() 
                 log("Falsch! Game Over.")
@@ -150,9 +164,9 @@ def next_round():
 
 
 def mainloop():
-    global now, run_game, st_ani
+    global now, run_game, st_ani, senso_run
     # Hauptloop
-    while True:
+    while senso_run:
         now = time.ticks_ms()
         if read_button() > 0 and run_game == 0:
             log("Game Start!")
@@ -165,4 +179,5 @@ def mainloop():
         # LEDs ausschalten, wenn Zeit abgelaufen und keine Sequenz läuft
         if time.ticks_diff(led_timer, now) <= 0 and runde != 1:
             leds_off()
-#mainloop()
+senso_run = True
+mainloop()

@@ -1,4 +1,4 @@
-import time, pin, display as d, game_senso
+import time, pin, display as d#, game_senso
 
 show_display = True   
 logondisplay = False
