@@ -76,9 +76,6 @@ def start_animation():
         led_on = False
         led_timer = now + random.randint(300, 2000)  # Pause zwischen Blitzen
 
-        
-
-
 # Spiel-Logik
 def spiel():
     global sequence, led_timer, runde, now, seq_index, led_on, player_index, run_game, last_press_time
@@ -155,20 +152,15 @@ def mainloop():
     # Hauptloop
     while True:
         now = time.ticks_ms()
-
         if read_button() > 0 and run_game == 0:
             log("Game Start!")
             run_game = 1
             next_round()
-        
-            
-
         if run_game == 1:
             spiel()
         elif st_ani==True:
             start_animation()
-
         # LEDs ausschalten, wenn Zeit abgelaufen und keine Sequenz läuft
         if time.ticks_diff(led_timer, now) <= 0 and runde != 1:
             leds_off()
-#mainloop()
+mainloop()
