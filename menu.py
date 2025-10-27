@@ -1,10 +1,10 @@
-import time, pin, display as d#, game_senso
+import time, pin, display as d
 
 show_display = True   
 logondisplay = False
 dev = True
 texthoehe = 0
-
+import game_senso
 # Error Log
 def log(msg):
     global texthoehe
@@ -80,16 +80,17 @@ def menutext(msg, xpos, ypos, sec=None):
     else:
         print(msg)
 
-# --- Ablauf ---
-menutext("Starten: Blau", "center", "center", 0)
-cleardisplay()
-eingabe = read_button(0)
-
-if eingabe == 4:
-    for p in ["", ".", "..", "..."]:
-        menutext(f"Spiel startet{p}", "center", "center", 0.5)
-        cleardisplay()
-menutext("Taste druecken", "center", "top", 0)
-menutext("fuer", "center", "center", 0)
-menutext("Erste Sequenz", "center", "bottom", 0)
-game_senso.mainloop()
+def mainmenu():
+    cleardisplay()
+    # --- Ablauf ---
+    menutext("Starten: Blau", "center", "center", 0)
+    eingabe = read_button(0)
+    cleardisplay()
+    if eingabe == 4:
+        for p in ["", ".", "..", "..."]:
+            menutext(f"Spiel startet{p}", "center", "center", 0.5)
+            cleardisplay()
+        menutext("Taste druecken", "center", "top", 0)
+        menutext("fuer", "center", "center", 0)
+        menutext("Erste Sequenz", "center", "bottom", 0)
+        game_senso.mainloop()
