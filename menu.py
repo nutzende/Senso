@@ -1,4 +1,4 @@
-import time, pin, display as d#, game_senso
+import time, pin, display as d, game_senso
 
 show_display = True   
 logondisplay = False
@@ -18,6 +18,9 @@ def log(msg):
             texthoehe += 10
         else:
             print(msg)
+
+def cleardisplay():
+    d.oled.fill(0)
 
 # Zeitdifferenz in ms
 def differenz(ende):
@@ -67,9 +70,8 @@ def menutext(msg, xpos, ypos, sec=None):
         if sec is None:
             log(f"Keine Zeit übergeben: {sec}")
             sec = 3
-
         if not error:
-            d.oled.fill(0)
+            #d.oled.fill(0)
             d.oled.text(msg, x_display, y_display)
             d.oled.show()
             time.sleep(sec)
@@ -80,10 +82,14 @@ def menutext(msg, xpos, ypos, sec=None):
 
 # --- Ablauf ---
 menutext("Starten: Blau", "center", "center", 0)
+cleardisplay()
 eingabe = read_button(0)
 
 if eingabe == 4:
     for p in ["", ".", "..", "..."]:
         menutext(f"Spiel startet{p}", "center", "center", 0.5)
-d.oled.fill(0)
-#game_senso.mainloop()
+        cleardisplay()
+menutext("Taste druecken", "center", "top", 0)
+menutext("fuer", "center", "center", 0)
+menutext("Erste Sequenz", "center", "bottom", 0)
+game_senso.mainloop()

@@ -22,6 +22,8 @@ def log(msg):
     if dev:
         if display == True:
             global texthoehe
+            if texthoehe == 0:
+                d.oled.fill(0)
             if texthoehe >= 60:
                 texthoehe = 0
                 d.oled.fill(0)
@@ -163,4 +165,4 @@ def mainloop():
         # LEDs ausschalten, wenn Zeit abgelaufen und keine Sequenz läuft
         if time.ticks_diff(led_timer, now) <= 0 and runde != 1:
             leds_off()
-mainloop()
+#mainloop()
