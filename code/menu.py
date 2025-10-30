@@ -94,3 +94,6 @@ def mainmenu():
         menutext("fuer", "center", "center", 0)
         menutext("Erste Sequenz", "center", "bottom", 0)
         game_senso.mainloop()
+    else:
+        menutext("Falsche Eingabe", "center", "center", 1)
+        mainmenu()

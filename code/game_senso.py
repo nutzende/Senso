@@ -125,28 +125,26 @@ def spiel():
                     runde = 3          # NEUES FLAG: warte-Pause
                     led_timer = now + 800  # 0,8 Sek Pause vor der nächsten Runde
                     leds_off()
-                if player_index == 8 and skill_level == 1:
+                    
+                #Skill Level definition
+                end_bedingungen = {
+                    0: 2,
+                    1: 8,
+                    2: 14,
+                    3: 20,
+                    4: 31
+                }
+                if skill_level in end_bedingungen and player_index == end_bedingungen[skill_level]:
                     log("Glückwunsch: Spiel beendet")
                     senso_run = False
                     sequence.clear()
-                if player_index == 14 and skill_level == 2:
-                    log("Glückwunsch: Spiel beendet")
-                    senso_run = False
-                if player_index == 20 and skill_level == 3:
-                    log("Glückwunsch: Spiel beendet")
-                    senso_run = False
-                if player_index == 31 and skill_level == 4:
-                    log("Glückwunsch: Spiel beendet")
-                    senso_run = False
-                if player_index == 2 and skill_level == 0:
-                    log("Glückwunsch: Spiel beendet")
-                    senso_run = False
             else:  # Game Over, Variablen reset und LEDs blinken
                 all_led() 
                 log("Falsch! Game Over.")
                 run_game = 0
                 sequence.clear()
                 leds_off()
+                senso_run = False
                 time.sleep(1)
 
     # --- Warte-Pause vor der nächsten Runde ---
@@ -170,9 +168,9 @@ def mainloop():
     global now, run_game, st_ani, senso_run
     senso_run = True
     # Hauptloop
-    while senso_run:
+    while True:
         now = time.ticks_ms()
-        if read_button() > 0 and run_game == 0:
+        if read_button() > 0 and run_game == 0 and senso_run == True:
             log("Game Start!")
             run_game = 1
             next_round()
@@ -189,5 +187,22 @@ def mainloop():
             leds_off()
             time.sleep(1)
             break
-    menu.mainmenu()
+    menu.menutext("Neuer Versuch?", "center", "top", 0)
+    menu.menutext("Gruen: Ja", "center", "center", 0)
+    menu.menutext("Rot: Nein", "center", "bottom", 0)
+    eingabe = menu.read_button(0)
+    menu.cleardisplay()
+    if eingabe == 1:
+        menu.menutext("Taste druecken", "center", "top", 0)
+        menu.menutext("fuer", "center", "center", 0)
+        menu.menutext("Erste Sequenz", "center", "bottom", 0)
+        mainloop()
+    elif eingabe == 2:
+        menu.cleardisplay()
+        menu.mainmenu()
+    else:
+        menutext("Falsche Eingabe", "center", "top", 0)
+        menu.menutext("zurueck Menue", "center", "center", 1)
+        menu.cleardisplay()
+        menu.mainmenu()
 #mainloop()
