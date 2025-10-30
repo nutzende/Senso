@@ -28,11 +28,10 @@ def spiel2(spieler):
     spielerLed = spielerLeds(spieler)
     aufgaben = ("Mache zehn Liegestützen","Laufe einen Marathon","Erzähle einen Witz")
     menu.log("Zum Starten eine beliebige Taste drücken")
+    
+    if menu.read_button(0)>0:
+            
     while True:
-        if menu.read_button(0)>0:
-            break
-    while True:
-        y = 0
         ausgwSpieler = random.randint(1,spieler)
         for i in range(50+ausgwSpieler):
             led(spielerLed[i%spieler])
@@ -42,10 +41,11 @@ def spiel2(spieler):
                 time.sleep(3)
                 leds_off()
                 menu.log("Zum weiter Spielen blau drücken, zum Abbrechen rot drücken")
-        while y==0:
-            if menu.read_button(0)==4:
-                y = 1
-            elif menu.read_button(0)==2:
-                break
-        if y==0:
+        button = 0
+        while button not 4 or button not 2:
+            button = menu.read_button(0) 
+        if button==4:
+            spiel2(spieler)
+        elif button==2:
             break
+            
