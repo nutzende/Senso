@@ -8,7 +8,7 @@ class NeoPixel:
     # G R B W
     ORDER = (1, 0, 2, 3)
 
-    def __init__(self, pin, n, bpp=4, timing=1):
+    def __init__(self, pin, n, bpp=3, timing=1):
         self.pin = pin
         self.n = n
         self.bpp = bpp
