@@ -1,4 +1,4 @@
-import time, random, pin, display as d, menu
+import time, random, pin, display as d, menu, difficulty
 # Log Ausgabe / Start Animation / Display
 dev = True
 st_ani = False
@@ -15,7 +15,8 @@ run_game = 0         #direkter Start nach Menü
 last_press_time = 0
 now = 0
 texthoehe = 0
-skill_level = 0      #Skill level 1-4
+difficulty.set_skilllevel(0)
+#skill_level = 0      #Skill level 1-4
 
 # Debug Funktion
 def log(msg):
@@ -133,7 +134,7 @@ def spiel():
                     3: 20,
                     4: 31
                 }
-                if skill_level in end_bedingungen and player_index == end_bedingungen[skill_level]:
+                if difficulty.skill_level in end_bedingungen and player_index == end_bedingungen[difficulty.skill_level]:
                     log("Glückwunsch: Spiel beendet")
                     senso_run = False
                     sequence.clear()
@@ -186,6 +187,7 @@ def mainloop():
             leds_off()
             time.sleep(1)
             break
+    menu.cleardisplay()
     menu.menutext("Neuer Versuch?", "center", "top", 0)
     menu.menutext("Gruen: Ja", "center", "center", 0)
     menu.menutext("Rot: Nein", "center", "bottom", 0)
