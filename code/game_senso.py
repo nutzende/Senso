@@ -15,7 +15,7 @@ run_game = 0         #direkter Start nach Menü
 last_press_time = 0
 now = 0
 texthoehe = 0
-difficulty.set_skilllevel(0)
+#difficulty.set_skilllevel(0)
 #skill_level = 0      #Skill level 1-4
 
 # Debug Funktion
@@ -163,7 +163,22 @@ def next_round():
     runde = 1
     log(f"Neue Runde! Sequenz: {sequence}")
 
-
+def pre_start_senso():
+    menu.menutext("Set Difficulty", "center", "top", 0)
+    menu.menutext("Grün: Leicht", "center", "center", 0)
+    menu.menutext("Rot: Schwer", "center", "bottom", 0)
+    eingabe = menu.read_button(0)
+    if eingabe == 1:
+        difficulty.set_skilllevel(1)
+    elif eingabe == 2:
+        difficulty.set_skilllevel(2)
+    else:
+        pre_start_senso()
+    menu.cleardisplay()
+    menu.menutext("Taste druecken", "center", "top", 0)
+    menu.menutext("fuer", "center", "center", 0)
+    menu.menutext("Erste Sequenz", "center", "bottom", 0)
+    mainloop()
 def mainloop():
     global now, run_game, st_ani, senso_run
     senso_run = True
@@ -198,7 +213,8 @@ def mainloop():
         menu.menutext("fuer", "center", "center", 0)
         menu.menutext("Erste Sequenz", "center", "bottom", 0)
         mainloop()
-    elif eingabe == 2:
+    if eingabe == 2:
+        menu.menutext("zurueck Menue", "center", "center", 1)
         menu.cleardisplay()
         menu.mainmenu()
     else:

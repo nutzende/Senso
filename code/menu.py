@@ -83,17 +83,20 @@ def menutext(msg, xpos, ypos, sec=None):
 def mainmenu():
     cleardisplay()
     # --- Ablauf ---
-    menutext("Starten: Blau", "center", "center", 0)
+    menutext("Spielauswahl", "center", "top", 0)
+    menutext("Senso: Blau", "center", "center", 0)
+    menutext("Flaschen: Gelb", "center", "bottom", 0)
     eingabe = read_button(0)
     cleardisplay()
-    if eingabe == 4:
+    if eingabe > 0:
         for p in ["", ".", "..", "..."]:
             menutext(f"Spiel startet{p}", "center", "center", 0.5)
             cleardisplay()
-        menutext("Taste druecken", "center", "top", 0)
-        menutext("fuer", "center", "center", 0)
-        menutext("Erste Sequenz", "center", "bottom", 0)
-        game_senso.mainloop()
+        if eingabe == 4:
+            game_senso.pre_start_senso()
+        if eingabe == 3:
+            import game_flaschendrehen
+            game_flaschendrehen.spiel2(4)
     else:
         menutext("Falsche Eingabe", "center", "center", 1)
         mainmenu()

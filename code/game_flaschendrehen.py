@@ -21,7 +21,17 @@ def spielerLeds(a):
     for i in range(4-a):
         x.pop()
     return x
-
+def pre_start_flaschendrehen():
+    menu.menutext("Set players", "center", "top", 0)
+    menu.menutext("Grün: 3", "center", "center", 0)
+    menu.menutext("Rot: 4", "center", "bottom", 0)
+    eingabe = menu.read_button(0)
+    if eingabe == 1:
+        spiel2(3)
+    elif eingabe == 2:
+        spiel2(4)
+    else:
+        pre_start_flaschendrehen()
 def spiel2(spieler):
     menu.log("Spiel2")
     spieler=spieler
@@ -31,21 +41,22 @@ def spiel2(spieler):
     
     if menu.read_button(0)>0:
             
-    while True:
-        ausgwSpieler = random.randint(1,spieler)
-        for i in range(50+ausgwSpieler):
-            led(spielerLed[i%spieler])
-            time.sleep(0.0001*((i-25)*(i-25))+0.05)
-            if i+1 == ausgwSpieler+50:
-                menu.log(aufgaben[random.randint(0,2)])
-                time.sleep(3)
-                leds_off()
-                menu.log("Zum weiter Spielen blau drücken, zum Abbrechen rot drücken")
-        button = 0
-        while button not 4 or button not 2:
-            button = menu.read_button(0) 
-        if button==4:
-            spiel2(spieler)
-        elif button==2:
+        while True:
+            ausgwSpieler = random.randint(1,spieler)
+            for i in range(50+ausgwSpieler):
+                led(spielerLed[i%spieler])
+                time.sleep(0.0001*((i-25)*(i-25))+0.05)
+                if i+1 == ausgwSpieler+50:
+                    menu.log(aufgaben[random.randint(0,2)])
+                    time.sleep(3)
+                    leds_off()
+                    menu.log("Zum weiter Spielen blau drücken, zum Abbrechen rot drücken")
+            button = 0
+            while button != 4 or button != 2:
+                button = menu.read_button(0)
+                print(button)
+                if button==4:
+                    spiel2(spieler)
+                elif button==2:
+                    break
             break
-            

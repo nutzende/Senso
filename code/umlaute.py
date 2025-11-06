@@ -98,6 +98,29 @@ font_umlaute = {
         0b10001000,
         0b11110000,
         0b00000000
+    ],
+    '1': [
+        0b00111100,
+        0b01110110,
+        0b11110011,
+        0b11110001,
+        0b10000001,
+        0b11000011,
+        0b01100110,
+        0b00111100
+    ],
+    '2': [
+        0b00111100,
+        0b01110010,
+        0b11110001,
+        0b11110001,
+        0b10000001,
+        0b10000001,
+        0b01000010,
+        0b00111100
+    ],
+    '3': [
+        0b1111111111111111111111
     ]
 }
 
@@ -120,5 +143,7 @@ def draw_text_with_umlauts(oled, text, x, y):
 
 
 oled.fill(0)
-draw_text_with_umlauts(oled, "Toll: ö ä ü !", 0, 0)
+draw_text_with_umlauts(oled, "1", 0, 0)
+draw_text_with_umlauts(oled, "2", 0, 10)
+draw_text_with_umlauts(oled, "3", 0, 20)
 oled.show()
