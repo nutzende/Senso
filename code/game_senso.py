@@ -1,5 +1,4 @@
 import time, random, pin, display as d, menu
-#TODO Taste gedrückt halten führt zu mehreren Eingaben. Variable zum Input Switch einführen
 # Log Ausgabe / Start Animation / Display
 dev = True
 st_ani = False
