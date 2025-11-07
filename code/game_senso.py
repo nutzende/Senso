@@ -1,4 +1,4 @@
-import time, random, pin, display as d, menu, difficulty
+import time, random, pin, display as d, menu, skilllevel
 # Log Ausgabe / Start Animation / Display
 dev = True
 st_ani = False
@@ -15,7 +15,7 @@ run_game = 0         #direkter Start nach Menü
 last_press_time = 0
 now = 0
 texthoehe = 0
-#difficulty.set_skilllevel(0)
+#skilllevel.set_skilllevel(0)
 #skill_level = 0      #Skill level 1-4
 
 # Debug Funktion
@@ -134,7 +134,7 @@ def spiel():
                     3: 20,
                     4: 31
                 }
-                if difficulty.skill_level in end_bedingungen and player_index == end_bedingungen[difficulty.skill_level]:
+                if skilllevel.skill_level in end_bedingungen and player_index == end_bedingungen[skilllevel.skill_level]:
                     log("Glückwunsch: Spiel beendet")
                     senso_run = False
                     sequence.clear()
@@ -164,14 +164,14 @@ def next_round():
     log(f"Neue Runde! Sequenz: {sequence}")
 
 def pre_start_senso():
-    menu.menutext("Set Difficulty", "center", "top", 0)
+    menu.menutext("Set skilllevel", "center", "top", 0)
     menu.menutext("Grün: Leicht", "center", "center", 0)
     menu.menutext("Rot: Schwer", "center", "bottom", 0)
     eingabe = menu.read_button(0)
     if eingabe == 1:
-        difficulty.set_skilllevel(1)
+        skilllevel.set_skilllevel(1)
     elif eingabe == 2:
-        difficulty.set_skilllevel(2)
+        skilllevel.set_skilllevel(2)
     else:
         pre_start_senso()
     menu.cleardisplay()
