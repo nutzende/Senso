@@ -221,7 +221,7 @@ def mainloop():
         menu.cleardisplay()
         menu.mainmenu()
     else:
-        menutext("Falsche Eingabe", "center", "top", 0)
+        menu.menutext("Falsche Eingabe", "center", "top", 0)
         menu.menutext("zurueck Menue", "center", "center", 1)
         menu.cleardisplay()
         menu.mainmenu()
