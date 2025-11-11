@@ -1,6 +1,6 @@
 import display, bitmaps
-# Deine Bitmap (jede Zahl = eine Pixelreihe, Bit 1 = weiß, 0 = schwarz)
 
+#Test Transparente Bitmap mit [0,1,2]
 bitmap_transparent = [
     [1,1,1,1,1,1,1,1,1,1],
     [1,0,0,0,0,0,0,0,0,1],
@@ -22,6 +22,7 @@ def width(bitmap):
     width = max(line.bit_length() for line in bitmap)
     return width
 
+#Für Testbitmap
 width4 = len(bitmap_transparent[0])
 
 def draw_bitmap(x, y, data, width, height, transparent):
@@ -42,22 +43,19 @@ def draw_bitmap(x, y, data, width, height, transparent):
                     display.oled.pixel(x + col, y + row, 1)
                 else:
                     display.oled.pixel(x + col, y + row, 0)
-# Display löschen
-#display.oled.fill(0)
-
-# Bitmap an Position (0,0) anzeigen
+                    
 def init_menu():
+    #Hauptmenü aufbauen
     draw_bitmap(0, 0, bitmaps.menu_ui, width(bitmaps.menu_ui), height(bitmaps.menu_ui), 0)
     draw_bitmap(1, 16, bitmaps.indicator_button_blue, width(bitmaps.indicator_button_blue), height(bitmaps.indicator_button_blue), 0)
     draw_bitmap(1, 25, bitmaps.indicator_button_red, width(bitmaps.indicator_button_red), height(bitmaps.indicator_button_red), 0)
     draw_bitmap(1, 34, bitmaps.indicator_button_green, width(bitmaps.indicator_button_green), height(bitmaps.indicator_button_green), 0)
     draw_bitmap(1, 43, bitmaps.indicator_button_yellow, width(bitmaps.indicator_button_yellow), height(bitmaps.indicator_button_yellow), 0)
     draw_bitmap(20, 0, bitmap_transparent, width4, height(bitmap_transparent), 1)
-    
+    #Test Texte Anzeigen
     display.oled.text("Senso", "text", 1)
     display.oled.text("Bottle spin", "text", 2)
     display.oled.text("test3", "text", 3)
     display.oled.text("test4", "text", 4)
     # Anzeigen
     display.oled.show()
-
