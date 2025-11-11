@@ -150,7 +150,7 @@ def spiel():
     # --- Warte-Pause vor der nächsten Runde ---
     elif runde == 3:
         if time.ticks_diff(now, led_timer) >= 0:
-            while pressed > 0:
+            while read_button() > 0:
                 log("Button pressed")
                 time.sleep(0.25)
             next_round()
