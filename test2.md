@@ -45,4 +45,27 @@ def convert_bmp(infile: Path, outdir: Path):
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python bmp2ssd1306.py input.bmp | input_directory
+        print("Usage: python bmp2ssd1306.py input.bmp | input_directory")
+        sys.exit(1)
+
+    input_path = Path(sys.argv[1])
+    outdir = Path("converted")
+    outdir.mkdir(exist_ok=True)
+
+    if input_path.is_dir():
+        bmp_files = list(input_path.glob("*.bmp")) + list(input_path.glob("*.BMP"))
+        if not bmp_files:
+            print(f"No BMP files found in {input_path}")
+            sys.exit(1)
+        for f in bmp_files:
+            convert_bmp(f, outdir)
+    else:
+        if not input_path.exists():
+            print(f"Error: file not found: {input_path}")
+            sys.exit(1)
+        convert_bmp(input_path, outdir)
+
+    print(f"Done. Output in: {outdir}")
+
+if __name__ == "__main__":
+    main()
