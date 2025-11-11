@@ -52,17 +52,21 @@ def menutext(msg, xpos, ypos, sec=None):
             x_display = (d.oled_width // 2) - ((len(msg) * 8) // 2)
         elif xpos == "right":
             x_display = d.oled_width - (len(msg) * 8)
+        elif xpos in ("title", "text"):
+            x_display = 12
         else:
             log("Falsche/Keine Breite übergeben")
             error = True
 
         # Y-Position
-        if ypos == "top":
+        if ypos == "top" or "title":
             y_display = 0
         elif ypos == "center":
             y_display = (d.oled_height // 2) - (texthoehe // 2)
         elif ypos == "bottom":
             y_display = d.oled_height - texthoehe
+        elif 0 < ypos <= 4:
+            y_display = 16 + (ypos - 1) * 9
         else:
             log("Falsche/Keine Höhe übergeben")
             error = True

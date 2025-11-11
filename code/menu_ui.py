@@ -46,16 +46,18 @@ def draw_bitmap(x, y, data, width, height, transparent):
 #display.oled.fill(0)
 
 # Bitmap an Position (0,0) anzeigen
-draw_bitmap(0, 0, bitmaps.menu_ui, width(bitmaps.menu_ui), height(bitmaps.menu_ui), 0)
-draw_bitmap(1, 16, bitmaps.indicator_button_blue, width(bitmaps.indicator_button_blue), height(bitmaps.indicator_button_blue), 0)
-draw_bitmap(1, 25, bitmaps.indicator_button_red, width(bitmaps.indicator_button_red), height(bitmaps.indicator_button_red), 0)
-draw_bitmap(1, 34, bitmaps.indicator_button_green, width(bitmaps.indicator_button_green), height(bitmaps.indicator_button_green), 0)
-draw_bitmap(1, 43, bitmaps.indicator_button_yellow, width(bitmaps.indicator_button_yellow), height(bitmaps.indicator_button_yellow), 0)
-draw_bitmap(20, 0, bitmap_transparent, width4, height(bitmap_transparent), 1)
-display.oled.text("Senso", 12, 16)
-display.oled.text("Bottle spin", 12, 25)
-display.oled.text("test3", 12, 34)
-display.oled.text("test4", 12, 43)
-# Anzeigen
-display.oled.show()
+def init_menu():
+    draw_bitmap(0, 0, bitmaps.menu_ui, width(bitmaps.menu_ui), height(bitmaps.menu_ui), 0)
+    draw_bitmap(1, 16, bitmaps.indicator_button_blue, width(bitmaps.indicator_button_blue), height(bitmaps.indicator_button_blue), 0)
+    draw_bitmap(1, 25, bitmaps.indicator_button_red, width(bitmaps.indicator_button_red), height(bitmaps.indicator_button_red), 0)
+    draw_bitmap(1, 34, bitmaps.indicator_button_green, width(bitmaps.indicator_button_green), height(bitmaps.indicator_button_green), 0)
+    draw_bitmap(1, 43, bitmaps.indicator_button_yellow, width(bitmaps.indicator_button_yellow), height(bitmaps.indicator_button_yellow), 0)
+    draw_bitmap(20, 0, bitmap_transparent, width4, height(bitmap_transparent), 1)
+    
+    display.oled.text("Senso", "text", 1)
+    display.oled.text("Bottle spin", "text", 2)
+    display.oled.text("test3", "text", 3)
+    display.oled.text("test4", "text", 4)
+    # Anzeigen
+    display.oled.show()
 
