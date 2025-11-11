@@ -1,4 +1,4 @@
-import display, bitmaps
+import display, bitmaps, menu
 
 #Test Transparente Bitmap mit [0,1,2]
 bitmap_transparent = [
@@ -26,7 +26,7 @@ def width(bitmap):
 width4 = len(bitmap_transparent[0])
 
 def draw_bitmap(x, y, data, width, height, transparent):
-    """Zeichnet eine monochrome Bitmap auf das OLED."""
+    
     if transparent == 1:
      for row, line in enumerate(data):
         for col, val in enumerate(line):
@@ -46,16 +46,47 @@ def draw_bitmap(x, y, data, width, height, transparent):
                     
 def init_menu():
     #Hauptmenü aufbauen
-    draw_bitmap(0, 0, bitmaps.menu_ui, width(bitmaps.menu_ui), height(bitmaps.menu_ui), 0)
+    #display.graphics.line(x1, y1, x2, y2, fill)
+    #linke Senkrechtlinie
+    display.graphics.line(10, 4, 10, 123, 1)
+    #rechte Senkrechtlinie
+    display.graphics.line(116, 4, 116, 123, 1)
+    #obere Horizontallinie
+    display.graphics.line(5, 13, 123, 13, 1)
+    #untere Horizontallinie
+    display.graphics.line(5, 53, 123, 53, 1)
+    #draw_bitmap(0, 0, bitmaps.menu_ui, width(bitmaps.menu_ui), height(bitmaps.menu_ui), 0)
+    
+    #schnörkel an den Linien im Menü darstellen
+    #Schnörkel oben links
+    draw_bitmap(1, 10, bitmaps.hcircle_l_up, width(bitmaps.hcircle_l_up), height(bitmaps.hcircle_l_up), 0)
+    #Schnörkel oben rechts
+    draw_bitmap(124, 10, bitmaps.hcircle_r_up, width(bitmaps.hcircle_r_up), height(bitmaps.hcircle_r_up), 0)
+    #Schnörkel oben links
+    draw_bitmap(1, 53, bitmaps.hcircle_l_down, width(bitmaps.hcircle_l_down), height(bitmaps.hcircle_l_down), 0)
+    #Schnörkel oben rechts
+    draw_bitmap(124, 53, bitmaps.hcircle_r_down, width(bitmaps.hcircle_r_down), height(bitmaps.hcircle_r_down), 0)
+
+    
+    #Kreuz oben links
+    draw_bitmap(9, 1, bitmaps.cross, width(bitmaps.cross), height(bitmaps.cross), 0)
+    #Kreuz oben rechts
+    draw_bitmap(114, 1, bitmaps.cross, width(bitmaps.cross), height(bitmaps.cross), 0)
+    #Kreuz unten links
+    draw_bitmap(9, 123, bitmaps.cross, width(bitmaps.cross), height(bitmaps.cross), 0)
+    #Kreuz unten rechts
+    draw_bitmap(114, 123, bitmaps.cross, width(bitmaps.cross), height(bitmaps.cross), 0)
+    #TODO Width und Hight für Indicator zusammenfassen
     draw_bitmap(1, 16, bitmaps.indicator_button_blue, width(bitmaps.indicator_button_blue), height(bitmaps.indicator_button_blue), 0)
     draw_bitmap(1, 25, bitmaps.indicator_button_red, width(bitmaps.indicator_button_red), height(bitmaps.indicator_button_red), 0)
     draw_bitmap(1, 34, bitmaps.indicator_button_green, width(bitmaps.indicator_button_green), height(bitmaps.indicator_button_green), 0)
     draw_bitmap(1, 43, bitmaps.indicator_button_yellow, width(bitmaps.indicator_button_yellow), height(bitmaps.indicator_button_yellow), 0)
     draw_bitmap(20, 0, bitmap_transparent, width4, height(bitmap_transparent), 1)
     #Test Texte Anzeigen
-    display.oled.text("Senso", "text", 1)
-    display.oled.text("Bottle spin", "text", 2)
-    display.oled.text("test3", "text", 3)
-    display.oled.text("test4", "text", 4)
+    #menu.menutext(TEXT, X-Pos, Y Line, SEC)
+    menu.menutext("Senso", "text", 1, 0)
+    menu.menutext("Bottle spin", "text", 2, 0)
+    menu.menutext("test3", "text", 3, 0)
+    menu.menutext("test4", "text", 4, 0)
     # Anzeigen
     display.oled.show()
