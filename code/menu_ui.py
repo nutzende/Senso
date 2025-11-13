@@ -77,15 +77,6 @@ def init_menu():
     draw_bitmap(1, 25, bitmaps.indicator_button_red, width_indicator, height(bitmaps.indicator_button_red), 0)
     draw_bitmap(1, 34, bitmaps.indicator_button_green, width_indicator, height(bitmaps.indicator_button_green), 0)
     draw_bitmap(1, 43, bitmaps.indicator_button_yellow, width_indicator, height(bitmaps.indicator_button_yellow), 0)
-    
     draw_bitmap(119, 16, bitmaps.arrow, width_arrow, height(bitmaps.arrow), 0)
-
-    #Test Texte Anzeigen
-    #menu.menutext(TEXT, X-Pos, Y Line, SEC)
-    menu.menutext("Select Game", "title", "title", 0)
-    menu.menutext("Senso", "text", 1, 0)
-    menu.menutext("Bottle spin", "text", 2, 0)
-    menu.menutext("Whac-A-Mole", "text", 3, 0)
-    menu.menutext("MMMMMMMMMMMMM", "text", 4, 0)
     # Anzeigen
     display.oled.show()

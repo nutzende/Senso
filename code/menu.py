@@ -1,4 +1,4 @@
-import time, pin, display as d
+import time, pin, display as d, menu_ui
 
 show_display = True   
 logondisplay = False
@@ -88,10 +88,13 @@ def menutext(msg, xpos, ypos, sec=None):
 
 def mainmenu():
     cleardisplay()
+    menu_ui.init_menu()
     # --- Ablauf ---
-    menutext("Spielauswahl", "center", "top", 0)
-    menutext("Senso: Blau", "center", "center", 0)
-    menutext("Flaschen: Gelb", "center", "bottom", 0)
+    menutext("Select Game", "title", "title", 0)
+    menutext("Senso", "text", 1, 0)
+    menutext("Bottle spin", "text", 2, 0)
+    menutext("Whac-A-Mole", "text", 3, 0)
+    menutext("MMMMMMMMMMMMM", "text", 4, 0)
     eingabe = read_button(0)
     cleardisplay()
     if eingabe > 0:

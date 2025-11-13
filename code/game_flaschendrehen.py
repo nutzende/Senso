@@ -22,13 +22,17 @@ def spielerLeds(a):
         x.pop()
     return x
 def pre_start_flaschendrehen():
-    menu.menutext("Set players", "center", "top", 0)
-    menu.menutext("Grün: 3", "center", "center", 0)
-    menu.menutext("Rot: 4", "center", "bottom", 0)
+    menu.menu_ui.init_menu()
+    menu.menutext("Set players", "title", "title", 0)
+    menu.menutext("2 Players", "text", 1, 0)
+    menu.menutext("3 Players", "text", 2, 0)
+    menu.menutext("4 Players", "text", 3, 0)
     eingabe = menu.read_button(0)
     if eingabe == 1:
-        spiel2(3)
+        spiel2(2)
     elif eingabe == 2:
+        spiel2(3)
+    elif eingabe == 3:
         spiel2(4)
     else:
         pre_start_flaschendrehen()
