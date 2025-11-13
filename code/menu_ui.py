@@ -48,40 +48,43 @@ def init_menu():
     #Hauptmenü aufbauen
     #display.graphics.line(x1, y1, x2, y2, fill)
     #linke Senkrechtlinie
-    display.graphics.line(10, 4, 10, 123, 1)
+    display.graphics.line(10, 4, 10, 59, 1)
     #rechte Senkrechtlinie
-    display.graphics.line(116, 4, 116, 123, 1)
+    display.graphics.line(116, 4, 116, 59, 1)
     #obere Horizontallinie
     display.graphics.line(5, 13, 123, 13, 1)
     #untere Horizontallinie
     display.graphics.line(5, 53, 123, 53, 1)
     #draw_bitmap(0, 0, bitmaps.menu_ui, width(bitmaps.menu_ui), height(bitmaps.menu_ui), 0)
     
+    width_hcircle = 4
+    width_cross = 3
+    width_indicator = 8
     #schnörkel an den Linien im Menü darstellen
     #Schnörkel oben links
-    draw_bitmap(1, 10, bitmaps.hcircle_l_up, width(bitmaps.hcircle_l_up), height(bitmaps.hcircle_l_up), 0)
+    draw_bitmap(1, 10, bitmaps.hcircle_l_up, width_hcircle, height(bitmaps.hcircle_l_up), 0)
     #Schnörkel oben rechts
-    draw_bitmap(124, 10, bitmaps.hcircle_r_up, width(bitmaps.hcircle_r_up), height(bitmaps.hcircle_r_up), 0)
+    draw_bitmap(124, 10, bitmaps.hcircle_r_up, width_hcircle, height(bitmaps.hcircle_r_up), 0)
     #Schnörkel oben links
-    draw_bitmap(1, 53, bitmaps.hcircle_l_down, width(bitmaps.hcircle_l_down), height(bitmaps.hcircle_l_down), 0)
+    draw_bitmap(1, 53, bitmaps.hcircle_l_down, width_hcircle, height(bitmaps.hcircle_l_down), 0)
     #Schnörkel oben rechts
-    draw_bitmap(124, 53, bitmaps.hcircle_r_down, width(bitmaps.hcircle_r_down), height(bitmaps.hcircle_r_down), 0)
+    draw_bitmap(124, 53, bitmaps.hcircle_r_down, width_hcircle, height(bitmaps.hcircle_r_down), 0)
 
     
     #Kreuz oben links
-    draw_bitmap(9, 1, bitmaps.cross, width(bitmaps.cross), height(bitmaps.cross), 0)
+    draw_bitmap(9, 1, bitmaps.cross, width_cross, height(bitmaps.cross), 0)
     #Kreuz oben rechts
-    draw_bitmap(114, 1, bitmaps.cross, width(bitmaps.cross), height(bitmaps.cross), 0)
+    draw_bitmap(115, 1, bitmaps.cross, width_cross, height(bitmaps.cross), 0)
     #Kreuz unten links
-    draw_bitmap(9, 123, bitmaps.cross, width(bitmaps.cross), height(bitmaps.cross), 0)
+    draw_bitmap(9, 59, bitmaps.cross, width_cross, height(bitmaps.cross), 0)
     #Kreuz unten rechts
-    draw_bitmap(114, 123, bitmaps.cross, width(bitmaps.cross), height(bitmaps.cross), 0)
+    draw_bitmap(115, 59, bitmaps.cross, width_cross, height(bitmaps.cross), 0)
     #TODO Width und Hight für Indicator zusammenfassen
-    draw_bitmap(1, 16, bitmaps.indicator_button_blue, width(bitmaps.indicator_button_blue), height(bitmaps.indicator_button_blue), 0)
-    draw_bitmap(1, 25, bitmaps.indicator_button_red, width(bitmaps.indicator_button_red), height(bitmaps.indicator_button_red), 0)
-    draw_bitmap(1, 34, bitmaps.indicator_button_green, width(bitmaps.indicator_button_green), height(bitmaps.indicator_button_green), 0)
-    draw_bitmap(1, 43, bitmaps.indicator_button_yellow, width(bitmaps.indicator_button_yellow), height(bitmaps.indicator_button_yellow), 0)
-    draw_bitmap(20, 0, bitmap_transparent, width4, height(bitmap_transparent), 1)
+    draw_bitmap(1, 16, bitmaps.indicator_button_blue, width_indicator, height(bitmaps.indicator_button_blue), 0)
+    draw_bitmap(1, 25, bitmaps.indicator_button_red, width_indicator, height(bitmaps.indicator_button_red), 0)
+    draw_bitmap(1, 34, bitmaps.indicator_button_green, width_indicator, height(bitmaps.indicator_button_green), 0)
+    draw_bitmap(1, 43, bitmaps.indicator_button_yellow, width_indicator, height(bitmaps.indicator_button_yellow), 0)
+
     #Test Texte Anzeigen
     #menu.menutext(TEXT, X-Pos, Y Line, SEC)
     menu.menutext("Senso", "text", 1, 0)
