@@ -59,8 +59,10 @@ def menutext(msg, xpos, ypos, sec=None):
             error = True
 
         # Y-Position
-        if ypos in ("top", "title"):
+        if ypos == "top":
             y_display = 0
+        elif ypos == "title":
+            y_display = 4
         elif ypos == "center":
             y_display = (d.oled_height // 2) - (texthoehe // 2)
         elif ypos == "bottom":
