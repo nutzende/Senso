@@ -119,6 +119,9 @@ def spiel():
                 led(pressed)
                 led_timer = now + 300
                 player_index += 1
+                while read_button() > 0:
+                    log("Button pressed")
+                    time.sleep(0.1)
 
                 if player_index == len(sequence):
                     log("Runde geschafft!")
@@ -152,7 +155,7 @@ def spiel():
         if time.ticks_diff(now, led_timer) >= 0:
             while read_button() > 0:
                 log("Button pressed")
-                time.sleep(0.25)
+                time.sleep(0.1)
             next_round()
 
 
