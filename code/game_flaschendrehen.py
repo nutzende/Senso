@@ -41,10 +41,14 @@ def spiel2(spieler):
     spieler=spieler
     spielerLed = spielerLeds(spieler)
     aufgaben = ("Mache zehn Liegestützen","Laufe einen Marathon","Erzähle einen Witz")
-    menu.log("Zum Starten eine beliebige Taste drücken")
+    menu.cleardisplay()
+    menu.menutext("Zum Starten", "center", "top", 0)
+    menu.menutext("eine beliebige", "center", "center", 0)
+    menu.menutext("Taste drücken", "center", "bottom", 0)
     
     if menu.read_button(0)>0:
-            
+        menu.cleardisplay()
+        display.oled.show()
         while True:
             ausgwSpieler = random.randint(1,spieler)
             for i in range(50+ausgwSpieler):
@@ -54,7 +58,9 @@ def spiel2(spieler):
                     menu.log(aufgaben[random.randint(0,2)])
                     time.sleep(3)
                     leds_off()
-                    menu.log("Zum weiter Spielen blau drücken, zum Abbrechen rot drücken")
+                    menu.menutext("Neuer Versuch?", "center", "top", 0)
+                    menu.menutext("Blau: Ja", "center", "center", 0)
+                    menu.menutext("Rot: Nein", "center", "bottom", 0)
             button = 0
             while button != 4 or button != 2:
                 button = menu.read_button(0)
@@ -64,3 +70,5 @@ def spiel2(spieler):
                 elif button==2:
                     break
             break
+        menu.cleardisplay()
+        menu.mainmenu()
