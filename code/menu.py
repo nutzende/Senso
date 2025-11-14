@@ -4,7 +4,7 @@ show_display = True
 logondisplay = False
 dev = True
 texthoehe = 0
-import game_senso
+import game_senso, game_flaschendrehen, game_whacamole
 # Error Log
 def log(msg):
     global texthoehe
@@ -21,6 +21,10 @@ def log(msg):
 
 def cleardisplay():
     d.oled.fill(0)
+    
+def cleartext():
+    d.graphics.fill_rect(11,14,106,39,0)
+    d.oled.show()
 
 # Zeitdifferenz in ms
 def differenz(ende):
@@ -94,7 +98,7 @@ def mainmenu():
     menutext("Senso", "text", 1, 0)
     menutext("Bottle spin", "text", 2, 0)
     menutext("Whac-A-Mole", "text", 3, 0)
-    menutext("MMMMMMMMMMMMM", "text", 4, 0)
+    menutext("Raction", "text", 4, 0)
     eingabe = read_button(0)
     cleardisplay()
     if eingabe > 0:
@@ -104,8 +108,9 @@ def mainmenu():
         if eingabe == 4:
             game_senso.pre_start_senso()
         if eingabe == 3:
-            import game_flaschendrehen
-            game_flaschendrehen.spiel2(4)
+            game_flaschendrehen.pre_start_flaschendrehen()
+        if eingabe == 1:
+            game_whacamole.spiel3(1)
     else:
         menutext("Falsche Eingabe", "center", "center", 1)
         mainmenu()

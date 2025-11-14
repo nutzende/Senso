@@ -167,14 +167,21 @@ def next_round():
     log(f"Neue Runde! Sequenz: {sequence}")
 
 def pre_start_senso():
-    menu.menutext("Set skilllevel", "center", "top", 0)
-    menu.menutext("Grün: Leicht", "center", "center", 0)
-    menu.menutext("Rot: Schwer", "center", "bottom", 0)
+    menu.menu_ui.init_menu()
+    menu.menutext("Set Gamemode", "title", "title", 0)
+    menu.menutext("Leicht", "text", 1, 0)
+    menu.menutext("Mittel", "text", 2, 0)
+    menu.menutext("Schwer", "text", 3, 0)
+    menu.menutext("Endlos", "text", 4, 0)
     eingabe = menu.read_button(0)
     if eingabe == 1:
         skilllevel.set_skilllevel(1)
     elif eingabe == 2:
         skilllevel.set_skilllevel(2)
+    elif eingabe == 3:
+        skilllevel.set_skilllevel(3)
+    elif eingabe == 4:
+        skilllevel.set_skilllevel(4)
     else:
         pre_start_senso()
     menu.cleardisplay()
