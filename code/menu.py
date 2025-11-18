@@ -110,7 +110,7 @@ def mainmenu():
         if eingabe == 3:
             game_flaschendrehen.pre_start_flaschendrehen()
         if eingabe == 1:
-            game_whacamole.spiel3(1)
+            game_whacamole.whacamole(1)
     else:
         menutext("Falsche Eingabe", "center", "center", 1)
         mainmenu()
