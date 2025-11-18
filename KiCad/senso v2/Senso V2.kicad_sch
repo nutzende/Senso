@@ -11,189 +11,6 @@
 		(company "FH-Wedel")
 	)
 	(lib_symbols
-		(symbol "Device:LED"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "LED"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Light emitting diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=K 2=A"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "LED diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "LED_0_1"
-				(polyline
-					(pts
-						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "LED_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -318,7 +135,10 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Switch:SW_MEC_5E"
+		(symbol "Switch:SW_Omron_B3FS"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -327,7 +147,7 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "SW"
-				(at 0.635 5.715 0)
+				(at 1.27 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -335,8 +155,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "SW_MEC_5E"
-				(at 0 -3.175 0)
+			(property "Value" "SW_Omron_B3FS"
+				(at 0 -1.524 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -344,7 +164,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 0 7.62 0)
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -352,8 +172,8 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371"
-				(at 0 7.62 0)
+			(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -361,7 +181,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "MEC 5E single pole normally-open tactile switch"
+			(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
 				(at 0 0 0)
 				(effects
 					(font
@@ -379,7 +199,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SW*MEC*5G*"
+			(property "ki_fp_filters" "SW*Omron*B3FS*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -388,33 +208,9 @@
 					(hide yes)
 				)
 			)
-			(symbol "SW_MEC_5E_0_1"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy -2.54 2.54) (xy -2.286 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.286 3.81) (xy 2.286 3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			(symbol "SW_Omron_B3FS_0_1"
 				(circle
-					(center -1.778 2.54)
+					(center -2.032 0)
 					(radius 0.508)
 					(stroke
 						(width 0)
@@ -426,7 +222,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 3.81) (xy 0 5.588)
+						(xy 0 1.27) (xy 0 3.048)
 					)
 					(stroke
 						(width 0)
@@ -437,7 +233,7 @@
 					)
 				)
 				(circle
-					(center 1.778 2.54)
+					(center 2.032 0)
 					(radius 0.508)
 					(stroke
 						(width 0)
@@ -449,7 +245,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.54 0) (xy 2.54 2.54) (xy 2.286 2.54)
+						(xy 2.54 1.27) (xy -2.54 1.27)
 					)
 					(stroke
 						(width 0)
@@ -460,7 +256,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at -5.08 0 0)
 					(length 2.54)
 					(name "1"
 						(effects
@@ -478,7 +274,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at 5.08 0 180)
 					(length 2.54)
 					(name "2"
 						(effects
@@ -488,42 +284,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 2.54 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1346,27 +1106,50 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "senso:OLED_I2C_2.42_inch"
+		(symbol "senso_lib:neopixel_SK6812_RGBW"
+			(pin_names
+				(offset 0.254)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "oledi2c2.42inch"
-				(at 0 0 0)
+			(property "Reference" "D1"
+				(at 10.16 6.4202 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" ""
-				(at 0 0 0)
+			(property "Value" "neopixel_SK6812_RGBW"
+				(at 10.16 3.8802 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "LED_SMD:LED_SK6812_PLCC4_5.0x5.0mm_P3.2mm"
+				(at 1.27 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/1138/SK6812+LED+datasheet+.pdf"
+				(at 2.54 -9.525 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Description" "RGB LED with integrated controller"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1375,7 +1158,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" ""
+			(property "ki_keywords" "RGB LED NeoPixel addressable"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1384,7 +1167,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" ""
+			(property "ki_fp_filters" "LED*SK6812*PLCC*5.0x5.0mm*P3.2mm*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1393,10 +1176,83 @@
 					(hide yes)
 				)
 			)
-			(symbol "OLED_I2C_2.42_inch_0_1"
-				(rectangle
-					(start -30.75 19.75)
-					(end 30.75 -19.75)
+			(symbol "neopixel_SK6812_RGBW_0_1"
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 1.778 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -3.556) (xy 1.778 -3.556)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -1.524) (xy 1.27 -2.54) (xy 1.27 -2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -2.54) (xy 1.27 -3.556) (xy 1.27 -3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.683 -1.016) (xy 3.683 -3.556) (xy 3.683 -4.064)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.699 -1.524) (xy 2.667 -1.524) (xy 3.683 -3.556) (xy 4.699 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.699 -3.556) (xy 2.667 -3.556)
+					)
 					(stroke
 						(width 0)
 						(type default)
@@ -1406,29 +1262,37 @@
 					)
 				)
 				(rectangle
-					(start -27.505 17.555)
-					(end 27.505 -9.935)
+					(start 5.08 5.08)
+					(end -5.08 -5.08)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type background)
 					)
 				)
 			)
-			(symbol "OLED_I2C_2.42_inch_1_1"
-				(pin power_in line
-					(at -3.81 21.59 270)
+			(symbol "neopixel_SK6812_RGBW_1_1"
+				(text "RGBW"
+					(at 1.778 -4.318 0)
+					(effects
+						(font
+							(size 0.762 0.762)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
 					(length 2.54)
-					(name "GND"
+					(name "DIN"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "GND"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1437,7 +1301,7 @@
 					)
 				)
 				(pin power_in line
-					(at -1.27 21.59 270)
+					(at 0 7.62 270)
 					(length 2.54)
 					(name "VDD"
 						(effects
@@ -1446,7 +1310,7 @@
 							)
 						)
 					)
-					(number "VDD"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1454,17 +1318,17 @@
 						)
 					)
 				)
-				(pin input line
-					(at 1.27 21.59 270)
+				(pin power_in line
+					(at 0 -7.62 90)
 					(length 2.54)
-					(name "SCL"
+					(name "VSS"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "SCL"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1472,17 +1336,17 @@
 						)
 					)
 				)
-				(pin input line
-					(at 3.81 21.59 270)
+				(pin output line
+					(at 7.62 0 180)
 					(length 2.54)
-					(name "SDA"
+					(name "DOUT"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "SDA"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1494,183 +1358,15 @@
 			(embedded_fonts no)
 		)
 	)
-	(junction
-		(at 193.04 111.76)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "075391de-70af-4943-bff8-d1fe0eec635d")
-	)
-	(junction
-		(at 173.99 33.02)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0e2aa362-4dc4-497d-9850-7c8205a1de56")
-	)
-	(junction
-		(at 199.39 33.02)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "143c30e1-2cee-4866-999d-06e25cb8351e")
-	)
-	(junction
-		(at 215.9 110.49)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1643929c-09d6-4a63-9222-1284d3b575bb")
-	)
-	(junction
-		(at 180.34 111.76)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1f2171d5-3d43-404b-9694-dbb51e5262df")
-	)
-	(junction
-		(at 190.5 110.49)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3560488d-0d81-4a8c-b29d-01c311788a7f")
-	)
-	(junction
-		(at 203.2 110.49)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "917d834b-2abc-4038-a1e9-f0d30e1b1bb6")
-	)
-	(junction
-		(at 186.69 33.02)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9e799c63-57ea-4b34-a341-523c9660d06b")
-	)
-	(junction
-		(at 205.74 111.76)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ccd889d7-ffb9-4c98-9825-50c5f27faf3c")
-	)
-	(junction
-		(at 212.09 33.02)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "defedc69-6294-49ac-8d10-6bdf6fc4e11d")
-	)
-	(no_connect
-		(at 212.09 35.56)
-		(uuid "485c1a92-f27c-4f7f-a00c-0185adb6a80a")
-	)
-	(no_connect
-		(at 138.43 33.02)
-		(uuid "48fd61f6-9081-4fe2-b442-3d9b6c1b74e8")
-	)
-	(no_connect
-		(at 212.09 34.29)
-		(uuid "5bf7cd0f-1a05-43d4-b2cc-cc4417ea10c1")
-	)
-	(no_connect
-		(at 173.99 35.56)
-		(uuid "7f5d1b1a-6b08-466b-bd60-52d56e67bf7e")
-	)
-	(no_connect
-		(at 199.39 35.56)
-		(uuid "9fe2451b-530a-4392-8fb5-2cfc09b07b48")
-	)
-	(no_connect
-		(at 186.69 34.29)
-		(uuid "a4b29d80-b00f-441b-970d-e21cc551fc5a")
-	)
-	(no_connect
-		(at 186.69 35.56)
-		(uuid "b642e1da-61ca-430b-8180-67d985398358")
-	)
-	(no_connect
-		(at 205.74 110.49)
-		(uuid "d7922a54-8374-4c18-9cd0-7cd62301b627")
-	)
-	(no_connect
-		(at 180.34 110.49)
-		(uuid "db14c061-5c66-46ad-b7d6-737ecde6fc0b")
-	)
-	(no_connect
-		(at 193.04 110.49)
-		(uuid "dca0677e-5871-4d53-af86-cc5bcf4b9e1d")
-	)
-	(no_connect
-		(at 173.99 34.29)
-		(uuid "ed8a4cc0-34a7-41b6-b5cb-5b8f3b7e0021")
-	)
-	(no_connect
-		(at 199.39 34.29)
-		(uuid "fcc4ef8e-3412-442c-9697-5cd8c38ed2ee")
-	)
 	(wire
 		(pts
-			(xy 173.99 53.34) (xy 226.06 53.34)
+			(xy 125.73 110.49) (xy 125.73 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "03ff2e1f-ae32-4138-93b5-435fb914a75f")
-	)
-	(wire
-		(pts
-			(xy 215.9 100.33) (xy 232.41 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0655d88e-7cfa-4646-9748-92cbf27d3c3d")
-	)
-	(wire
-		(pts
-			(xy 167.64 95.25) (xy 167.64 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "07fb2d10-1236-4349-b45d-8cff923448ac")
-	)
-	(wire
-		(pts
-			(xy 213.36 35.56) (xy 238.76 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0ae854d9-0622-4527-80f2-86b9c17ec8bb")
-	)
-	(wire
-		(pts
-			(xy 214.63 34.29) (xy 241.3 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0ba0eebf-4a88-406e-bd8f-7e84a038eaac")
-	)
-	(wire
-		(pts
-			(xy 173.99 33.02) (xy 135.89 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0c071811-1664-45e0-801a-dcf17060fd20")
-	)
-	(wire
-		(pts
-			(xy 173.99 33.02) (xy 173.99 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "13556db0-68b7-4fd5-ae16-e24f534f38c2")
+		(uuid "12cf153e-071c-4b54-b71f-e8fa05c8c6ef")
 	)
 	(wire
 		(pts
@@ -1694,13 +1390,13 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 92.71) (xy 232.41 92.71)
+			(xy 102.87 115.57) (xy 102.87 123.19)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "221fae39-97b1-4503-9331-3eca1cf569b0")
+		(uuid "2206c685-b0ae-42ff-9ba4-4f3307877f0f")
 	)
 	(wire
 		(pts
@@ -1724,73 +1420,13 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 33.02) (xy 212.09 41.91)
+			(xy 127 143.51) (xy 127 149.86)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "41f9b57a-137c-4eb3-bd15-999094bf2bc3")
-	)
-	(wire
-		(pts
-			(xy 180.34 97.79) (xy 180.34 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "48f8f90f-17e2-41eb-b90a-835bea11504e")
-	)
-	(wire
-		(pts
-			(xy 212.09 33.02) (xy 269.24 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4996f6e1-1395-4f79-b709-4646b6b28a01")
-	)
-	(wire
-		(pts
-			(xy 139.7 34.29) (xy 214.63 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4a9427f8-adef-4099-88ff-59771267321a")
-	)
-	(wire
-		(pts
-			(xy 139.7 31.75) (xy 130.81 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "53ab7e46-e8bb-4e8f-8376-c00c6ac24ee5")
-	)
-	(wire
-		(pts
-			(xy 190.5 110.49) (xy 190.5 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5a79d3e0-b056-482f-b6c9-e9675b6af86a")
-	)
-	(wire
-		(pts
-			(xy 140.97 35.56) (xy 135.89 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5f1e29e5-4d4f-41f6-9ff9-5cc30816dd11")
+		(uuid "5aafaed2-e3fa-4516-86e5-7b121b5304f1")
 	)
 	(wire
 		(pts
@@ -1804,16 +1440,6 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 35.56) (xy 213.36 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6b85de22-059c-40fe-b89c-1d2cd32d4b72")
-	)
-	(wire
-		(pts
 			(xy 224.79 54.61) (xy 233.68 63.5)
 		)
 		(stroke
@@ -1821,36 +1447,6 @@
 			(type default)
 		)
 		(uuid "72758917-6f4c-4c68-9bac-6c511e0410ca")
-	)
-	(wire
-		(pts
-			(xy 199.39 33.02) (xy 199.39 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "72c3a629-7430-43e7-830e-2121b14806b4")
-	)
-	(wire
-		(pts
-			(xy 205.74 111.76) (xy 271.78 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7b093a3d-09a2-44c7-92fb-f4a261108e5e")
-	)
-	(wire
-		(pts
-			(xy 177.8 110.49) (xy 190.5 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7e40d6e1-d2e3-45f3-9cbb-757edd2cdd75")
 	)
 	(wire
 		(pts
@@ -1864,26 +1460,6 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 111.76) (xy 193.04 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "87f3c8f6-0185-4d07-aab9-f89477481305")
-	)
-	(wire
-		(pts
-			(xy 193.04 111.76) (xy 205.74 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8d238706-2f45-4a3f-82e3-b4d973309f0b")
-	)
-	(wire
-		(pts
 			(xy 238.76 60.96) (xy 238.76 63.5)
 		)
 		(stroke
@@ -1894,13 +1470,13 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 100.33) (xy 193.04 111.76)
+			(xy 115.57 110.49) (xy 115.57 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a0ce9afa-9a7a-46b1-87b3-5d68a2d03b3c")
+		(uuid "a1f11e9a-df8a-4307-8feb-4dfbe7dd882e")
 	)
 	(wire
 		(pts
@@ -1914,16 +1490,6 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 33.02) (xy 212.09 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a67cc47c-fc78-4f50-8b3f-aa593b30298a")
-	)
-	(wire
-		(pts
 			(xy 241.3 60.96) (xy 241.3 63.5)
 		)
 		(stroke
@@ -1934,53 +1500,13 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 110.49) (xy 215.9 110.49)
+			(xy 113.03 115.57) (xy 113.03 123.19)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b4e5dd45-c912-4ecf-8f3f-bfd4cb5be6d7")
-	)
-	(wire
-		(pts
-			(xy 173.99 33.02) (xy 186.69 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b8d3831d-79e7-4f06-ab9c-caf5f230ff26")
-	)
-	(wire
-		(pts
-			(xy 203.2 107.95) (xy 203.2 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9c3f919-bbba-4334-9a54-049640d9e5fb")
-	)
-	(wire
-		(pts
-			(xy 186.69 33.02) (xy 199.39 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bcb5ac29-224d-4a29-9a9a-24fdf64671e9")
-	)
-	(wire
-		(pts
-			(xy 215.9 110.49) (xy 269.24 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bce86bff-36db-4c96-8555-97099236cbb9")
+		(uuid "aded69b2-e93d-43d5-b5e1-aabed91629c5")
 	)
 	(wire
 		(pts
@@ -1994,53 +1520,13 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 54.61) (xy 224.79 54.61)
+			(xy 102.87 130.81) (xy 102.87 138.43)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c8a3a2bf-afc7-4c1b-9e90-bf805651e59c")
-	)
-	(wire
-		(pts
-			(xy 177.8 110.49) (xy 177.8 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "caab0344-8d0e-43c3-86cd-324fa26de299")
-	)
-	(wire
-		(pts
-			(xy 212.09 57.15) (xy 222.25 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cbebb982-7585-4de5-9a4b-ebd3a4e33307")
-	)
-	(wire
-		(pts
-			(xy 199.39 55.88) (xy 223.52 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cf1ec9d1-4ba8-45cf-be43-726599c0cfa0")
-	)
-	(wire
-		(pts
-			(xy 167.64 111.76) (xy 180.34 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d09fcda5-87e6-4518-afe0-9a416e8f3048")
+		(uuid "d6affd8c-0358-43dd-b334-2db380c4ed09")
 	)
 	(wire
 		(pts
@@ -2054,43 +1540,13 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 33.02) (xy 186.69 39.37)
+			(xy 113.03 130.81) (xy 113.03 138.43)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d95870bd-9ba4-4a8b-9872-6f6fe67c8c51")
-	)
-	(wire
-		(pts
-			(xy 135.89 33.02) (xy 128.27 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dc1d0b01-aa26-41d9-b335-34a59c639538")
-	)
-	(wire
-		(pts
-			(xy 203.2 97.79) (xy 232.41 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e31fe201-cd1f-4aa1-8141-ab67822f0a14")
-	)
-	(wire
-		(pts
-			(xy 133.35 40.64) (xy 139.7 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e577a041-a202-4e0e-99ca-e695e2701b8f")
+		(uuid "e102874c-81e7-4120-a4a8-8e231da8baf0")
 	)
 	(wire
 		(pts
@@ -2104,23 +1560,13 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 95.25) (xy 232.41 95.25)
+			(xy 116.84 143.51) (xy 116.84 149.86)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e7643cba-ff9d-4fce-96e5-37abcf822798")
-	)
-	(wire
-		(pts
-			(xy 205.74 102.87) (xy 205.74 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f1efc8c8-8e16-4145-a7de-c698d7b5b78f")
+		(uuid "e9ea5a07-43d1-420d-8ee3-bcc7932ee27b")
 	)
 	(wire
 		(pts
@@ -2132,55 +1578,111 @@
 		)
 		(uuid "f30bc644-5e74-473b-b628-20e2595cb744")
 	)
-	(wire
-		(pts
-			(xy 139.7 31.75) (xy 271.78 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f6f9ea12-8a29-4cab-ba57-f512408af387")
-	)
-	(wire
-		(pts
-			(xy 190.5 110.49) (xy 203.2 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fbbb42e4-bf0e-4899-8daa-2ed25cb7bee3")
-	)
 	(symbol
-		(lib_id "Device:R")
-		(at 212.09 45.72 180)
+		(lib_id "senso_lib:neopixel_SK6812_RGBW")
+		(at 78.74 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "197d28de-6f93-4b9c-8ae9-ff9d962d41d7")
-		(property "Reference" "R2"
-			(at 209.55 46.9901 0)
+		(fields_autoplaced yes)
+		(uuid "06b61e45-e517-495c-8b55-70238c663fa2")
+		(property "Reference" "D1"
+			(at 96.52 53.2698 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+			)
+		)
+		(property "Value" "neopixel_SK6812_RGBW"
+			(at 96.52 55.8098 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_SK6812_PLCC4_5.0x5.0mm_P3.2mm"
+			(at 80.01 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
 				(hide yes)
 			)
 		)
-		(property "Value" "220Ω"
-			(at 212.09 45.72 90)
+		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/1138/SK6812+LED+datasheet+.pdf"
+			(at 81.28 69.215 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller"
+			(at 78.74 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "a5d16fb1-8e75-490f-b695-58390beb66f9")
+		)
+		(pin "2"
+			(uuid "b75cf3f4-2439-4a1e-b0b9-c727e5950e14")
+		)
+		(pin "4"
+			(uuid "73033eff-e249-4e54-8727-143b26198b07")
+		)
+		(pin "1"
+			(uuid "dc559f60-1d4b-4273-b193-dc3a7a9cfa53")
+		)
+		(instances
+			(project ""
+				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Omron_B3FS")
+		(at 107.95 123.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1537e738-aa44-4b5a-867a-24e6cfedd83b")
+		(property "Reference" "Taster_Rot_2"
+			(at 107.95 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify top)
+			)
+		)
+		(property "Value" "SW_Omron_B3FS"
+			(at 107.95 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 213.868 45.72 90)
+			(at 107.95 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2188,8 +1690,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 212.09 45.72 0)
+		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
+			(at 107.95 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2197,8 +1699,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 212.09 45.72 0)
+		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
+			(at 107.95 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2207,49 +1709,49 @@
 			)
 		)
 		(pin "1"
-			(uuid "c072b6ce-9352-4209-8d3a-f85a31681aba")
+			(uuid "f3f23bcd-fa80-4dcd-bc10-3bb2e5d7de85")
 		)
 		(pin "2"
-			(uuid "1db9a3d1-eabf-46b4-b158-31a8899667e8")
+			(uuid "dded1dcd-3b9e-41f9-8aed-e7fbd6ad30d1")
 		)
 		(instances
-			(project ""
+			(project "Senso V2"
 				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "R2")
+					(reference "Taster_Rot_2")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 199.39 44.45 180)
+		(lib_id "Switch:SW_Omron_B3FS")
+		(at 107.95 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "1b81a1ed-055f-446c-bfcf-0d65fea88549")
-		(property "Reference" "R3"
-			(at 196.85 45.7201 0)
+		(uuid "253b968a-bf40-40a1-8dbe-18630e03ecef")
+		(property "Reference" "Taster_Grün_2"
+			(at 107.95 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
-				(hide yes)
+				(justify top)
 			)
 		)
-		(property "Value" "220Ω"
-			(at 199.39 44.45 90)
+		(property "Value" "SW_Omron_B3FS"
+			(at 107.95 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 201.168 44.45 90)
+			(at 107.95 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2257,8 +1759,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 199.39 44.45 0)
+		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
+			(at 107.95 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2266,8 +1768,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 199.39 44.45 0)
+		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
+			(at 107.95 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2276,15 +1778,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "9ec3ecf6-0f10-40e9-888a-0e521bcb24ab")
+			(uuid "1e29af48-fd07-4fb6-947e-6caf95ff85de")
 		)
 		(pin "2"
-			(uuid "decf5f80-d41d-4af2-89c1-74ced5c1de13")
+			(uuid "03c3114b-edd9-4d6d-8e8b-0a806f8a6575")
 		)
 		(instances
-			(project ""
+			(project "Senso V2"
 				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "R3")
+					(reference "Taster_Grün_2")
 					(unit 1)
 				)
 			)
@@ -2292,153 +1794,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 186.69 43.18 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2b463558-5513-4a4d-ab24-376ffdd829ca")
-		(property "Reference" "R4"
-			(at 184.15 44.4501 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "220Ω"
-			(at 186.69 43.18 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 188.468 43.18 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 186.69 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 186.69 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "f9f7dffd-7712-403a-8932-59d0610ce8ef")
-		)
-		(pin "1"
-			(uuid "37ed7c01-4c04-414a-84c8-02c2a308ef79")
-		)
-		(instances
-			(project ""
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 199.39 52.07 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "31db418e-9b64-40e5-bd2a-29174a3ee694")
-		(property "Reference" "LED_Grün1"
-			(at 203.2 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Value" "LED"
-			(at 201.93 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 199.39 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 199.39 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 199.39 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 199.39 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "aa76a5d7-09ac-4327-9a2e-863ba1f4eee3")
-		)
-		(pin "1"
-			(uuid "d56c8f9b-8e60-4ba1-9ef6-171350e145c4")
-		)
-		(instances
-			(project ""
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "LED_Grün1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 177.8 99.06 0)
+		(at 192.405 111.125 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2446,7 +1802,7 @@
 		(dnp no)
 		(uuid "329bed0c-2df9-49df-aebd-5b58a0e64426")
 		(property "Reference" "R5"
-			(at 180.34 97.7899 0)
+			(at 193.6751 113.665 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2456,7 +1812,7 @@
 			)
 		)
 		(property "Value" "10kΩ"
-			(at 177.8 99.06 90)
+			(at 192.405 111.125 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2464,7 +1820,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 176.022 99.06 90)
+			(at 192.405 109.347 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2473,7 +1829,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 177.8 99.06 0)
+			(at 192.405 111.125 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2482,7 +1838,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 177.8 99.06 0)
+			(at 192.405 111.125 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2506,8 +1862,77 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_Omron_B3FS")
+		(at 107.95 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "35084f53-5a9f-41c6-9e56-3f79a8cc6b15")
+		(property "Reference" "Taster_Rot_1"
+			(at 107.95 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify top)
+			)
+		)
+		(property "Value" "SW_Omron_B3FS"
+			(at 107.95 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 107.95 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
+			(at 107.95 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
+			(at 107.95 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2e8447c3-533f-4fb3-afb9-97fe3d8d29d2")
+		)
+		(pin "2"
+			(uuid "0ec46d40-46c5-4ae8-a3e8-a24f37a0a231")
+		)
+		(instances
+			(project "Senso V2"
+				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
+					(reference "Taster_Rot_1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
-		(at 215.9 106.68 0)
+		(at 182.245 140.335 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2515,7 +1940,7 @@
 		(dnp no)
 		(uuid "37b79bc3-65dc-4022-a53d-c238df7f7c06")
 		(property "Reference" "R8"
-			(at 218.44 105.4099 0)
+			(at 183.5151 142.875 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2525,7 +1950,7 @@
 			)
 		)
 		(property "Value" "10kΩ"
-			(at 215.9 106.68 90)
+			(at 182.245 140.335 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2533,7 +1958,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 214.122 106.68 90)
+			(at 182.245 138.557 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2542,7 +1967,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 215.9 106.68 0)
+			(at 182.245 140.335 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2551,7 +1976,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 215.9 106.68 0)
+			(at 182.245 140.335 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2575,33 +2000,34 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 173.99 49.53 270)
+		(lib_id "Switch:SW_Omron_B3FS")
+		(at 121.92 143.51 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "48d28594-79c8-40c5-bdfb-9191b4325929")
-		(property "Reference" "LED_Blau1"
-			(at 177.8 49.53 0)
+		(uuid "4dcacc6d-91ca-4bb5-98b2-a52599337ff1")
+		(property "Reference" "Taster_Gelb_1"
+			(at 121.92 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify bottom)
+				(justify top)
 			)
 		)
-		(property "Value" "LED"
-			(at 176.53 49.53 0)
+		(property "Value" "SW_Omron_B3FS"
+			(at 121.92 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 173.99 49.53 0)
+			(at 121.92 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2609,8 +2035,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 173.99 49.53 0)
+		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
+			(at 121.92 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2618,17 +2044,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Light emitting diode"
-			(at 173.99 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 173.99 49.53 0)
+		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
+			(at 121.92 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2637,48 +2054,49 @@
 			)
 		)
 		(pin "1"
-			(uuid "313d4c69-6f9f-4757-b6d2-1a28cd8f815e")
+			(uuid "2773f006-036c-4ef6-b270-f15df4420fc4")
 		)
 		(pin "2"
-			(uuid "b9a55b4e-3231-4326-845d-617d5fda6e79")
+			(uuid "f1469d68-ebbf-41d8-9a0a-a2ccfa9c7c56")
 		)
 		(instances
-			(project ""
+			(project "Senso V2"
 				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "LED_Blau1")
+					(reference "Taster_Gelb_1")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 186.69 50.8 270)
+		(lib_id "Switch:SW_Omron_B3FS")
+		(at 120.65 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5ef9b861-69bb-4d0b-a8d2-a2fec0b49a49")
-		(property "Reference" "LED_Gelb1"
-			(at 190.5 50.8 0)
+		(uuid "53714ab3-58d3-4d3b-ba2e-1cad6cce8997")
+		(property "Reference" "Taster_Blau_1"
+			(at 120.65 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify bottom)
+				(justify top)
 			)
 		)
-		(property "Value" "LED"
-			(at 189.23 50.8 0)
+		(property "Value" "SW_Omron_B3FS"
+			(at 120.65 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 186.69 50.8 0)
+			(at 120.65 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2686,8 +2104,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 186.69 50.8 0)
+		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
+			(at 120.65 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2695,17 +2113,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Light emitting diode"
-			(at 186.69 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 186.69 50.8 0)
+		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
+			(at 120.65 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2714,31 +2123,68 @@
 			)
 		)
 		(pin "1"
-			(uuid "544f9023-b5c7-41ed-8bb9-a7a3ecd93cf9")
+			(uuid "b3937b90-a5b3-4c37-93f9-283be81eca13")
 		)
 		(pin "2"
-			(uuid "3d073f9f-4a6f-4e02-81e4-e8b8020a9280")
+			(uuid "653a56ab-064a-4f69-843a-f4fd9056606b")
 		)
 		(instances
-			(project ""
+			(project "Senso V2"
 				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "LED_Gelb1")
+					(reference "Taster_Blau_1")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_MEC_5E")
-		(at 198.12 100.33 0)
+		(lib_id "senso_lib:neopixel_SK6812_RGBW")
+		(at 88.9 35.56 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6b7f98e5-11a7-4528-a5ae-1e169c655cf3")
-		(property "Reference" "SW3"
-			(at 198.12 90.17 0)
+		(fields_autoplaced yes)
+		(uuid "59ee323e-2960-449d-af5c-c7814e7b1a1d")
+		(property "Reference" "D2"
+			(at 106.68 29.1398 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "neopixel_SK6812_RGBW"
+			(at 106.68 31.6798 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_SK6812_PLCC4_5.0x5.0mm_P3.2mm"
+			(at 90.17 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/1138/SK6812+LED+datasheet+.pdf"
+			(at 91.44 45.085 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller"
+			(at 88.9 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2746,90 +2192,56 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "Taster_Grün"
-			(at 198.12 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 198.12 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371"
-			(at 198.12 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "MEC 5E single pole normally-open tactile switch"
-			(at 198.12 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "0cf247bc-6d7a-48c1-9158-c28eba9610d0")
-		)
-		(pin "2"
-			(uuid "a832d507-7d6b-4bb6-b297-b27a737f2b8e")
+		(pin "1"
+			(uuid "c72882fd-2f31-4121-ae41-b5584e528ff5")
 		)
 		(pin "3"
-			(uuid "ad01a798-4898-4743-bb35-98666c6f715b")
+			(uuid "76be34a5-099f-49be-8d0b-63990f6c8f9d")
 		)
-		(pin "1"
-			(uuid "ca7c411a-1edd-4f7d-8917-3f7189be7763")
+		(pin "2"
+			(uuid "02d43c88-c744-42d2-998b-3bb1d6ecbd07")
+		)
+		(pin "4"
+			(uuid "bc33e161-ec8b-4859-ac42-6e8d276e3154")
 		)
 		(instances
 			(project ""
 				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "SW3")
+					(reference "D2")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_MEC_5E")
-		(at 172.72 95.25 0)
+		(lib_id "Switch:SW_Omron_B3FS")
+		(at 120.65 110.49 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6c05b2cd-9f34-459b-858b-3c4eb238c6ea")
-		(property "Reference" "SW1"
-			(at 172.72 85.09 0)
+		(uuid "677465d8-f2c2-469c-af15-f56a4efc327a")
+		(property "Reference" "Taster_Blau_2"
+			(at 120.65 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify top)
+			)
+		)
+		(property "Value" "SW_Omron_B3FS"
+			(at 120.65 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
-			)
-		)
-		(property "Value" "Taster_Blau"
-			(at 172.72 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 			)
 		)
 		(property "Footprint" ""
-			(at 172.72 87.63 0)
+			(at 120.65 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2837,8 +2249,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371"
-			(at 172.72 87.63 0)
+		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
+			(at 120.65 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2846,31 +2258,94 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "MEC 5E single pole normally-open tactile switch"
-			(at 172.72 95.25 0)
+		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
+			(at 120.65 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "2"
-			(uuid "7e87f0c4-cfbb-4590-83d2-a6d187b9810b")
-		)
-		(pin "4"
-			(uuid "eb9bff3b-ec4f-4c22-bcc6-e55c142c2492")
-		)
-		(pin "3"
-			(uuid "7df8c0e8-5f68-4675-8aaf-bf2ac336ac22")
 		)
 		(pin "1"
-			(uuid "79bf13b5-edea-4ced-af95-27f3a6bdc64e")
+			(uuid "0ec059b4-de20-45ea-ba69-db6f915a21c8")
+		)
+		(pin "2"
+			(uuid "d0c31589-3121-4117-9189-50bdfca7a1a7")
 		)
 		(instances
 			(project ""
 				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "SW1")
+					(reference "Taster_Blau_2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Omron_B3FS")
+		(at 121.92 149.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9b1f64a7-f8c7-4da1-b163-0dd4c11d821a")
+		(property "Reference" "Taster_Gelb_2"
+			(at 121.92 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify top)
+			)
+		)
+		(property "Value" "SW_Omron_B3FS"
+			(at 121.92 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 121.92 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
+			(at 121.92 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
+			(at 121.92 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5478ecd6-ea6a-48ac-acf2-2843dee7e2a5")
+		)
+		(pin "2"
+			(uuid "e42b897e-4923-418a-9e05-652117577037")
+		)
+		(instances
+			(project "Senso V2"
+				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
+					(reference "Taster_Gelb_2")
 					(unit 1)
 				)
 			)
@@ -3065,85 +2540,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 212.09 53.34 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a996f331-a667-4083-87f0-a498693bd540")
-		(property "Reference" "LED_Rot1"
-			(at 215.9 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Value" "LED"
-			(at 214.63 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 212.09 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 212.09 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 212.09 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 212.09 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4c68f5d5-7639-4236-9236-6bed529826bb")
-		)
-		(pin "2"
-			(uuid "f60f5899-944c-4fd9-afd0-d4c208508fe0")
-		)
-		(instances
-			(project ""
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "LED_Rot1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 203.2 104.14 0)
+		(at 186.055 133.985 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3151,7 +2549,7 @@
 		(dnp no)
 		(uuid "ac3fc66f-0513-43ba-9bbf-a96d94930032")
 		(property "Reference" "R7"
-			(at 205.74 102.8699 0)
+			(at 187.3251 136.525 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3161,7 +2559,7 @@
 			)
 		)
 		(property "Value" "10kΩ"
-			(at 203.2 104.14 90)
+			(at 186.055 133.985 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3169,7 +2567,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 201.422 104.14 90)
+			(at 186.055 132.207 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3178,7 +2576,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 203.2 104.14 0)
+			(at 186.055 133.985 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3187,7 +2585,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 203.2 104.14 0)
+			(at 186.055 133.985 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3211,292 +2609,221 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 173.99 41.91 180)
+		(lib_id "senso_lib:neopixel_SK6812_RGBW")
+		(at 144.78 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "b72cedb5-95b1-4ecf-b9e7-de015e84502f")
-		(property "Reference" "R1"
-			(at 171.45 43.1801 0)
+		(fields_autoplaced yes)
+		(uuid "e2bdfc30-6ca4-4868-ac66-33c5c0d01be9")
+		(property "Reference" "D4"
+			(at 162.56 53.2698 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+			)
+		)
+		(property "Value" "neopixel_SK6812_RGBW"
+			(at 162.56 55.8098 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_SK6812_PLCC4_5.0x5.0mm_P3.2mm"
+			(at 146.05 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
 				(hide yes)
 			)
 		)
-		(property "Value" "220Ω"
-			(at 173.99 41.91 90)
+		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/1138/SK6812+LED+datasheet+.pdf"
+			(at 147.32 69.215 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left top)
+				(hide yes)
 			)
 		)
-		(property "Footprint" ""
-			(at 175.768 41.91 90)
+		(property "Description" "RGB LED with integrated controller"
+			(at 144.78 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "Datasheet" "~"
-			(at 173.99 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 173.99 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "c5fb25c2-c59b-4350-89bd-0c7f86709fac")
 		)
 		(pin "1"
-			(uuid "29cb64a8-4999-45a5-b152-d7c730ac93e4")
-		)
-		(instances
-			(project ""
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_MEC_5E")
-		(at 210.82 102.87 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b9000513-1b1e-4538-a7b0-cfd654d06264")
-		(property "Reference" "SW4"
-			(at 210.82 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "Taster_Rot"
-			(at 210.82 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 210.82 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371"
-			(at 210.82 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "MEC 5E single pole normally-open tactile switch"
-			(at 210.82 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "0cf247bc-6d7a-48c1-9158-c28eba9610d1")
-		)
-		(pin "2"
-			(uuid "a832d507-7d6b-4bb6-b297-b27a737f2b8f")
+			(uuid "59d9f293-11d7-4d72-a87b-2db98e06c112")
 		)
 		(pin "3"
-			(uuid "ad01a798-4898-4743-bb35-98666c6f715c")
-		)
-		(pin "1"
-			(uuid "ca7c411a-1edd-4f7d-8917-3f7189be7764")
-		)
-		(instances
-			(project ""
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "SW4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "senso:OLED_I2C_2.42_inch")
-		(at 132.08 62.23 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bfa7bc6a-2557-4370-97d1-8af59cf2086e")
-		(property "Reference" "oledi2c2.42inch1"
-			(at 132.08 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "~"
-			(at 163.83 63.4999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 132.08 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 132.08 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 132.08 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "SCL"
-			(uuid "5b931683-eddd-4307-960f-f7cff6f2bc2c")
-		)
-		(pin "VDD"
-			(uuid "fb4c1d30-f030-46bd-a2a8-8781f2bb653d")
-		)
-		(pin "GND"
-			(uuid "d65609f1-2de2-444f-ae5b-6edce0914003")
-		)
-		(pin "SDA"
-			(uuid "6cfc96f4-1179-4ada-9dcb-bc68fbc8ffd0")
-		)
-		(instances
-			(project ""
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "oledi2c2.42inch1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_MEC_5E")
-		(at 185.42 97.79 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c74d92ff-66d5-4f31-ac27-c3a2c18516bf")
-		(property "Reference" "SW2"
-			(at 185.42 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "Taster_Gelb"
-			(at 185.42 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 185.42 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371"
-			(at 185.42 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "MEC 5E single pole normally-open tactile switch"
-			(at 185.42 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "0cf247bc-6d7a-48c1-9158-c28eba9610d2")
+			(uuid "7fe3f41d-d5be-4cd9-8c61-5e8ad83a2a1c")
 		)
 		(pin "2"
-			(uuid "a832d507-7d6b-4bb6-b297-b27a737f2b90")
+			(uuid "6d08450f-a094-4207-8226-5731e33a828f")
 		)
-		(pin "3"
-			(uuid "ad01a798-4898-4743-bb35-98666c6f715d")
-		)
-		(pin "1"
-			(uuid "ca7c411a-1edd-4f7d-8917-3f7189be7765")
+		(pin "4"
+			(uuid "07837c6f-0c63-4d1f-a184-e28c1e085793")
 		)
 		(instances
 			(project ""
 				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "SW2")
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Omron_B3FS")
+		(at 107.95 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "edc96e73-f688-40de-868c-42efa0011566")
+		(property "Reference" "Taster_Grün_1"
+			(at 107.95 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify top)
+			)
+		)
+		(property "Value" "SW_Omron_B3FS"
+			(at 107.95 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 107.95 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
+			(at 107.95 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
+			(at 107.95 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9997fe76-5523-4402-92c5-79b4392f3caf")
+		)
+		(pin "2"
+			(uuid "79185638-3505-4da8-9620-98d148d84b79")
+		)
+		(instances
+			(project "Senso V2"
+				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
+					(reference "Taster_Grün_1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "senso_lib:neopixel_SK6812_RGBW")
+		(at 148.59 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eddc3d6c-aa32-44dc-8554-e104323b3248")
+		(property "Reference" "D3"
+			(at 166.37 34.2198 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "neopixel_SK6812_RGBW"
+			(at 166.37 36.7598 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_SK6812_PLCC4_5.0x5.0mm_P3.2mm"
+			(at 149.86 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/1138/SK6812+LED+datasheet+.pdf"
+			(at 151.13 50.165 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller"
+			(at 148.59 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a57bc68f-7ce7-4ade-a975-dc00bcdc5464")
+		)
+		(pin "3"
+			(uuid "431b430a-d9ac-481c-822b-49778400d4a0")
+		)
+		(pin "2"
+			(uuid "e530dbb8-0a6d-42e6-a7bb-f0904dde75da")
+		)
+		(pin "4"
+			(uuid "fbff42e9-22fe-4c74-8497-4939bcca2b5c")
+		)
+		(instances
+			(project ""
+				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -3504,7 +2831,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 190.5 101.6 0)
+		(at 189.865 123.825 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3512,7 +2839,7 @@
 		(dnp no)
 		(uuid "f04ac36b-6e91-4ef4-b266-68d7915b84a0")
 		(property "Reference" "R6"
-			(at 193.04 100.3299 0)
+			(at 191.1351 126.365 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3522,7 +2849,7 @@
 			)
 		)
 		(property "Value" "10kΩ"
-			(at 190.5 101.6 90)
+			(at 189.865 123.825 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3530,7 +2857,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 188.722 101.6 90)
+			(at 189.865 122.047 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3539,7 +2866,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 190.5 101.6 0)
+			(at 189.865 123.825 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3548,7 +2875,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 190.5 101.6 0)
+			(at 189.865 123.825 0)
 			(effects
 				(font
 					(size 1.27 1.27)
