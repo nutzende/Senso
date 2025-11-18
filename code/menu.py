@@ -12,7 +12,7 @@ def log(msg):
         if logondisplay:
             if texthoehe >= 60:
                 texthoehe = 0
-                d.oled.fill(0)
+                d.oled.oled.clear()
             d.oled.text(msg, 0, texthoehe)
             d.oled.show()
             texthoehe += 10
@@ -20,7 +20,7 @@ def log(msg):
             print(msg)
 
 def cleardisplay():
-    d.oled.fill(0)
+    d.oled.clear()
     
 def cleartext():
     d.graphics.fill_rect(11,14,106,39,0)
@@ -81,7 +81,7 @@ def menutext(msg, xpos, ypos, sec=None):
             log(f"Keine Zeit übergeben: {sec}")
             sec = 3
         if not error:
-            #d.oled.fill(0)
+            #d.oled.oled.clear()
             d.oled.text(msg, x_display, y_display)
             d.oled.show()
             time.sleep(sec)

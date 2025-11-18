@@ -1,8 +1,7 @@
-from machine import Pin, SoftI2C
-import ssd1306, gfx
-i2c = SoftI2C(scl=Pin(7), sda=Pin(8))
+from machine import Pin, I2C
+import ssd1309
+i2c = I2C(0, scl=Pin(7), sda=Pin(8))
 oled_width = 128
 oled_height = 64
-oled = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c)
-graphics = gfx.GFX(oled_width, oled_height, oled.pixel)
-oled.fill(0)
+oled = ssd1309.Display(i2c=i2c, rst=Pin(5), width=128, height=64)
+oled.clear()

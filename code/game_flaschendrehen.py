@@ -36,11 +36,20 @@ def pre_start_flaschendrehen():
         spiel2(4)
     else:
         pre_start_flaschendrehen()
+def aufgaben(n):
+    menu.cleardisplay()
+    if n == 0:
+        menu.menutext("Keine Aufgabe", "center", "top", 0)
+    elif n == 1:
+        menu.menutext("Mache zehn", "center", "top", 0)
+        menu.menutext("Liegestützen", "center", "center", 0)
+    elif n == 2:
+        menu.menutext("Laufe einen", "center", "top", 0)
+        menu.menutext("Marathon", "center", "center", 0)
 def spiel2(spieler):
     menu.log("Spiel2")
     spieler=spieler
     spielerLed = spielerLeds(spieler)
-    aufgaben = ("Mache zehn Liegestützen","Laufe einen Marathon","Erzähle einen Witz")
     menu.cleardisplay()
     menu.menutext("Zum Starten", "center", "top", 0)
     menu.menutext("eine beliebige", "center", "center", 0)
@@ -55,8 +64,9 @@ def spiel2(spieler):
                 led(spielerLed[i%spieler])
                 time.sleep(0.0001*((i-25)*(i-25))+0.05)
                 if i+1 == ausgwSpieler+50:
-                    menu.log(aufgaben[random.randint(0,2)])
+                    aufgaben(random.randint(0,2))
                     time.sleep(3)
+                    menu.cleardisplay()
                     leds_off()
                     menu.menutext("Neuer Versuch?", "center", "top", 0)
                     menu.menutext("Blau: Ja", "center", "center", 0)

@@ -27,18 +27,18 @@ def draw_bitmap(x, y, data, width, height, transparent):
      for row, line in enumerate(data):
         for col, val in enumerate(line):
             if val == 1:
-                display.oled.pixel(x + col, y + row, 1)
+                display.oled.draw_pixel(x + col, y + row, 0)
             elif val == 0:
-                display.oled.pixel(x + col, y + row, 0)
+                display.oled.draw_pixel(x + col, y + row, 1)
     else:
         for row in range(height):
             line = data[row]
             for col in range(width):
                 # Prüfe, ob das Bit gesetzt ist (von links nach rechts)
                 if (line >> (width - 1 - col)) & 1:
-                    display.oled.pixel(x + col, y + row, 1)
+                    display.oled.draw_pixel(x + col, y + row, 0)
                 else:
-                    display.oled.pixel(x + col, y + row, 0)
+                    display.oled.draw_pixel(x + col, y + row, 1)
                     
 def init_menu():
     #Hauptmenü aufbauen
@@ -48,13 +48,13 @@ def init_menu():
     width_arrow = 9
     #display.graphics.line(x1, y1, x2, y2, fill)
     #linke Senkrechtlinie
-    display.graphics.line(10, 4, 10, 59, 1)
+    display.oled.draw_line(10, 4, 10, 59)
     #rechte Senkrechtlinie
-    display.graphics.line(117, 4, 117, 59, 1)
+    display.oled.draw_line(117, 4, 117, 59)
     #obere Horizontallinie
-    display.graphics.line(5, 13, 123, 13, 1)
+    display.oled.draw_line(5, 13, 123, 13)
     #untere Horizontallinie
-    display.graphics.line(5, 53, 123, 53, 1)
+    display.oled.draw_line(5, 53, 123, 53)
     #schnörkel an den Linien im Menü darstellen
     #Schnörkel oben links
     draw_bitmap(1, 10, bitmaps.hcircle_l_up, width_hcircle, height(bitmaps.hcircle_l_up), 0)

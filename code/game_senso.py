@@ -24,10 +24,10 @@ def log(msg):
         if display == True:
             global texthoehe
             if texthoehe == 0:
-                d.oled.fill(0)
+                menu.cleardisplay()
             if texthoehe >= 60:
                 texthoehe = 0
-                d.oled.fill(0)
+                menu.cleardisplay()
             d.oled.text(msg, 0, texthoehe)
             d.oled.show()
             texthoehe = texthoehe + 10

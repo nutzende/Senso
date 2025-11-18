@@ -1,5 +1,5 @@
 from machine import Pin, I2C
-from ssd1306 import SSD1306_I2C
+import ssd1309
 import time
 import urandom
 
@@ -16,8 +16,9 @@ DISPLAY_HOEHE = 48  # falls du ein 128x64 Display hast, ändere das zu 64
 # (eventuell musst du scl/sda anpassen)
 i2c = I2C(0, scl=Pin(7), sda=Pin(8))
 
+
 # Display-Objekt erstellen
-oled = SSD1306_I2C(DISPLAY_BREITE, DISPLAY_HOEHE, i2c)
+oled = ssd1309.Display(i2c=i2c, rst=Pin(5), width=128, height=64)
 
 # ====================================================
 # 2. HILFSFUNKTIONEN ZUM ZEICHNEN
@@ -37,7 +38,7 @@ def zeichne_linie(start_x, start_y, ende_x, ende_y):
     while True:
         # Pixel auf dem Display setzen
         if 0 <= start_x < DISPLAY_BREITE and 0 <= start_y < DISPLAY_HOEHE:
-            oled.pixel(start_x, start_y, 1)
+            oled.draw_pixel(start_x, start_y, 0)
 
         # Wenn Endpunkt erreicht, abbrechen
         if start_x == ende_x and start_y == ende_y:
@@ -62,7 +63,7 @@ def schreibe_text_zentriert(text):
     text_breite = len(text) * 8
     start_x = (DISPLAY_BREITE - text_breite) // 2
     start_y = (DISPLAY_HOEHE // 2) - 4
-    oled.text(text, start_x, start_y, 1)
+    oled.text(text, start_x, start_y)
 
 
 # ====================================================
@@ -118,11 +119,11 @@ def zeige_game_over():
     """
     Zeigt mehrmals die GAME OVER-Anzeige mit Blitz-Animation.
     """
-    anzahl_bilder = 10
+    anzahl_bilder = 5
 
     for frame_nummer in range(anzahl_bilder):
         # Bildschirm löschen
-        oled.fill(0)
+        oled.clear()
 
         # Text in der Mitte anzeigen
         schreibe_text_zentriert("GAME OVER")
@@ -134,7 +135,7 @@ def zeige_game_over():
         oled.show()
 
         # Kurze Pause, damit man die Bewegung sieht
-        time.sleep(0.2)
+        time.sleep(0.4)
 
 
 # ====================================================
