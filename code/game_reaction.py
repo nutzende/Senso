@@ -66,7 +66,7 @@ def led_rotate(levels):
         delay = 350 - (lvl * 25)
         if delay < 80:
             delay = 80
-        for n in range(1, 5):
+        for n in range(1, 4):
             led(n)
             pressed = read_button_msec(delay)
             if n == 2
