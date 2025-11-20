@@ -23,7 +23,7 @@ def cleardisplay():
     d.oled.clear()
     
 def cleartext():
-    d.graphics.fill_rect(11,14,106,39,0)
+    d.oled.fill_rectangle(11,14,106,39,0)
     d.oled.show()
 
 # Zeitdifferenz in ms
@@ -110,7 +110,7 @@ def mainmenu():
         if eingabe == 3:
             game_flaschendrehen.pre_start_flaschendrehen()
         if eingabe == 1:
-            game_whacamole.whacamole(1)
+            game_whacamole.pre_start_whacamole()
     else:
         menutext("Falsche Eingabe", "center", "center", 1)
         mainmenu()

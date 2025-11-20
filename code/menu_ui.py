@@ -52,18 +52,18 @@ def init_menu():
     #rechte Senkrechtlinie
     display.oled.draw_line(117, 4, 117, 59)
     #obere Horizontallinie
-    display.oled.draw_line(5, 13, 123, 13)
+    display.oled.draw_line(5, 12, 123, 12)
     #untere Horizontallinie
-    display.oled.draw_line(5, 53, 123, 53)
+    display.oled.draw_line(5, 52, 123, 52)
     #schnörkel an den Linien im Menü darstellen
     #Schnörkel oben links
     draw_bitmap(1, 10, bitmaps.hcircle_l_up, width_hcircle, height(bitmaps.hcircle_l_up), 0)
     #Schnörkel oben rechts
-    draw_bitmap(124, 10, bitmaps.hcircle_r_up, width_hcircle, height(bitmaps.hcircle_r_up), 0)
+    draw_bitmap(123, 10, bitmaps.hcircle_r_up, width_hcircle, height(bitmaps.hcircle_r_up), 0)
     #Schnörkel oben links
-    draw_bitmap(1, 53, bitmaps.hcircle_l_down, width_hcircle, height(bitmaps.hcircle_l_down), 0)
+    draw_bitmap(1, 52, bitmaps.hcircle_l_down, width_hcircle, height(bitmaps.hcircle_l_down), 0)
     #Schnörkel oben rechts
-    draw_bitmap(124, 53, bitmaps.hcircle_r_down, width_hcircle, height(bitmaps.hcircle_r_down), 0)
+    draw_bitmap(123, 52, bitmaps.hcircle_r_down, width_hcircle, height(bitmaps.hcircle_r_down), 0)
     #Kreuz oben links
     draw_bitmap(9, 1, bitmaps.cross, width_cross, height(bitmaps.cross), 0)
     #Kreuz oben rechts

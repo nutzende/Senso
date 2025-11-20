@@ -29,56 +29,70 @@ def read_button_msec(msec):
         if pin.b_blue.value(): return 4
     return 0
 
-def pre_start_whacamole():
+def pre_start_reaction():
     menu.menu_ui.init_menu()
-    menu.menutext("Set Gamemode", "title", "title", 0)
+    menu.menutext("LED Rotation", "title", "title", 0)
     menu.menutext("Leicht", "text", 1, 0)
     menu.menutext("Mittel", "text", 2, 0)
     menu.menutext("Schwer", "text", 3, 0)
+
     eingabe = menu.read_button(0)
     menu.cleardisplay()
-    if eingabe == 1:
-        whacamole(3)
-    elif eingabe == 2:
-        whacamole(6)
-    elif eingabe == 3:
-        whacamole(9)
-    else:
-        pre_start_whacamole()
 
-def whacamole(lvl):
+    if eingabe == 1:
+        reaction(4)
+    elif eingabe == 2:
+        reaction(7)
+    elif eingabe == 3:
+        reaction(10)
+    else:
+        pre_start_reaction()
+
+def led_rotate(levels):
+    # Warten bis Spieler bereit
     while read_button() > 0:
-        print("Button pressed")
         time.sleep(0.2)
-    print("Zum Starten beliebigen Knopf drücken")
     menu.menutext("Zum Starten", "center", "top", 0)
     menu.menutext("beliebigen Knopf", "center", "center", 0)
     menu.menutext("drücken", "center", "bottom", 0)
     read_button_msec(0)
     time.sleep(0.2)
-    abbr = False
-    for i in range(lvl):
+    lives = 3
+    for lvl in range(levels):
         menu.cleardisplay()
-        menu.menutext(f"Runde: {i+1}", "center", "top", 0)
-        print("Runde:", i+1)  
-        for j in range(4):
-            mole = random.randint(1,4)
-            led(mole)
-            if read_button_msec(2150-(i*200)) != mole:
-                menu.menutext("Verloren", "center", "center", 0)
-                print("Verloren")
-                leds_off()
-                time.sleep(0.2)
-                abbr = True
-                break
+        menu.menutext(f"Runde {lvl+1}", "center", "top", 0)
+        menu.menutext(f"Leben: {lives}", "center", "center", 0)
+        print("Runde:", lvl+1)
+        delay = 350 - (lvl * 25)
+        if delay < 80:
+            delay = 80
+        for n in range(1, 5):
+            led(n)
+            pressed = read_button_msec(delay)
+            if n == 2
+                if pressed != 2:
+                    lives -= 1
+                    print("Fehler! Falsches Timing.")
             else:
-                leds_off()
-                time.sleep(0.2)
-                print("richtig")
-        if abbr: break
-    if not abbr:
+                if pressed != 0:
+                    lives -= 1
+                    print("Fehler! Knopf zu früh gedrückt.")
+
+            leds_off()
+            if lives <= 0:
+                break
+
+        if lives <= 0:
+            break
+        time.sleep(0.2)
+        
+    if lives <= 0:
+        menu.menutext("VERLOREN!", "center", "center", 0)
+        print("Verloren!")
+    else:
+        menu.menutext("GEWONNEN!", "center", "center", 0)
         print("Gewonnen!")
-        menu.menutext("Gewonnen!", "center", "center", 0)
+
     time.sleep(3)
     menu.cleardisplay()
     menu.menutext("Neuer Versuch?", "center", "top", 0)
@@ -87,13 +101,8 @@ def whacamole(lvl):
     eingabe = menu.read_button(0)
     menu.cleardisplay()
     if eingabe == 1:
-        whacamole(2)
-    if eingabe == 2:
-        menu.menutext("zurueck Menue", "center", "center", 1)
-        menu.cleardisplay()
+        led_rotate(3)
+    elif eingabe == 2:
         menu.mainmenu()
     else:
-        menu.menutext("Falsche Eingabe", "center", "top", 0)
-        menu.menutext("zurueck Menue", "center", "center", 1)
-        menu.cleardisplay()
         menu.mainmenu()
