@@ -1,17 +1,20 @@
 import time, random, pin, menu
 
+# LED Funktionen
 def leds_off():
-    pin.l_green.off()
-    pin.l_red.off()
-    pin.l_yellow.off()
-    pin.l_blue.off()
+    pin.np[0] = (0,0,0)
+    pin.np[1] = (0,0,0)
+    pin.np[2] = (0,0,0)
+    pin.np[3] = (0,0,0)
+    pin.np.write()
 
 def led(num):
     leds_off()
-    if num == 1: pin.l_green.on()
-    elif num == 2: pin.l_red.on()
-    elif num == 3: pin.l_yellow.on()
-    elif num == 4: pin.l_blue.on()
+    if num == 1: pin.np[1] = (0,255,0)
+    elif num == 2: pin.np[0] = (255,0,0)
+    elif num == 3: pin.np[2] = (255,255,0)
+    elif num == 4: pin.np[3] = (0,0,255)
+    pin.np.write()
 
 def read_button():
     if pin.b_green.value(): return 1

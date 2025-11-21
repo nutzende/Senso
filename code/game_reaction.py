@@ -1,17 +1,20 @@
 import time, random, pin, menu
 
+# LED Funktionen
 def leds_off():
-    pin.l_green.off()
-    pin.l_red.off()
-    pin.l_yellow.off()
-    pin.l_blue.off()
+    pin.np[0] = (0,0,0)
+    pin.np[1] = (0,0,0)
+    pin.np[2] = (0,0,0)
+    pin.np[3] = (0,0,0)
+    pin.np.write()
 
 def led(num):
     leds_off()
-    if num == 1: pin.l_green.on()
-    elif num == 2: pin.l_red.on()
-    elif num == 3: pin.l_yellow.on()
-    elif num == 4: pin.l_blue.on()
+    if num == 1: pin.np[1] = (0,255,0)
+    elif num == 2: pin.np[0] = (255,0,0)
+    elif num == 3: pin.np[2] = (255,255,0)
+    elif num == 4: pin.np[3] = (0,0,255)
+    pin.np.write()
 
 def read_button():
     if pin.b_green.value(): return 1
@@ -48,7 +51,7 @@ def pre_start_reaction():
     else:
         pre_start_reaction()
 
-def led_rotate(levels):
+def reaction(levels):
     # Warten bis Spieler bereit
     while read_button() > 0:
         time.sleep(0.2)
@@ -66,10 +69,10 @@ def led_rotate(levels):
         delay = 350 - (lvl * 25)
         if delay < 80:
             delay = 80
-        for n in range(1, 4):
+        for n in range(1, 5):
             led(n)
             pressed = read_button_msec(delay)
-            if n == 2
+            if n == 2:
                 if pressed != 2:
                     lives -= 1
                     print("Fehler! Falsches Timing.")
@@ -101,7 +104,7 @@ def led_rotate(levels):
     eingabe = menu.read_button(0)
     menu.cleardisplay()
     if eingabe == 1:
-        led_rotate(3)
+        reaction(3)
     elif eingabe == 2:
         menu.mainmenu()
     else:

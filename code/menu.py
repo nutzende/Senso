@@ -4,7 +4,7 @@ show_display = True
 logondisplay = False
 dev = True
 texthoehe = 0
-import game_senso, game_flaschendrehen, game_whacamole
+import game_senso, game_flaschendrehen, game_whacamole, game_reaction
 # Error Log
 def log(msg):
     global texthoehe
@@ -111,6 +111,8 @@ def mainmenu():
             game_flaschendrehen.pre_start_flaschendrehen()
         if eingabe == 1:
             game_whacamole.pre_start_whacamole()
+        if eingabe == 2:
+            game_reaction.pre_start_reaction()
     else:
         menutext("Falsche Eingabe", "center", "center", 1)
         mainmenu()

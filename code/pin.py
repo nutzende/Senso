@@ -1,5 +1,12 @@
 from machine import Pin
 
+import machine, neopixel
+
+n = 4
+p = 15
+
+np = neopixel.NeoPixel(machine.Pin(p), n)
+
 # LEDs
 l_green = Pin(21, Pin.OUT)
 l_red = Pin(20, Pin.OUT)
