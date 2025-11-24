@@ -57,9 +57,9 @@ def init_menu():
     display.oled.draw_line(5, 52, 123, 52)
     #schnörkel an den Linien im Menü darstellen
     #Schnörkel oben links
-    draw_bitmap(1, 10, bitmaps.hcircle_l_up, width_hcircle, height(bitmaps.hcircle_l_up), 0)
+    draw_bitmap(1, 9, bitmaps.hcircle_l_up, width_hcircle, height(bitmaps.hcircle_l_up), 0)
     #Schnörkel oben rechts
-    draw_bitmap(123, 10, bitmaps.hcircle_r_up, width_hcircle, height(bitmaps.hcircle_r_up), 0)
+    draw_bitmap(123, 9, bitmaps.hcircle_r_up, width_hcircle, height(bitmaps.hcircle_r_up), 0)
     #Schnörkel oben links
     draw_bitmap(1, 52, bitmaps.hcircle_l_down, width_hcircle, height(bitmaps.hcircle_l_down), 0)
     #Schnörkel oben rechts
@@ -77,6 +77,6 @@ def init_menu():
     draw_bitmap(1, 25, bitmaps.indicator_button_red, width_indicator, height(bitmaps.indicator_button_red), 0)
     draw_bitmap(1, 34, bitmaps.indicator_button_green, width_indicator, height(bitmaps.indicator_button_green), 0)
     draw_bitmap(1, 43, bitmaps.indicator_button_yellow, width_indicator, height(bitmaps.indicator_button_yellow), 0)
-    draw_bitmap(119, 16, bitmaps.arrow, width_arrow, height(bitmaps.arrow), 0)
+    #draw_bitmap(119, 16, bitmaps.arrow, width_arrow, height(bitmaps.arrow), 0)
     # Anzeigen
     display.oled.show()
