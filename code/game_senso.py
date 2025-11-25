@@ -44,18 +44,18 @@ def leds_off():
     pin.np.write()
 
 def all_led():
-    pin.np[0] = (255,0,0)
-    pin.np[1] = (0,255,0)
-    pin.np[2] = (255,255,0)
-    pin.np[3] = (0,0,255)
+    pin.np[0] = (0,0,255)
+    pin.np[1] = (255,255,0)
+    pin.np[2] = (0,255,0)
+    pin.np[3] = (255,0,0)
     pin.np.write()
 
 def led(num):
     leds_off()
-    if num == 1: pin.np[1] = (0,255,0)
-    elif num == 2: pin.np[0] = (255,0,0)
-    elif num == 3: pin.np[2] = (255,255,0)
-    elif num == 4: pin.np[3] = (0,0,255)
+    if num == 3: pin.np[1] = (255,255,0)
+    elif num == 4: pin.np[0] = (0,0,255)
+    elif num == 1: pin.np[2] = (0,255,0)
+    elif num == 2: pin.np[3] = (255,0,0)
     pin.np.write()
 
 # Button lesen

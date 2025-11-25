@@ -1,11 +1,7 @@
 from machine import Pin
-
 import machine, neopixel
 
-n = 4
-p = 15
-
-np = neopixel.NeoPixel(machine.Pin(p), n)
+np = neopixel.NeoPixel(machine.Pin(15), 4)
 
 # LEDs
 l_green = Pin(21, Pin.OUT)
@@ -22,3 +18,8 @@ b_red = Pin(33, Pin.IN, Pin.PULL_DOWN)       #2
 b_yellow = Pin(26, Pin.IN, Pin.PULL_DOWN)    #3
 b_blue = Pin(25, Pin.IN, Pin.PULL_DOWN)      #4
 
+#reset
+#def handle_interrupt(pin):
+#  machine.reset()
+#res = Pin(25, Pin.IN, Pin.PULL_DOWN)
+#res.irq(trigger=Pin.IRQ_RISING, handler=handle_interrupt)
