@@ -17,6 +17,7 @@ now = 0
 texthoehe = 0
 gamemode = 0
 players = 0
+selected_player = 0
 #skilllevel.set_skilllevel(0)
 #skill_level = 0      #Skill level 1-4
 
@@ -170,6 +171,12 @@ def next_round():
         sequence.append(random.randint(1, 4))
     elif gamemode == 1:
         sequence.append(random.choice(list(player_color.values())))
+    elif gamemode == 2:
+        menu.menutext("Player: ", "center", "center", 0)
+        menu.menutext("Press next", "center", "center", 0)
+        menu.menutext("sequence color", "center", "bottom", 0)
+        eingabe = menu.read_button(0)
+        sequence.append(eingabe)
     player_index = 0
     seq_index = 0
     led_on = False
@@ -190,14 +197,27 @@ def pre_start_senso():
         pre_start_game_senso()
     elif eingabe == 2:
         gamemode = 1
-        pre_start_playeradds()
+        pre_start_choosecolor()
     elif eingabe == 3:
         gamemode = 2
+        pre_start_playeradds()
     else:
         pre_start_senso()
     menu.cleardisplay()
-    
+
 def pre_start_playeradds():
+    global players, player_color
+    menu.menu_ui.init_menu()
+    menu.menutext("Set Players", "title", "title", 0)
+    menu.menutext("1 Player", "text", 1, 0)
+    menu.menutext("2 Player", "text", 2, 0)
+    menu.menutext("3 Player", "text", 3, 0)
+    menu.menutext("4 Player", "text", 4, 0)
+    eingabe = menu.read_button(0)
+    players = eingabe
+    mainloop()
+    
+def pre_start_choosecolor():
     global players, player_color
     player_color = {}
     menu.menu_ui.init_menu()
@@ -303,4 +323,3 @@ def mainloop():
         menu.menutext("zurueck Menue", "center", "center", 1)
         menu.cleardisplay()
         menu.mainmenu()
-#mainloop()
