@@ -2,7 +2,7 @@ import time, random, pin, display as d, menu, skilllevel
 # Log Ausgabe / Start Animation / Display
 dev = True
 st_ani = False
-display = True
+display = False
 
 # Variablen
 sequence = []        # Liste mit bisherigen Farben
