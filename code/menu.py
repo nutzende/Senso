@@ -21,9 +21,17 @@ def log(msg):
 
 def cleardisplay():
     d.oled.clear()
-    
+
 def cleartext():
     d.oled.fill_rectangle(11,14,106,39,0)
+    d.oled.show()
+
+def cleararrows():
+    d.oled.fill_rectangle(11,14,106,39,0)
+    d.oled.show()
+
+def clearsymbols():
+    d.oled.fill_rectangle(1,16,8,51,0)
     d.oled.show()
 
 # Zeitdifferenz in ms
