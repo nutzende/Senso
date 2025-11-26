@@ -206,7 +206,7 @@ def pre_start_senso():
     menu.cleardisplay()
 
 def pre_start_playeradds():
-    global players, player_color
+    global players
     menu.menu_ui.init_menu()
     menu.menutext("Set Players", "title", "title", 0)
     menu.menutext("1 Player", "text", 1, 0)

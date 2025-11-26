@@ -42,17 +42,27 @@ def draw_bitmap(x, y, data, width, height, transparent):
 
 def init_progressbar(selectors):
     width_blitz = 11
-    for blitz in range(selectors):
-        x = blitz * 13
-        if x == 0:
-            x = 1
-        print(blitz)
-        print(x)
-        if x <= 116:
-            draw_bitmap(x, 17, bitmaps.blitz, width_blitz, height(bitmaps.blitz), 0)
-        elif x > 116:
-            x = x-117
-            draw_bitmap(x, 33, bitmaps.blitz_unfill, width_blitz, height(bitmaps.blitz), 0)
+    x_min = 13
+    x_max = 106
+
+    bar_width = x_max - x_min
+
+    for i in range(selectors):
+        x = x_min + (i * 13)
+        if x <= x_max:
+            y = 16
+            bitmap = bitmaps.blitz
+        elif x <= x_max + bar_width + 11:
+            x = x - bar_width - 11
+            y = 32
+            bitmap = bitmaps.blitz_unfill
+        else:
+            x = x - 2 * bar_width - 22
+            y = 48
+            bitmap = bitmaps.blitz_unfill
+
+        draw_bitmap(x, y, bitmap, width_blitz, height(bitmap), 0)
+
     display.oled.show()
 def init_menu():
     #Hauptmenü aufbauen

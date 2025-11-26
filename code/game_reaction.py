@@ -66,7 +66,7 @@ def reaction(levels):
         menu.menutext(f"Runde {lvl+1}", "center", "top", 0)
         menu.menutext(f"Leben: {lives}", "center", "center", 0)
         print("Runde:", lvl+1)
-        delay = 1000 - (lvl * 25)
+        delay = 500 - (lvl * 50)
         if delay < 80:
             delay = 80
         for n in range(1,5):
@@ -93,7 +93,6 @@ def reaction(levels):
                 break
         if lives <= 0:
             break
-        time.sleep(0.2)
         
     if lives <= 0:
         menu.menutext("VERLOREN!", "center", "center", 0)
