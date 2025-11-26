@@ -134,7 +134,6 @@ def spiel():
                     
                 #Skill Level definition
                 end_bedingungen = {
-                    0: 2,
                     1: 8,
                     2: 14,
                     3: 20,
