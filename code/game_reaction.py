@@ -66,15 +66,21 @@ def reaction(levels):
         menu.menutext(f"Runde {lvl+1}", "center", "top", 0)
         menu.menutext(f"Leben: {lives}", "center", "center", 0)
         print("Runde:", lvl+1)
-        delay = 350 - (lvl * 25)
+        delay = 1000 - (lvl * 25)
         if delay < 80:
             delay = 80
-        for n in range(1, 5):
-            led(n)
+        for n in range(1,5):
+            if n == 3:
+                led(4)
+            elif n == 4:
+                led(3)
+            else:
+                led(n)
             pressed = read_button_msec(delay)
+            while read_button() > 0:
+                    time.sleep(0.1)
             if n == 2:
                 if pressed != 2:
-                    lives -= 1
                     print("Fehler! Falsches Timing.")
             else:
                 if pressed != 0:
@@ -82,9 +88,9 @@ def reaction(levels):
                     print("Fehler! Knopf zu früh gedrückt.")
 
             leds_off()
+            print(f"Leben: {lives}")
             if lives <= 0:
                 break
-
         if lives <= 0:
             break
         time.sleep(0.2)
