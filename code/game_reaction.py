@@ -10,26 +10,27 @@ def leds_off():
 
 def led(num):
     leds_off()
-    if num == 3: pin.np[1] = (255,255,0)
-    elif num == 4: pin.np[0] = (0,0,255)
-    elif num == 1: pin.np[2] = (0,255,0)
+    if num == 1: pin.np[0] = (0,0,255)
     elif num == 2: pin.np[3] = (255,0,0)
+    elif num == 3: pin.np[2] = (0,255,0)
+    elif num == 4: pin.np[1] = (255,255,0)
     pin.np.write()
 
+# Button lesen
 def read_button():
-    if pin.b_green.value(): return 1
+    if pin.b_blue.value(): return 1
     if pin.b_red.value(): return 2
-    if pin.b_yellow.value(): return 3
-    if pin.b_blue.value(): return 4
+    if pin.b_green.value(): return 3
+    if pin.b_yellow.value(): return 4
     return 0
 
 def read_button_msec(msec):
     start = time.ticks_ms()
     while time.ticks_diff(time.ticks_add(start, msec ), time.ticks_ms()) > 0 or msec == 0:
-        if pin.b_green.value(): return 1
+        if pin.b_blue.value(): return 1
         if pin.b_red.value(): return 2
-        if pin.b_yellow.value(): return 3
-        if pin.b_blue.value(): return 4
+        if pin.b_green.value(): return 3
+        if pin.b_yellow.value(): return 4
     return 0
 
 def pre_start_reaction():
@@ -70,12 +71,7 @@ def reaction(levels):
         if delay < 80:
             delay = 80
         for n in range(1,5):
-            if n == 3:
-                led(4)
-            elif n == 4:
-                led(3)
-            else:
-                led(n)
+            led(n)
             pressed = read_button_msec(delay)
             while read_button() > 0:
                     time.sleep(0.1)
@@ -103,13 +99,14 @@ def reaction(levels):
 
     time.sleep(3)
     menu.cleardisplay()
-    menu.menutext("Neuer Versuch?", "center", "top", 0)
-    menu.menutext("Gruen: Ja", "center", "center", 0)
-    menu.menutext("Rot: Nein", "center", "bottom", 0)
+    menu.menu_ui.init_menu()
+    menu.menutext("Neuer Versuch?", "title", "title", 0)
+    menu.menutext("Ja", "text", 1, 0)
+    menu.menutext("Nein", "text", 2, 0)
     eingabe = menu.read_button(0)
     menu.cleardisplay()
     if eingabe == 1:
-        reaction(3)
+        pre_start_reaction()
     elif eingabe == 2:
         menu.mainmenu()
     else:
