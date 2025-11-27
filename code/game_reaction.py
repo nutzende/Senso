@@ -10,10 +10,10 @@ def leds_off():
 
 def led(num):
     leds_off()
-    if num == 1: pin.np[0] = (0,0,255)
-    elif num == 2: pin.np[3] = (255,0,0)
-    elif num == 3: pin.np[2] = (0,255,0)
-    elif num == 4: pin.np[1] = (255,255,0)
+    if num == 1: pin.np[2] = (0,0,255)
+    elif num == 2: pin.np[1] = (255,0,0)
+    elif num == 3: pin.np[0] = (0,255,0)
+    elif num == 4: pin.np[3] = (255,255,0)
     pin.np.write()
 
 # Button lesen
@@ -39,6 +39,7 @@ def pre_start_reaction():
     menu.menutext("Leicht", "text", 1, 0)
     menu.menutext("Mittel", "text", 2, 0)
     menu.menutext("Schwer", "text", 3, 0)
+    menu.menutext("Extrem", "text", 4, 0)
 
     eingabe = menu.read_button(0)
     menu.cleardisplay()
@@ -49,8 +50,8 @@ def pre_start_reaction():
         reaction(7)
     elif eingabe == 3:
         reaction(10)
-    else:
-        pre_start_reaction()
+    elif eingabe == 4:
+        reaction(13)
 
 def reaction(levels):
     # Warten bis Spieler bereit
@@ -91,21 +92,21 @@ def reaction(levels):
             break
         
     if lives <= 0:
-        menu.menutext("VERLOREN!", "center", "center", 0)
+        menu.menutext("VERLOREN!", "center", "bottom", 0)
         print("Verloren!")
     else:
-        menu.menutext("GEWONNEN!", "center", "center", 0)
+        menu.menutext("GEWONNEN!", "center", "bottom", 0)
         print("Gewonnen!")
 
     time.sleep(3)
     menu.cleardisplay()
     menu.menu_ui.init_menu()
     menu.menutext("Neuer Versuch?", "title", "title", 0)
-    menu.menutext("Ja", "text", 1, 0)
+    menu.menutext("Ja", "text", 3, 0)
     menu.menutext("Nein", "text", 2, 0)
     eingabe = menu.read_button(0)
     menu.cleardisplay()
-    if eingabe == 1:
+    if eingabe == 3:
         pre_start_reaction()
     elif eingabe == 2:
         menu.mainmenu()

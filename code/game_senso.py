@@ -18,6 +18,7 @@ texthoehe = 0
 gamemode = 0
 players = 0
 selected_player = 0
+numspieler = 0
 #skilllevel.set_skilllevel(0)
 #skill_level = 0      #Skill level 1-4
 
@@ -47,18 +48,18 @@ def leds_off():
     pin.np.write()
 
 def all_led():
-    pin.np[0] = (0,0,255)
-    pin.np[1] = (255,255,0)
-    pin.np[2] = (0,255,0)
-    pin.np[3] = (255,0,0)
+    pin.np[2] = (0,0,255)
+    pin.np[3] = (255,255,0)
+    pin.np[0] = (0,255,0)
+    pin.np[1] = (255,0,0)
     pin.np.write()
 
 def led(num):
     leds_off()
-    if num == 1: pin.np[0] = (0,0,255)
-    elif num == 2: pin.np[3] = (255,0,0)
-    elif num == 3: pin.np[2] = (0,255,0)
-    elif num == 4: pin.np[1] = (255,255,0)
+    if num == 1: pin.np[2] = (0,0,255)
+    elif num == 2: pin.np[1] = (255,0,0)
+    elif num == 3: pin.np[0] = (0,255,0)
+    elif num == 4: pin.np[3] = (255,255,0)
     pin.np.write()
 
 # Button lesen
@@ -152,6 +153,7 @@ def spiel():
                 log("Falsch! Game Over.")
                 run_game = 0
                 sequence.clear()
+                numspieler = 0
                 leds_off()
                 senso_run = False
                 time.sleep(1)
@@ -166,17 +168,24 @@ def spiel():
 
 
 def next_round():
-    global player_index, seq_index, runde, led_on, led_timer
-    if gamemode == 0:
+    global player_index, seq_index, runde, led_on, led_timer, numspieler
+    if gamemode in (0,3):
         sequence.append(random.randint(1, 4))
     elif gamemode == 1:
         sequence.append(random.choice(list(player_color.values())))
     elif gamemode == 2:
-        menu.menutext("Player: ", "center", "center", 0)
-        menu.menutext("Press next", "center", "center", 0)
-        menu.menutext("sequence color", "center", "bottom", 0)
-        eingabe = menu.read_button(0)
-        sequence.append(eingabe)
+        if len(sequence) == 0:
+            sequence.append(random.randint(1, 4))
+        else:
+            numspieler = numspieler + 1
+            if numspieler > players:
+                numspieler = 1
+            menu.menutext(f"Player: {numspieler}", "center", "top", 0)
+            menu.menutext("Press next", "center", "center", 0)
+            menu.menutext("sequence color", "center", "bottom", 0)
+            eingabe = menu.read_button(0)
+            sequence.append(eingabe)
+            menu.cleardisplay()
     player_index = 0
     seq_index = 0
     led_on = False
@@ -191,19 +200,27 @@ def pre_start_senso():
     menu.menutext("Normal Senso", "text", 1, 0)
     menu.menutext("Player Adds", "text", 2, 0)
     menu.menutext("Choose Color", "text", 3, 0)
+    menu.menutext("Endless", "text", 4, 0)
     eingabe = menu.read_button(0)
+    menu.cleardisplay()
+    while read_button() > 0:
+            log("Button pressed")
+            time.sleep(0.25)
     if eingabe == 1:
         gamemode = 0
         pre_start_game_senso()
     elif eingabe == 2:
-        gamemode = 1
+        gamemode = 2
         pre_start_playeradds()
     elif eingabe == 3:
-        gamemode = 2
+        gamemode = 1
         pre_start_choosecolor()
-    else:
-        pre_start_senso()
-    menu.cleardisplay()
+    elif eingabe == 4:
+        gamemode = 3
+        menu.menutext("Taste druecken", "center", "top", 0)
+        menu.menutext("fuer", "center", "center", 0)
+        menu.menutext("Erste Sequenz", "center", "bottom", 0)
+        mainloop()
 
 def pre_start_playeradds():
     global players
@@ -215,6 +232,7 @@ def pre_start_playeradds():
     menu.menutext("4 Player", "text", 4, 0)
     eingabe = menu.read_button(0)
     players = eingabe
+    menu.cleardisplay()
     mainloop()
     
 def pre_start_choosecolor():
@@ -264,7 +282,7 @@ def pre_start_game_senso():
     menu.menutext("Leicht", "text", 1, 0)
     menu.menutext("Mittel", "text", 2, 0)
     menu.menutext("Schwer", "text", 3, 0)
-    menu.menutext("Endlos", "text", 4, 0)
+    menu.menutext("Extrem", "text", 4, 0)
     eingabe = menu.read_button(0)
     if eingabe == 1:
         skilllevel.set_skilllevel(1)
@@ -275,6 +293,9 @@ def pre_start_game_senso():
     elif eingabe == 4:
         skilllevel.set_skilllevel(4)
     menu.cleardisplay()
+    while read_button() > 0:
+            log("Button pressed")
+            time.sleep(0.25)
     menu.menutext("Taste druecken", "center", "top", 0)
     menu.menutext("fuer", "center", "center", 0)
     menu.menutext("Erste Sequenz", "center", "bottom", 0)
@@ -304,17 +325,18 @@ def mainloop():
             time.sleep(1)
             break
     menu.cleardisplay()
-    menu.menutext("Neuer Versuch?", "center", "top", 0)
-    menu.menutext("Gruen: Ja", "center", "center", 0)
-    menu.menutext("Rot: Nein", "center", "bottom", 0)
+    menu.menu_ui.init_menu()
+    menu.menutext("Neuer Versuch", "title", "title", 0)
+    menu.menutext("Nein", "text", 2, 0)
+    menu.menutext("Ja", "text", 3, 0)
     eingabe = menu.read_button(0)
     menu.cleardisplay()
-    if eingabe == 1:
+    if eingabe == 3:
         menu.menutext("Taste druecken", "center", "top", 0)
         menu.menutext("fuer", "center", "center", 0)
         menu.menutext("Erste Sequenz", "center", "bottom", 0)
         mainloop()
-    if eingabe == 2:
+    if eingabe == 4:
         menu.menutext("zurueck Menue", "center", "center", 1)
         menu.cleardisplay()
         menu.mainmenu()

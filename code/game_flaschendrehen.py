@@ -12,18 +12,27 @@ def leds_off():
 
 def led(num):
     leds_off()
-    if num == 1: pin.np[0] = (0,0,255)
-    elif num == 2: pin.np[3] = (255,0,0)
-    elif num == 3: pin.np[2] = (0,255,0)
-    elif num == 4: pin.np[1] = (255,255,0)
+    if num == 1: pin.np[2] = (0,0,255)
+    elif num == 2: pin.np[1] = (255,0,0)
+    elif num == 3: pin.np[0] = (0,255,0)
+    elif num == 4: pin.np[3] = (255,255,0)
     pin.np.write()
 
 def spielerLeds(a):
-    x = [1,2,4,3]
+    x = [1,2,3,4]
 
     for i in range(4-a):
         x.pop()
     return x
+
+# Button lesen
+def read_button():
+    if pin.b_blue.value(): return 1
+    if pin.b_red.value(): return 2
+    if pin.b_green.value(): return 3
+    if pin.b_yellow.value(): return 4
+    return 0
+
 def pre_start_flaschendrehen():
     menu.menu_ui.init_menu()
     menu.menutext("Set players", "title", "title", 0)
@@ -54,6 +63,9 @@ def spiel2(spieler):
     spieler=spieler
     spielerLed = spielerLeds(spieler)
     menu.cleardisplay()
+    while read_button() > 0:
+            menu.log("Button pressed")
+            time.sleep(0.25)
     menu.menutext("Zum Starten", "center", "top", 0)
     menu.menutext("eine beliebige", "center", "center", 0)
     menu.menutext("Taste drücken", "center", "bottom", 0)
@@ -72,14 +84,14 @@ def spiel2(spieler):
                     menu.cleardisplay()
                     leds_off()
                     menu.menu_ui.init_menu()
-                    menu.menutext("Neuer Versuch?", "title", "title", 0)
-                    menu.menutext("Ja", "text", 1, 0)
+                    menu.menutext("Neuer Versuch", "title", "title", 0)
                     menu.menutext("Nein", "text", 2, 0)
+                    menu.menutext("Ja", "text", 3, 0)
             button = 0
-            while button != 4 or button != 2:
+            while button != 3 or button != 2:
                 button = menu.read_button(0)
                 print(button)
-                if button==4:
+                if button==3:
                     spiel2(spieler)
                 elif button==2:
                     break

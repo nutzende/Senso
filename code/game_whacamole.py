@@ -10,10 +10,10 @@ def leds_off():
 
 def led(num):
     leds_off()
-    if num == 1: pin.np[0] = (0,0,255)
-    elif num == 2: pin.np[3] = (255,0,0)
-    elif num == 3: pin.np[2] = (0,255,0)
-    elif num == 4: pin.np[1] = (255,255,0)
+    if num == 1: pin.np[2] = (0,0,255)
+    elif num == 2: pin.np[1] = (255,0,0)
+    elif num == 3: pin.np[0] = (0,255,0)
+    elif num == 4: pin.np[3] = (255,255,0)
     pin.np.write()
 
 # Button lesen
@@ -85,12 +85,13 @@ def whacamole(lvl):
         menu.menutext("Gewonnen!", "center", "center", 0)
     time.sleep(3)
     menu.cleardisplay()
-    menu.menutext("Neuer Versuch?", "center", "top", 0)
-    menu.menutext("Gruen: Ja", "center", "center", 0)
-    menu.menutext("Rot: Nein", "center", "bottom", 0)
+    menu.menu_ui.init_menu()
+    menu.menutext("Neuer Versuch", "title", "title", 0)
+    menu.menutext("Nein", "text", 2, 0)
+    menu.menutext("Ja", "text", 3, 0)
     eingabe = menu.read_button(0)
     menu.cleardisplay()
-    if eingabe == 1:
+    if eingabe == 3:
         whacamole(2)
     if eingabe == 2:
         menu.menutext("zurueck Menue", "center", "center", 1)

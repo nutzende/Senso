@@ -1,7 +1,7 @@
 import machine, neopixel
 
 n = 4
-p = 15
+p = 22
 
 np = neopixel.NeoPixel(machine.Pin(p), n)
 
