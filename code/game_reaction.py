@@ -10,27 +10,27 @@ def leds_off():
 
 def led(num):
     leds_off()
-    if num == 1: pin.np[0] = (0,0,255)
-    elif num == 2: pin.np[3] = (255,0,0)
-    elif num == 3: pin.np[2] = (0,255,0)
-    elif num == 4: pin.np[1] = (255,255,0)
+    if num == 1: pin.np[2] = (0,0,255)
+    elif num == 2: pin.np[3] = (255,255,0)
+    elif num == 3: pin.np[0] = (0,255,0)
+    elif num == 4: pin.np[1] = (255,0,0)
     pin.np.write()
 
 # Button lesen
 def read_button():
     if pin.b_blue.value(): return 1
-    if pin.b_red.value(): return 2
+    if pin.b_yellow.value(): return 2
     if pin.b_green.value(): return 3
-    if pin.b_yellow.value(): return 4
+    if pin.b_red.value(): return 4
     return 0
 
 def read_button_msec(msec):
     start = time.ticks_ms()
     while time.ticks_diff(time.ticks_add(start, msec ), time.ticks_ms()) > 0 or msec == 0:
         if pin.b_blue.value(): return 1
-        if pin.b_red.value(): return 2
+        if pin.b_yellow.value(): return 2
         if pin.b_green.value(): return 3
-        if pin.b_yellow.value(): return 4
+        if pin.b_red.value(): return 4
     return 0
 
 def pre_start_reaction():

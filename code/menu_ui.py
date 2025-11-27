@@ -4,9 +4,6 @@ def height(bitmap):
     height = len(bitmap)
     return height
 
-#Für Testbitmap
-width4 = len(bitmap_transparent[0])
-
 def draw_bitmap(x, y, data, width, height, transparent):
     
     if transparent == 1:
