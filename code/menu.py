@@ -105,7 +105,7 @@ def mainmenu():
     menutext("Bottle spin", "text", 2, 0)
     menutext("Whac-A-Mole", "text", 3, 0)
     menutext("Reaction", "text", 4, 0)
-    eingabe = read_button()
+    eingabe = read_button(0)
     cleardisplay()
     if eingabe > 0:
         for p in ["", ".", "..", "..."]:
