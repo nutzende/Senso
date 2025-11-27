@@ -46,9 +46,9 @@ def read_button(sec):
     start = time.ticks_ms()
     while time.ticks_diff(time.ticks_add(start, sec * 1000), time.ticks_ms()) > 0 or sec == 0:
         if pin.b_blue.value(): return 1
-        if pin.b_yellow.value(): return 2
+        if pin.b_red.value(): return 2
         if pin.b_green.value(): return 3
-        if pin.b_red.value(): return 4
+        if pin.b_yellow.value(): return 4
     menutext("Zeit abgelaufen", "center", "center", 2)
 
 # Menütext anzeigen

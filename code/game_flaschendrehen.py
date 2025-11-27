@@ -13,9 +13,9 @@ def leds_off():
 def led(num):
     leds_off()
     if num == 1: pin.np[2] = (0,0,255)
-    elif num == 2: pin.np[3] = (255,255,0)
+    elif num == 2: pin.np[1] = (255,0,0)
     elif num == 3: pin.np[0] = (0,255,0)
-    elif num == 4: pin.np[1] = (255,0,0)
+    elif num == 4: pin.np[3] = (255,255,0)
     pin.np.write()
 
 def spielerLeds(a):
