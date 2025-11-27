@@ -10,26 +10,27 @@ def leds_off():
 
 def led(num):
     leds_off()
-    if num == 1: pin.np[1] = (0,255,0)
-    elif num == 2: pin.np[0] = (255,0,0)
-    elif num == 3: pin.np[2] = (255,255,0)
-    elif num == 4: pin.np[3] = (0,0,255)
+    if num == 1: pin.np[0] = (0,0,255)
+    elif num == 2: pin.np[3] = (255,0,0)
+    elif num == 3: pin.np[2] = (0,255,0)
+    elif num == 4: pin.np[1] = (255,255,0)
     pin.np.write()
 
+# Button lesen
 def read_button():
-    if pin.b_green.value(): return 1
+    if pin.b_blue.value(): return 1
     if pin.b_red.value(): return 2
-    if pin.b_yellow.value(): return 3
-    if pin.b_blue.value(): return 4
+    if pin.b_green.value(): return 3
+    if pin.b_yellow.value(): return 4
     return 0
 
 def read_button_msec(msec):
     start = time.ticks_ms()
     while time.ticks_diff(time.ticks_add(start, msec ), time.ticks_ms()) > 0 or msec == 0:
-        if pin.b_green.value(): return 1
+        if pin.b_blue.value(): return 1
         if pin.b_red.value(): return 2
-        if pin.b_yellow.value(): return 3
-        if pin.b_blue.value(): return 4
+        if pin.b_green.value(): return 3
+        if pin.b_yellow.value(): return 4
     return 0
 
 def pre_start_reaction():
@@ -66,15 +67,16 @@ def reaction(levels):
         menu.menutext(f"Runde {lvl+1}", "center", "top", 0)
         menu.menutext(f"Leben: {lives}", "center", "center", 0)
         print("Runde:", lvl+1)
-        delay = 350 - (lvl * 25)
+        delay = 500 - (lvl * 50)
         if delay < 80:
             delay = 80
-        for n in range(1, 5):
+        for n in range(1,5):
             led(n)
             pressed = read_button_msec(delay)
+            while read_button() > 0:
+                    time.sleep(0.1)
             if n == 2:
                 if pressed != 2:
-                    lives -= 1
                     print("Fehler! Falsches Timing.")
             else:
                 if pressed != 0:
@@ -82,12 +84,11 @@ def reaction(levels):
                     print("Fehler! Knopf zu früh gedrückt.")
 
             leds_off()
+            print(f"Leben: {lives}")
             if lives <= 0:
                 break
-
         if lives <= 0:
             break
-        time.sleep(0.2)
         
     if lives <= 0:
         menu.menutext("VERLOREN!", "center", "center", 0)
@@ -98,13 +99,14 @@ def reaction(levels):
 
     time.sleep(3)
     menu.cleardisplay()
-    menu.menutext("Neuer Versuch?", "center", "top", 0)
-    menu.menutext("Gruen: Ja", "center", "center", 0)
-    menu.menutext("Rot: Nein", "center", "bottom", 0)
+    menu.menu_ui.init_menu()
+    menu.menutext("Neuer Versuch?", "title", "title", 0)
+    menu.menutext("Ja", "text", 1, 0)
+    menu.menutext("Nein", "text", 2, 0)
     eingabe = menu.read_button(0)
     menu.cleardisplay()
     if eingabe == 1:
-        reaction(3)
+        pre_start_reaction()
     elif eingabe == 2:
         menu.mainmenu()
     else:

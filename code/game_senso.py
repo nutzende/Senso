@@ -2,7 +2,7 @@ import time, random, pin, display as d, menu, skilllevel
 # Log Ausgabe / Start Animation / Display
 dev = True
 st_ani = False
-display = True
+display = False
 
 # Variablen
 sequence = []        # Liste mit bisherigen Farben
@@ -15,6 +15,9 @@ run_game = 0         #direkter Start nach Menü
 last_press_time = 0
 now = 0
 texthoehe = 0
+gamemode = 0
+players = 0
+selected_player = 0
 #skilllevel.set_skilllevel(0)
 #skill_level = 0      #Skill level 1-4
 
@@ -44,26 +47,26 @@ def leds_off():
     pin.np.write()
 
 def all_led():
-    pin.np[0] = (255,0,0)
-    pin.np[1] = (0,255,0)
-    pin.np[2] = (255,255,0)
-    pin.np[3] = (0,0,255)
+    pin.np[0] = (0,0,255)
+    pin.np[1] = (255,255,0)
+    pin.np[2] = (0,255,0)
+    pin.np[3] = (255,0,0)
     pin.np.write()
 
 def led(num):
     leds_off()
-    if num == 1: pin.np[1] = (0,255,0)
-    elif num == 2: pin.np[0] = (255,0,0)
-    elif num == 3: pin.np[2] = (255,255,0)
-    elif num == 4: pin.np[3] = (0,0,255)
+    if num == 1: pin.np[0] = (0,0,255)
+    elif num == 2: pin.np[3] = (255,0,0)
+    elif num == 3: pin.np[2] = (0,255,0)
+    elif num == 4: pin.np[1] = (255,255,0)
     pin.np.write()
 
 # Button lesen
 def read_button():
-    if pin.b_green.value(): return 1
+    if pin.b_blue.value(): return 1
     if pin.b_red.value(): return 2
-    if pin.b_yellow.value(): return 3
-    if pin.b_blue.value(): return 4
+    if pin.b_green.value(): return 3
+    if pin.b_yellow.value(): return 4
     return 0
 
 def start_animation():
@@ -134,16 +137,16 @@ def spiel():
                     
                 #Skill Level definition
                 end_bedingungen = {
-                    0: 2,
                     1: 8,
                     2: 14,
                     3: 20,
                     4: 31
                 }
-                if skilllevel.skill_level in end_bedingungen and player_index == end_bedingungen[skilllevel.skill_level]:
-                    log("Glückwunsch: Spiel beendet")
-                    senso_run = False
-                    sequence.clear()
+                if gamemode == 0:
+                    if skilllevel.skill_level in end_bedingungen and player_index == end_bedingungen[skilllevel.skill_level]:
+                        log("Glückwunsch: Spiel beendet")
+                        senso_run = False
+                        sequence.clear()
             else:  # Game Over, Variablen reset und LEDs blinken
                 all_led() 
                 log("Falsch! Game Over.")
@@ -164,7 +167,16 @@ def spiel():
 
 def next_round():
     global player_index, seq_index, runde, led_on, led_timer
-    sequence.append(random.randint(1, 4))
+    if gamemode == 0:
+        sequence.append(random.randint(1, 4))
+    elif gamemode == 1:
+        sequence.append(random.choice(list(player_color.values())))
+    elif gamemode == 2:
+        menu.menutext("Player: ", "center", "center", 0)
+        menu.menutext("Press next", "center", "center", 0)
+        menu.menutext("sequence color", "center", "bottom", 0)
+        eingabe = menu.read_button(0)
+        sequence.append(eingabe)
     player_index = 0
     seq_index = 0
     led_on = False
@@ -173,6 +185,80 @@ def next_round():
     log(f"Neue Runde! Sequenz: {sequence}")
 
 def pre_start_senso():
+    global gamemode
+    menu.menu_ui.init_menu()
+    menu.menutext("Set Gamemode", "title", "title", 0)
+    menu.menutext("Normal Senso", "text", 1, 0)
+    menu.menutext("Player Adds", "text", 2, 0)
+    menu.menutext("Choose Color", "text", 3, 0)
+    eingabe = menu.read_button(0)
+    if eingabe == 1:
+        gamemode = 0
+        pre_start_game_senso()
+    elif eingabe == 2:
+        gamemode = 1
+        pre_start_playeradds()
+    elif eingabe == 3:
+        gamemode = 2
+        pre_start_choosecolor()
+    else:
+        pre_start_senso()
+    menu.cleardisplay()
+
+def pre_start_playeradds():
+    global players
+    menu.menu_ui.init_menu()
+    menu.menutext("Set Players", "title", "title", 0)
+    menu.menutext("1 Player", "text", 1, 0)
+    menu.menutext("2 Player", "text", 2, 0)
+    menu.menutext("3 Player", "text", 3, 0)
+    menu.menutext("4 Player", "text", 4, 0)
+    eingabe = menu.read_button(0)
+    players = eingabe
+    mainloop()
+    
+def pre_start_choosecolor():
+    global players, player_color
+    player_color = {}
+    menu.menu_ui.init_menu()
+    menu.menutext("Set Players", "title", "title", 0)
+    menu.menutext("1 Player", "text", 1, 0)
+    menu.menutext("2 Player", "text", 2, 0)
+    menu.menutext("3 Player", "text", 3, 0)
+    menu.menutext("4 Player", "text", 4, 0)
+    eingabe = menu.read_button(0)
+    players = eingabe
+    menu.cleardisplay()
+    menu.menu_ui.init_menu()
+    while read_button() > 0:
+            log("Button pressed")
+            time.sleep(0.25)
+    menu.menutext("Choose Color", "title", "title", 0)
+    menu.menutext("1 Player", "text", 1, 0)
+    if players > 1:
+        menu.menutext("2 Player", "text", 2, 0)
+    if players > 2:
+        menu.menutext("3 Player", "text", 3, 0)
+    if players > 3:
+        menu.menutext("4 Player", "text", 4, 0)
+    for eingaben in range(players):
+        run = True
+        while run:
+            while read_button() > 0:
+                log("Button pressed")
+                time.sleep(0.25)
+            eingabe = menu.read_button(0)
+            if eingabe in player_color.values():
+                run = True
+            else:
+                player_color[eingaben + 1] = eingabe
+                run = False
+            
+    menu.cleardisplay()
+    print(player_color)
+    mainloop()
+    
+def pre_start_game_senso():
     menu.menu_ui.init_menu()
     menu.menutext("Set Gamemode", "title", "title", 0)
     menu.menutext("Leicht", "text", 1, 0)
@@ -188,13 +274,12 @@ def pre_start_senso():
         skilllevel.set_skilllevel(3)
     elif eingabe == 4:
         skilllevel.set_skilllevel(4)
-    else:
-        pre_start_senso()
     menu.cleardisplay()
     menu.menutext("Taste druecken", "center", "top", 0)
     menu.menutext("fuer", "center", "center", 0)
     menu.menutext("Erste Sequenz", "center", "bottom", 0)
     mainloop()
+    
 def mainloop():
     global now, run_game, st_ani, senso_run
     senso_run = True
@@ -238,4 +323,3 @@ def mainloop():
         menu.menutext("zurueck Menue", "center", "center", 1)
         menu.cleardisplay()
         menu.mainmenu()
-#mainloop()
