@@ -1,5 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "senso")(type "KiCad")(uri "${KIPRJMOD}/senso.kicad_sym")(options "")(descr ""))
-  (lib (name "senso_lib")(type "KiCad")(uri "${KIPRJMOD}/senso_lib.kicad_sym")(options "")(descr ""))
-)
