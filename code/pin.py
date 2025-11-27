@@ -10,7 +10,10 @@ b_yellow = Pin(33, Pin.IN, Pin.PULL_DOWN)    #3
 b_blue = Pin(25, Pin.IN, Pin.PULL_DOWN)      #4
 
 #reset
-#def handle_interrupt(pin):
-#  machine.reset()
-#res = Pin(25, Pin.IN, Pin.PULL_DOWN)
-#res.irq(trigger=Pin.IRQ_RISING, handler=handle_interrupt)
+def handle_interrupt(pin):
+  machine.reset()
+res = Pin(20, Pin.IN, Pin.PULL_DOWN)
+res.irq(trigger=Pin.IRQ_RISING, handler=handle_interrupt)
+
+res2 = Pin(21, Pin.IN, Pin.PULL_DOWN)
+res2.irq(trigger=Pin.IRQ_RISING, handler=handle_interrupt)
