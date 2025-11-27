@@ -1,25 +1,8 @@
 import display, bitmaps, menu
 
-#Test Transparente Bitmap mit [0,1,2]
-bitmap_transparent = [
-    [1,1,1,1,1,1,1,1,1,1],
-    [1,0,0,0,0,0,0,0,0,1],
-    [1,0,2,2,2,2,2,2,0,1],
-    [1,0,2,2,2,2,2,2,0,1],
-    [1,0,2,2,2,2,2,2,0,1],
-    [1,0,2,2,2,2,2,2,0,1],
-    [1,0,2,2,2,2,2,2,0,1],
-    [1,0,2,2,2,2,2,2,0,1],
-    [1,0,0,0,0,0,0,0,0,1],
-    [1,1,1,1,1,1,1,1,1,1]
-]
-
 def height(bitmap):
     height = len(bitmap)
     return height
-
-#Für Testbitmap
-width4 = len(bitmap_transparent[0])
 
 def draw_bitmap(x, y, data, width, height, transparent):
     
@@ -39,7 +22,31 @@ def draw_bitmap(x, y, data, width, height, transparent):
                     display.oled.draw_pixel(x + col, y + row, 0)
                 else:
                     display.oled.draw_pixel(x + col, y + row, 1)
-                    
+
+def init_progressbar(selectors):
+    width_blitz = 11
+    x_min = 13
+    x_max = 106
+
+    bar_width = x_max - x_min
+
+    for i in range(selectors):
+        x = x_min + (i * 13)
+        if x <= x_max:
+            y = 16
+            bitmap = bitmaps.blitz
+        elif x <= x_max + bar_width + 11:
+            x = x - bar_width - 11
+            y = 32
+            bitmap = bitmaps.blitz_unfill
+        else:
+            x = x - 2 * bar_width - 22
+            y = 48
+            bitmap = bitmaps.blitz_unfill
+
+        draw_bitmap(x, y, bitmap, width_blitz, height(bitmap), 0)
+
+    display.oled.show()
 def init_menu():
     #Hauptmenü aufbauen
     width_hcircle = 4

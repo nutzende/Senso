@@ -3,434 +3,14 @@
 	(generator "eeschema")
 	(generator_version "9.0")
 	(uuid "0f469680-05f4-46eb-a3fb-391e58944d2b")
-	(paper "A4")
+	(paper "A3")
 	(title_block
-		(title "Senso Schaltplan")
-		(date "26.10.2025")
-		(rev "1")
+		(title "SChaltplan des Sensos der Gruppe A")
+		(date "2025-11-24")
+		(rev "4")
 		(company "FH-Wedel")
 	)
 	(lib_symbols
-		(symbol "Amplifier_Operational:LMH6611"
-			(pin_names
-				(offset 0.127)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at 2.54 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "LMH6611"
-				(at 2.54 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
-				(at 2.54 -6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lmh6612.pdf"
-				(at 3.81 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Single Supply, 345 MHz, Rail-to-Rail Output, Amplifier, TSOT-23-6"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "opamp operational amplifier single"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TSOT*23*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "LMH6611_0_1"
-				(polyline
-					(pts
-						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "LMH6611_1_1"
-				(pin input line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 2.54)
-					(name "-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -2.54 7.62 270)
-					(length 3.81)
-					(name "V+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -2.54 -7.62 90)
-					(length 3.81)
-					(name "V-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 0 -7.62 90)
-					(length 5.08)
-					(name "~{DISABLE}"
-						(effects
-							(font
-								(size 0.762 0.762)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:Battery"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "BT"
-				(at 2.54 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "Battery"
-				(at 2.54 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 1.524 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 1.524 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Multiple-cell battery"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "batt voltage-source cell"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Battery_0_1"
-				(rectangle
-					(start -2.286 1.778)
-					(end 2.286 1.524)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -2.286 -1.27)
-					(end 2.286 -1.524)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -1.524 1.016)
-					(end 1.524 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -1.524 -2.032)
-					(end 1.524 -2.54)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.778) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -0.508) (xy 0 -0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -1.016) (xy 0 -0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 3.048) (xy 1.778 3.048)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 3.556) (xy 1.27 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Battery_1_1"
-				(pin passive line
-					(at 0 5.08 270)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -555,34 +135,31 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:Speaker"
+		(symbol "Mechanical:MountingHole"
 			(pin_names
-				(offset 0)
-				(hide yes)
+				(offset 1.016)
 			)
 			(exclude_from_sim no)
-			(in_bom yes)
+			(in_bom no)
 			(on_board yes)
-			(property "Reference" "LS"
-				(at 1.27 5.715 0)
+			(property "Reference" "H"
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify right)
 				)
 			)
-			(property "Value" "Speaker"
-				(at 1.27 3.81 0)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify right)
 				)
 			)
 			(property "Footprint" ""
-				(at 0 -5.08 0)
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -591,15 +168,6 @@
 				)
 			)
 			(property "Datasheet" "~"
-				(at -0.254 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Speaker"
 				(at 0 0 0)
 				(effects
 					(font
@@ -608,7 +176,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "speaker sound"
+			(property "Description" "Mounting Hole without connection"
 				(at 0 0 0)
 				(effects
 					(font
@@ -617,66 +185,34 @@
 					(hide yes)
 				)
 			)
-			(symbol "Speaker_0_0"
-				(rectangle
-					(start -2.54 1.27)
-					(end 1.016 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
 					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 1.27) (xy 3.556 3.81) (xy 3.556 -6.35) (xy 1.016 -3.81)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
+					(hide yes)
 				)
 			)
-			(symbol "Speaker_1_1"
-				(pin input line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
 					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
+					(hide yes)
 				)
-				(pin input line
-					(at -5.08 -2.54 0)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
 					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+					(fill
+						(type none)
 					)
 				)
 			)
@@ -881,172 +417,6 @@
 				)
 			)
 			(symbol "PINHD_1x2_Female_1_1"
-				(pin passive line
-					(at -3.81 1.27 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -1.27 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "PCM_SL_Pin_Headers:PINHD_1x2_Male"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 0 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "PINHD_1x2_Male"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-				(at 1.27 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Pin Header male with pin space 2.54mm. Pin Count -2"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "Pin Header"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "PinHeader_1x02_P2.54mm*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "PINHD_1x2_Male_0_1"
-				(rectangle
-					(start -1.27 2.54)
-					(end 1.27 -2.54)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy 0 1.27)
-					)
-					(stroke
-						(width 0.3)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy 0 1.27)
-					)
-					(stroke
-						(width 0.5)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy 0 -1.27)
-					)
-					(stroke
-						(width 0.3)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy 0 -1.27)
-					)
-					(stroke
-						(width 0.5)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "PINHD_1x2_Male_1_1"
 				(pin passive line
 					(at -3.81 1.27 0)
 					(length 2.54)
@@ -1465,298 +835,6 @@
 				)
 			)
 			(symbol "PINHD_1x5_Female_1_1"
-				(pin passive line
-					(at -3.81 5.08 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 2.54 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -2.54 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -5.08 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "PCM_SL_Pin_Headers:PINHD_1x5_Male"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 0 10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "PINHD_1x5_Male"
-				(at 0 7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
-				(at -1.27 12.7 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 11.43 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Pin Header male with pin space 2.54mm. Pin Count -5"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "Pin Header"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "PinHeader_1x05_P2.54mm*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "PINHD_1x5_Male_0_1"
-				(rectangle
-					(start -1.27 6.35)
-					(end 1.27 -6.35)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 5.08) (xy 0 5.08)
-					)
-					(stroke
-						(width 0.3)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 5.08) (xy 0 5.08)
-					)
-					(stroke
-						(width 0.5)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.54) (xy 0 2.54)
-					)
-					(stroke
-						(width 0.3)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.54) (xy 0 2.54)
-					)
-					(stroke
-						(width 0.5)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 0 0)
-					)
-					(stroke
-						(width 0.3)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 0 0)
-					)
-					(stroke
-						(width 0.5)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -2.54) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0.3)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -2.54) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0.5)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -5.08) (xy 0 -5.08)
-					)
-					(stroke
-						(width 0.3)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -5.08) (xy 0 -5.08)
-					)
-					(stroke
-						(width 0.5)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "PINHD_1x5_Male_1_1"
 				(pin passive line
 					(at -3.81 5.08 0)
 					(length 2.54)
@@ -2468,541 +1546,6 @@
 						)
 					)
 					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "PCM_SL_Pin_Headers:PINHD_1x7_Male"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 0 12.7 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "PINHD_1x7_Male"
-				(at 0 10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical"
-				(at -1.27 15.24 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 13.97 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Pin Header male with pin space 2.54mm. Pin Count -7"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "Pin Header"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "PinHeader_1x07_P2.54mm*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "PINHD_1x7_Male_0_1"
-				(rectangle
-					(start -1.27 8.89)
-					(end 1.27 -8.89)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 7.62) (xy 0 7.62)
-					)
-					(stroke
-						(width 0.3)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 7.62) (xy 0 7.62)
-					)
-					(stroke
-						(width 0.5)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 5.08) (xy 0 5.08)
-					)
-					(stroke
-						(width 0.3)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 5.08) (xy 0 5.08)
-					)
-					(stroke
-						(width 0.5)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.54) (xy 0 2.54)
-					)
-					(stroke
-						(width 0.3)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.54) (xy 0 2.54)
-					)
-					(stroke
-						(width 0.5)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 0 0)
-					)
-					(stroke
-						(width 0.3)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 0 0)
-					)
-					(stroke
-						(width 0.5)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -2.54) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0.3)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -2.54) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0.5)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -5.08) (xy 0 -5.08)
-					)
-					(stroke
-						(width 0.3)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -5.08) (xy 0 -5.08)
-					)
-					(stroke
-						(width 0.5)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -7.62) (xy 0 -7.62)
-					)
-					(stroke
-						(width 0.3)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -7.62) (xy 0 -7.62)
-					)
-					(stroke
-						(width 0.5)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "PINHD_1x7_Male_1_1"
-				(pin passive line
-					(at -3.81 7.62 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 5.08 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 2.54 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -2.54 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -5.08 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -7.62 0)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Switch:SW_Omron_B3FS"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "SW"
-				(at 1.27 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "SW_Omron_B3FS"
-				(at 0 -1.524 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "switch normally-open pushbutton push-button"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SW*Omron*B3FS*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SW_Omron_B3FS_0_1"
-				(circle
-					(center -2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.27) (xy 0 3.048)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy -2.54 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3825,506 +2368,10 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "senso_lib:charge_controller"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "charge_controller_1_1"
-				(rectangle
-					(start -8.5 14)
-					(end 8.5 -14)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -2.54 15.24)
-					(end 2.54 11.43)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text_box "USB"
-					(at -2.54 15.24 0)
-					(size 5.08 -3.81)
-					(margins 1.016 1.016 1.016 1.016)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-						(justify bottom)
-					)
-				)
-				(pin power_in line
-					(at -10.16 12.7 0)
-					(length 2.54)
-					(name "IN-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at -7.62 -15.24 90)
-					(length 2.54)
-					(name "P-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at -5.08 -15.24 90)
-					(length 2.54)
-					(name "B-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -1.27 12.7 90)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 1.27 12.7 90)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 5.08 -15.24 90)
-					(length 2.54)
-					(name "B+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 7.62 -15.24 90)
-					(length 2.54)
-					(name "P+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 10.16 12.7 180)
-					(length 2.54)
-					(name "IN+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "senso_lib:neopixel_SK6812_RGBW"
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D1"
-				(at 10.16 6.4202 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "neopixel_SK6812_RGBW"
-				(at 10.16 3.8802 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "LED_SMD:LED_SK6812_PLCC4_5.0x5.0mm_P3.2mm"
-				(at 1.27 -7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/1138/SK6812+LED+datasheet+.pdf"
-				(at 2.54 -9.525 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "RGB LED with integrated controller"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "RGB LED NeoPixel addressable"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "LED*SK6812*PLCC*5.0x5.0mm*P3.2mm*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "neopixel_SK6812_RGBW_0_1"
-				(polyline
-					(pts
-						(xy 1.27 -2.54) (xy 1.778 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -3.556) (xy 1.778 -3.556)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.286 -1.524) (xy 1.27 -2.54) (xy 1.27 -2.032)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.286 -2.54) (xy 1.27 -3.556) (xy 1.27 -3.048)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.683 -1.016) (xy 3.683 -3.556) (xy 3.683 -4.064)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.699 -1.524) (xy 2.667 -1.524) (xy 3.683 -3.556) (xy 4.699 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.699 -3.556) (xy 2.667 -3.556)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 5.08 5.08)
-					(end -5.08 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "neopixel_SK6812_RGBW_1_1"
-				(text "RGBW"
-					(at 1.778 -4.318 0)
-					(effects
-						(font
-							(size 0.762 0.762)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "DIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 7.62 270)
-					(length 2.54)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "VSS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "DOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-	)
-	(text "OLED scl"
-		(exclude_from_sim no)
-		(at 129.54 88.9 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "49733c2c-79ac-4433-9d8b-4428c364ed65")
 	)
 	(text "Speaker mono"
 		(exclude_from_sim no)
-		(at 124.46 83.058 90)
+		(at 61.468 38.1 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4332,19 +2379,9 @@
 		)
 		(uuid "8e26dfa3-5735-4da2-aebc-07d0a43cf32e")
 	)
-	(text "OLED sca"
-		(exclude_from_sim no)
-		(at 127 87.63 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "a088c5ba-e866-4438-b0f3-069e701692c5")
-	)
 	(text "OLED reset"
 		(exclude_from_sim no)
-		(at 132.08 87.63 90)
+		(at 68.58 39.116 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4354,7 +2391,7 @@
 	)
 	(text "taster right"
 		(exclude_from_sim no)
-		(at 119.38 79.756 90)
+		(at 56.134 39.116 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4362,19 +2399,9 @@
 		)
 		(uuid "c0d73104-ae3f-4067-bae0-7108aac9301b")
 	)
-	(text "Speaker mono"
-		(exclude_from_sim no)
-		(at 178.308 64.262 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "ea645107-45cf-4f99-b619-273b41110514")
-	)
 	(text "Data in LED"
 		(exclude_from_sim no)
-		(at 121.666 85.09 90)
+		(at 58.674 40.132 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4384,7 +2411,7 @@
 	)
 	(text "taster left"
 		(exclude_from_sim no)
-		(at 116.078 80.518 90)
+		(at 52.832 39.878 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4393,128 +2420,74 @@
 		(uuid "f7f4ef44-3a09-4a5e-a824-6ce2a812b086")
 	)
 	(junction
-		(at 96.52 58.42)
+		(at 53.34 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "04841e3a-fc9a-4bb2-a845-6e69d1b56e00")
+		(uuid "016c6aa9-79d0-46aa-9fad-e9515f79ca0b")
 	)
 	(junction
-		(at 232.41 128.27)
+		(at 88.9 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "08543f1d-b872-41bf-9d8d-458975e50f42")
+		(uuid "0b7257a4-4966-43cb-897f-9ad5759062c1")
 	)
 	(junction
-		(at 182.88 123.19)
+		(at 93.98 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "08bbf131-a2e0-4298-ab57-020efc03a093")
+		(uuid "18807770-b361-49b2-af50-76d4eb76fe49")
 	)
 	(junction
-		(at 96.52 73.66)
+		(at 119.38 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "16581043-293e-4b45-b1ad-e11ac096512e")
+		(uuid "2b6d9a0d-0fac-4184-bb91-e74f2dcfe3bf")
 	)
 	(junction
-		(at 78.74 177.8)
+		(at 93.98 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "219d4ea2-a9b3-4d2e-b0c2-322bb5feddf0")
+		(uuid "3121b648-7dc1-4c3f-8dee-bc7e35f0bf5d")
 	)
 	(junction
-		(at 43.18 162.56)
+		(at 120.65 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "2e1c9d16-f00d-4f80-8b91-53c577a4282d")
+		(uuid "42486031-a5c6-42f5-8af9-bb06282739b6")
 	)
 	(junction
-		(at 30.48 151.13)
+		(at 93.98 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "510b28d4-d92f-45c6-bb44-fe5f1e21bbb1")
+		(uuid "4289c7f5-2305-4f91-9ff2-5a973f4a1ed5")
 	)
 	(junction
-		(at 71.12 93.98)
+		(at 91.44 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "53c21728-bd3e-475a-ba23-a74cb0563aa6")
+		(uuid "687fc488-fa6e-4e2f-9b12-500cf9a19d19")
 	)
 	(junction
-		(at 53.34 154.94)
+		(at 120.65 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "5f043858-0ac4-47fd-bef5-f1a971e4d518")
+		(uuid "edacb7fd-5c89-4fda-8319-a9503688725a")
 	)
 	(junction
-		(at 40.64 143.51)
+		(at 120.65 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "7927eada-2afb-4a2a-89f8-cadc1bf34f50")
+		(uuid "fa5ab2de-3b89-47a9-97e0-8f9a83c0ac81")
 	)
 	(junction
-		(at 71.12 78.74)
+		(at 93.98 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "8097fba5-b5f7-4924-8a1a-e8aff24ee112")
-	)
-	(junction
-		(at 232.41 118.11)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8fe5c471-782d-4907-8c20-d57d8da6c1cc")
-	)
-	(junction
-		(at 71.12 58.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "990f5465-0001-4a03-8121-e9f4047a785b")
-	)
-	(junction
-		(at 157.48 139.7)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b008699b-5678-47cd-b09c-0ce1d2253f1e")
-	)
-	(junction
-		(at 232.41 115.57)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "be6a8dae-323e-453c-86d2-87c49d51c4e6")
-	)
-	(junction
-		(at 71.12 73.66)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cd85336f-6749-4a1a-8b9c-3f1b8cc3dbe1")
-	)
-	(junction
-		(at 232.41 130.81)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ddcfb4fd-30df-4c89-b38f-8643a2db952b")
-	)
-	(junction
-		(at 55.88 173.99)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e6a319e8-d85a-4c07-b78e-e4cf0d74b7a7")
-	)
-	(junction
-		(at 66.04 166.37)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f34bf2ff-7b09-4679-b748-3f05218c1968")
-	)
-	(junction
-		(at 68.58 185.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f9f6a7e8-a23c-40a8-b078-75db51913d5b")
+		(uuid "fbe5de75-6a5b-40d0-9db4-c61b517dc597")
 	)
 	(wire
 		(pts
-			(xy 161.29 140.97) (xy 181.61 140.97)
+			(xy 97.79 90.17) (xy 118.11 90.17)
 		)
 		(stroke
 			(width 0)
@@ -4524,57 +2497,17 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 139.7) (xy 124.46 173.99)
+			(xy 53.34 53.34) (xy 53.34 54.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "004bbe49-96ab-4ac8-b1b0-48c934aef9aa")
+		(uuid "0420eeed-28cc-46f6-9aa5-7b25d58ff163")
 	)
 	(wire
 		(pts
-			(xy 168.91 82.55) (xy 168.91 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "00a18177-a9bf-49be-a653-1b70726d0e1d")
-	)
-	(wire
-		(pts
-			(xy 66.04 143.51) (xy 100.33 177.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "010654e2-17ef-4264-8ddf-4b79985e8123")
-	)
-	(wire
-		(pts
-			(xy 40.64 143.51) (xy 40.64 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0252d9fe-3086-45e8-ae82-3151877d279b")
-	)
-	(wire
-		(pts
-			(xy 40.64 162.56) (xy 43.18 162.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "062cb1df-fa60-4d84-9131-36d6d3540bee")
-	)
-	(wire
-		(pts
-			(xy 124.46 106.68) (xy 124.46 114.3)
+			(xy 60.96 53.34) (xy 60.96 63.5)
 		)
 		(stroke
 			(width 0)
@@ -4584,107 +2517,67 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 58.42) (xy 187.96 64.77)
+			(xy 118.11 68.58) (xy 120.65 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0aecef49-c4a0-4bb5-bef3-d43982b31787")
+		(uuid "07f15715-c9b4-4c32-bf44-4c0c6785bbbe")
 	)
 	(wire
 		(pts
-			(xy 113.03 187.96) (xy 121.92 187.96)
+			(xy 86.36 55.88) (xy 88.9 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0c63bc0b-ce08-4b93-821f-9b2057ffeeb0")
+		(uuid "0ab0c6ef-36ee-43a2-9585-f7163b5fe37f")
 	)
 	(wire
 		(pts
-			(xy 203.2 115.57) (xy 196.85 121.92)
+			(xy 60.96 90.17) (xy 60.96 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0ed48a5f-a70e-429f-875f-35388195a574")
+		(uuid "0acf52a5-6d81-4c30-afc0-c43edbfc282c")
 	)
 	(wire
 		(pts
-			(xy 96.52 58.42) (xy 181.61 58.42)
+			(xy 68.58 97.79) (xy 68.58 99.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0f925e80-44c6-41e2-b744-eec623178f1a")
+		(uuid "0b3a68ab-1338-4102-bb9c-16d932cd14f1")
 	)
 	(wire
 		(pts
-			(xy 120.65 177.8) (xy 124.46 173.99)
+			(xy 111.76 64.77) (xy 119.38 72.39)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "13c4bd70-7571-4d40-9ca1-97d3e132f58f")
+		(uuid "0dc38828-bdd5-4c0e-9afb-5d4bbe552e4f")
 	)
 	(wire
 		(pts
-			(xy 53.34 154.94) (xy 74.93 154.94)
+			(xy 55.88 62.23) (xy 55.88 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "15bcdf0f-c8ae-46fe-93be-d01a5dea0fd2")
+		(uuid "19443c5e-8de3-452c-b4a1-55062e12b3c5")
 	)
 	(wire
 		(pts
-			(xy 120.65 182.88) (xy 129.54 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1929ccb5-985d-47f7-9b82-4f871d505fcf")
-	)
-	(wire
-		(pts
-			(xy 55.88 166.37) (xy 55.88 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2206c685-b0ae-42ff-9ba4-4f3307877f0f")
-	)
-	(wire
-		(pts
-			(xy 184.15 85.09) (xy 187.96 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2377ca66-413b-492f-83f8-f8c9f18837d2")
-	)
-	(wire
-		(pts
-			(xy 43.18 163.83) (xy 53.34 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2384dfd8-fcfb-4205-8674-88bad887b461")
-	)
-	(wire
-		(pts
-			(xy 160.02 142.24) (xy 157.48 139.7)
+			(xy 96.52 91.44) (xy 93.98 88.9)
 		)
 		(stroke
 			(width 0)
@@ -4694,47 +2587,67 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 177.8) (xy 100.33 185.42)
+			(xy 55.88 53.34) (xy 55.88 54.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2f3b0542-d9e6-4940-b0bd-b0029c15dedf")
+		(uuid "2bdfd404-51be-410f-a40f-19e247598442")
 	)
 	(wire
 		(pts
-			(xy 62.23 58.42) (xy 62.23 93.98)
+			(xy 53.34 62.23) (xy 53.34 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2f68afe5-b037-495d-9add-7c3f71f187dd")
+		(uuid "2bf63843-0441-4704-b8bd-09eacc4a03db")
 	)
 	(wire
 		(pts
-			(xy 120.65 180.34) (xy 127 173.99)
+			(xy 68.58 90.17) (xy 68.58 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3021034c-2e52-40ea-8ab8-ef5cef1ab50f")
+		(uuid "2f0ef1a3-10f5-45a8-9a93-853b9888e5f4")
 	)
 	(wire
 		(pts
-			(xy 157.48 152.4) (xy 121.92 187.96)
+			(xy 63.5 97.79) (xy 63.5 99.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "353de3eb-9417-4c15-b4e2-ae4798238284")
+		(uuid "3681cd1c-bb47-44f6-b898-7b5e44b861f3")
 	)
 	(wire
 		(pts
-			(xy 184.15 124.46) (xy 184.15 140.97)
+			(xy 53.34 82.55) (xy 59.69 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37d59501-600f-404b-be23-8a14f3fa74af")
+	)
+	(wire
+		(pts
+			(xy 88.9 55.88) (xy 91.44 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38d3bc04-2ce6-471e-a2e2-d0f261eae0fc")
+	)
+	(wire
+		(pts
+			(xy 120.65 73.66) (xy 120.65 74.93)
 		)
 		(stroke
 			(width 0)
@@ -4744,77 +2657,57 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 58.42) (xy 96.52 58.42)
+			(xy 60.96 97.79) (xy 60.96 99.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3d48157e-be8c-47f5-a016-55bee658f9ef")
+		(uuid "3e560476-1a22-4238-82b4-ed8ef9435d17")
 	)
 	(wire
 		(pts
-			(xy 168.91 109.22) (xy 182.88 123.19)
+			(xy 111.76 55.88) (xy 111.76 64.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4275c25d-1ada-4cb9-ad0a-fc84aba4fe69")
+		(uuid "4564757a-150d-441e-805c-53a145375490")
 	)
 	(wire
 		(pts
-			(xy 78.74 86.36) (xy 88.9 86.36)
+			(xy 120.65 77.47) (xy 120.65 90.17)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4f93ad83-30c5-4da8-974a-bb8f2b88ba1b")
+		(uuid "4b2c09ff-57b3-4e1a-bf3e-a0e003ee7f00")
 	)
 	(wire
 		(pts
-			(xy 62.23 58.42) (xy 71.12 58.42)
+			(xy 53.34 88.9) (xy 53.34 93.98)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "52760e87-1e8a-4065-92e1-b173944e17e2")
+		(uuid "514d29d1-b131-4551-90db-8b14a3e15e5b")
 	)
 	(wire
 		(pts
-			(xy 83.82 166.37) (xy 100.33 182.88)
+			(xy 66.04 90.17) (xy 66.04 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "52c64856-96ae-48ab-9a09-fd4e782460db")
+		(uuid "528b500f-ffd8-48b1-be18-eb46870b5249")
 	)
 	(wire
 		(pts
-			(xy 78.74 66.04) (xy 88.9 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "543d4956-e0d0-4803-970d-8068e2840168")
-	)
-	(wire
-		(pts
-			(xy 71.12 187.96) (xy 68.58 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "569fdbf8-bad3-4f72-9b2d-51384d6f6be2")
-	)
-	(wire
-		(pts
-			(xy 129.54 106.68) (xy 129.54 114.3)
+			(xy 66.04 53.34) (xy 66.04 63.5)
 		)
 		(stroke
 			(width 0)
@@ -4824,57 +2717,37 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 154.94) (xy 53.34 162.56)
+			(xy 93.98 63.5) (xy 93.98 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5aafaed2-e3fa-4516-86e5-7b121b5304f1")
+		(uuid "66094d8e-f71e-40dc-bb43-e90e0b9f434f")
 	)
 	(wire
 		(pts
-			(xy 232.41 118.11) (xy 232.41 115.57)
+			(xy 109.22 66.04) (xy 120.65 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6105e18f-8dab-4cbd-a287-4f24549854ae")
+		(uuid "705a3582-515a-4329-8876-d60298cbd94f")
 	)
 	(wire
 		(pts
-			(xy 71.12 73.66) (xy 96.52 73.66)
+			(xy 91.44 55.88) (xy 93.98 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "63128456-15c5-493e-a19f-451419b87d9a")
+		(uuid "7a6228b8-e2c3-4036-b3f5-6b49e078c586")
 	)
 	(wire
 		(pts
-			(xy 30.48 151.13) (xy 30.48 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "636bc2e6-3a82-459e-8cdb-23b0b5e0ea95")
-	)
-	(wire
-		(pts
-			(xy 66.04 185.42) (xy 68.58 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6d508f7b-140c-4dd2-afd0-6280e93dc98f")
-	)
-	(wire
-		(pts
-			(xy 121.92 106.68) (xy 121.92 114.3)
+			(xy 58.42 53.34) (xy 58.42 63.5)
 		)
 		(stroke
 			(width 0)
@@ -4884,37 +2757,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 139.7) (xy 157.48 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7f2feea9-5f33-4990-b843-7a8d7bc8bac7")
-	)
-	(wire
-		(pts
-			(xy 129.54 139.7) (xy 129.54 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "811d8d3c-9993-4741-8dc3-e6f01988b524")
-	)
-	(wire
-		(pts
-			(xy 157.48 139.7) (xy 157.48 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8243b0ef-1467-4ca6-99f7-762965ef0884")
-	)
-	(wire
-		(pts
-			(xy 132.08 106.68) (xy 132.08 114.3)
+			(xy 68.58 53.34) (xy 68.58 63.5)
 		)
 		(stroke
 			(width 0)
@@ -4924,37 +2767,17 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 118.11) (xy 232.41 118.11)
+			(xy 93.98 76.2) (xy 93.98 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8419fb9f-ab42-4cc5-8a29-98031021051d")
+		(uuid "838b742b-376d-4acf-a3a3-bd91da11d94c")
 	)
 	(wire
 		(pts
-			(xy 120.65 185.42) (xy 132.08 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "847aae05-77cc-4d2a-a75a-a70b76db4050")
-	)
-	(wire
-		(pts
-			(xy 55.88 175.26) (xy 66.04 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "85bc382a-0f04-48e5-ab68-c48bbc3bae6a")
-	)
-	(wire
-		(pts
-			(xy 182.88 139.7) (xy 182.88 123.19)
+			(xy 119.38 88.9) (xy 119.38 72.39)
 		)
 		(stroke
 			(width 0)
@@ -4964,27 +2787,17 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 154.94) (xy 100.33 180.34)
+			(xy 53.34 82.55) (xy 53.34 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "86c9bd8f-22c7-44dc-bb38-2c632631eb5a")
+		(uuid "98aa74e8-5ae2-483f-b171-2a6d6bdec163")
 	)
 	(wire
 		(pts
-			(xy 184.15 80.01) (xy 187.96 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "90e0bc1e-d2e6-4610-824c-c62f1f1eb005")
-	)
-	(wire
-		(pts
-			(xy 181.61 140.97) (xy 182.88 139.7)
+			(xy 118.11 90.17) (xy 119.38 88.9)
 		)
 		(stroke
 			(width 0)
@@ -4994,117 +2807,27 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 151.13) (xy 30.48 143.51)
+			(xy 63.5 90.17) (xy 63.5 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a1f11e9a-df8a-4307-8feb-4dfbe7dd882e")
+		(uuid "9e87b0b5-b610-4455-8219-9bc21aa9eafe")
 	)
 	(wire
 		(pts
-			(xy 203.2 130.81) (xy 232.41 130.81)
+			(xy 96.52 55.88) (xy 96.52 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a2355db0-5f5e-452a-b27e-8372483a9343")
+		(uuid "a98d14fa-3601-430f-9499-c2f7e3c7ddc7")
 	)
 	(wire
 		(pts
-			(xy 55.88 173.99) (xy 55.88 175.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad1da260-5ff2-49d3-ad9b-8a7ce5fa6ef5")
-	)
-	(wire
-		(pts
-			(xy 66.04 166.37) (xy 66.04 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aded69b2-e93d-43d5-b5e1-aabed91629c5")
-	)
-	(wire
-		(pts
-			(xy 43.18 162.56) (xy 43.18 163.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "af31660e-dfdf-486d-b238-5300884b94e1")
-	)
-	(wire
-		(pts
-			(xy 71.12 78.74) (xy 96.52 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "af483d53-ef86-463a-ad4a-5d781601f0dd")
-	)
-	(wire
-		(pts
-			(xy 132.08 139.7) (xy 132.08 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "afb41eb1-f94b-4db8-9ac6-d2c21bc779de")
-	)
-	(wire
-		(pts
-			(xy 63.5 66.04) (xy 63.5 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b1df09a7-7382-4e3d-b6cc-f0b4fbb64f8b")
-	)
-	(wire
-		(pts
-			(xy 232.41 115.57) (xy 203.2 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b2fca0c0-17fc-4d3a-8cf5-799b6f025747")
-	)
-	(wire
-		(pts
-			(xy 53.34 173.99) (xy 55.88 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b7751a7b-3d15-486b-96d5-7ce4fbb2cc20")
-	)
-	(wire
-		(pts
-			(xy 223.52 128.27) (xy 232.41 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9c35c3b-1051-4b89-a14a-32eafc9decd3")
-	)
-	(wire
-		(pts
-			(xy 182.88 123.19) (xy 184.15 121.92)
+			(xy 119.38 72.39) (xy 120.65 71.12)
 		)
 		(stroke
 			(width 0)
@@ -5114,127 +2837,57 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 93.98) (xy 96.52 93.98)
+			(xy 109.22 55.88) (xy 109.22 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c1af4eb1-0b46-41ce-8491-738240d26199")
+		(uuid "bf6eea8c-ead7-4e3a-a932-dce5b9ac4fbe")
 	)
 	(wire
 		(pts
-			(xy 232.41 128.27) (xy 232.41 118.11)
+			(xy 59.69 76.2) (xy 93.98 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c27ee8f6-d2bf-4560-8bf1-ea2af9527eac")
+		(uuid "c2a5c484-b682-4dbd-90b5-73edeb70f686")
 	)
 	(wire
 		(pts
-			(xy 203.2 130.81) (xy 196.85 124.46)
+			(xy 115.57 55.88) (xy 115.57 69.85)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c8b335f5-75bf-41a0-8290-343bb0b913e3")
+		(uuid "c6378858-859f-429c-ad98-92425974fb40")
 	)
 	(wire
 		(pts
-			(xy 66.04 166.37) (xy 83.82 166.37)
+			(xy 66.04 97.79) (xy 66.04 99.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cff16ca0-8aa8-4c88-a59f-54f02f94a93e")
+		(uuid "cf6e5c73-d882-4049-a6ab-7dfbd093381a")
 	)
 	(wire
 		(pts
-			(xy 71.12 73.66) (xy 71.12 78.74)
+			(xy 118.11 55.88) (xy 118.11 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d5caa0bd-3cdc-4b89-a5e9-9cc642c50d5e")
+		(uuid "d7451f30-3176-4da6-ab77-97f261b52016")
 	)
 	(wire
 		(pts
-			(xy 68.58 177.8) (xy 68.58 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6affd8c-0358-43dd-b334-2db380c4ed09")
-	)
-	(wire
-		(pts
-			(xy 181.61 73.66) (xy 187.96 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7dc43b2-0247-4efd-816c-3e82bf37d394")
-	)
-	(wire
-		(pts
-			(xy 30.48 152.4) (xy 40.64 162.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d898d282-d4e4-410a-b04e-1120510b2003")
-	)
-	(wire
-		(pts
-			(xy 96.52 73.66) (xy 181.61 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "db7353fd-e066-41f0-83da-fb2a5b5f8d6a")
-	)
-	(wire
-		(pts
-			(xy 100.33 187.96) (xy 71.12 187.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dbc912cf-750e-4983-9dc8-914632eb5ab6")
-	)
-	(wire
-		(pts
-			(xy 78.74 177.8) (xy 78.74 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e102874c-81e7-4120-a4a8-8e231da8baf0")
-	)
-	(wire
-		(pts
-			(xy 78.74 177.8) (xy 92.71 177.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e110e96d-91e5-4725-8f00-d4d70c695e09")
-	)
-	(wire
-		(pts
-			(xy 127 106.68) (xy 127 114.3)
+			(xy 63.5 53.34) (xy 63.5 63.5)
 		)
 		(stroke
 			(width 0)
@@ -5244,37 +2897,17 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 93.98) (xy 71.12 93.98)
+			(xy 120.65 74.93) (xy 120.65 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e50849a5-4d42-4839-a113-d9067585b39c")
+		(uuid "e61e53df-e391-4d74-a16a-c646461cfe02")
 	)
 	(wire
 		(pts
-			(xy 40.64 143.51) (xy 66.04 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e56caa88-4733-455a-a3eb-2d10baa1aa32")
-	)
-	(wire
-		(pts
-			(xy 232.41 130.81) (xy 232.41 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e6311d89-88ff-4ba7-b4b4-a8fa5dcb6d04")
-	)
-	(wire
-		(pts
-			(xy 160.02 139.7) (xy 161.29 140.97)
+			(xy 96.52 88.9) (xy 97.79 90.17)
 		)
 		(stroke
 			(width 0)
@@ -5284,17 +2917,17 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 154.94) (xy 43.18 162.56)
+			(xy 53.34 93.98) (xy 58.42 99.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e9ea5a07-43d1-420d-8ee3-bcc7932ee27b")
+		(uuid "ebb14d59-d52a-473f-aa8d-e7b751969194")
 	)
 	(wire
 		(pts
-			(xy 184.15 140.97) (xy 182.88 142.24)
+			(xy 120.65 90.17) (xy 119.38 91.44)
 		)
 		(stroke
 			(width 0)
@@ -5304,7 +2937,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 142.24) (xy 160.02 142.24)
+			(xy 119.38 91.44) (xy 96.52 91.44)
 		)
 		(stroke
 			(width 0)
@@ -5314,182 +2947,27 @@
 	)
 	(wire
 		(pts
-			(xy 127 139.7) (xy 127 173.99)
+			(xy 93.98 55.88) (xy 93.98 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fd6a7088-ab97-4988-8b7d-9297fb7fbb70")
+		(uuid "fef7a00f-bf31-4505-a654-8b2da94fc6e5")
 	)
-	(symbol
-		(lib_id "senso_lib:neopixel_SK6812_RGBW")
-		(at 96.52 66.04 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "06b61e45-e517-495c-8b55-70238c663fa2")
-		(property "Reference" "LED_Blau1"
-			(at 96.52 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
+	(wire
+		(pts
+			(xy 115.57 69.85) (xy 120.65 74.93)
 		)
-		(property "Value" "neopixel_SK6812_RGBW"
-			(at 96.52 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
+		(stroke
+			(width 0)
+			(type default)
 		)
-		(property "Footprint" "LED_SMD:LED_SK6812_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 95.25 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/1138/SK6812+LED+datasheet+.pdf"
-			(at 93.98 75.565 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "RGB LED with integrated controller"
-			(at 96.52 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 96.52 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "a5d16fb1-8e75-490f-b695-58390beb66f9")
-		)
-		(pin "2"
-			(uuid "b75cf3f4-2439-4a1e-b0b9-c727e5950e14")
-		)
-		(pin "4"
-			(uuid "73033eff-e249-4e54-8727-143b26198b07")
-		)
-		(pin "1"
-			(uuid "dc559f60-1d4b-4273-b193-dc3a7a9cfa53")
-		)
-		(instances
-			(project ""
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "LED_Blau1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Omron_B3FS")
-		(at 60.96 173.99 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1537e738-aa44-4b5a-867a-24e6cfedd83b")
-		(property "Reference" "Taster_Rot_2"
-			(at 60.96 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify top)
-			)
-		)
-		(property "Value" "SW_Omron_B3FS"
-			(at 60.96 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 60.96 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
-			(at 60.96 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
-			(at 60.96 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 60.96 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f3f23bcd-fa80-4dcd-bc10-3bb2e5d7de85")
-		)
-		(pin "2"
-			(uuid "dded1dcd-3b9e-41f9-8aed-e7fbd6ad30d1")
-		)
-		(instances
-			(project "Senso V2"
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "Taster_Rot_2")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "fff0f520-858f-4808-8130-eb383d470e0a")
 	)
 	(symbol
 		(lib_id "PCM_SL_Pin_Headers:PINHD_1x2_Female")
-		(at 187.96 123.19 0)
+		(at 124.46 72.39 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5497,7 +2975,7 @@
 		(dnp no)
 		(uuid "1934ed91-c153-4dcd-a96b-cc082261931f")
 		(property "Reference" "J5"
-			(at 187.96 120.396 0)
+			(at 124.46 69.596 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5506,7 +2984,7 @@
 			)
 		)
 		(property "Value" "PINHD_1x2_Female"
-			(at 187.96 118.11 0)
+			(at 124.46 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5515,7 +2993,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
-			(at 190.5 113.03 0)
+			(at 127 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5524,7 +3002,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 187.96 115.57 0)
+			(at 124.46 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5533,7 +3011,7 @@
 			)
 		)
 		(property "Description" "Pin Header female with pin space 2.54mm. Pin Count -2"
-			(at 187.96 123.19 0)
+			(at 124.46 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5557,34 +3035,33 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SL_Pin_Headers:PINHD_1x2_Female")
-		(at 196.85 66.04 180)
+		(lib_id "PCM_SL_Pin_Headers:PINHD_1x7_Female")
+		(at 60.96 49.53 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "1ec43f7e-ac0d-4d29-a3d8-1934d10b5a9c")
-		(property "Reference" "J4"
-			(at 196.85 60.706 0)
+		(fields_autoplaced yes)
+		(uuid "1be6dc9d-22d5-469e-b59b-538e767fb8f3")
+		(property "Reference" "J2"
+			(at 60.96 43.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right top)
 			)
 		)
-		(property "Value" "PINHD_1x2_Female"
-			(at 196.85 61.976 0)
+		(property "Value" "PINHD_1x7_Female"
+			(at 60.96 45.72 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
-			(at 194.31 76.2 0)
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical"
+			(at 44.45 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5593,7 +3070,91 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 196.85 73.66 0)
+			(at 46.99 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Pin Header female with pin space 2.54mm. Pin Count -7"
+			(at 60.96 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "841af97a-7a20-4eb3-996b-d980e5b1ad1a")
+		)
+		(pin "4"
+			(uuid "a12a7cda-1ec1-4c04-b6af-a2aec94efc49")
+		)
+		(pin "3"
+			(uuid "5d176011-ca42-4416-b247-dd1e12371943")
+		)
+		(pin "2"
+			(uuid "d2266f9a-4b33-4097-9515-d9f1f4d21f4f")
+		)
+		(pin "7"
+			(uuid "72256aeb-9965-4eb1-940c-05f8514e5057")
+		)
+		(pin "5"
+			(uuid "06da0437-63d0-4f13-80f8-292e9dda7454")
+		)
+		(pin "6"
+			(uuid "994d3d9e-de04-4147-888d-2414f83aae17")
+		)
+		(instances
+			(project ""
+				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SL_Pin_Headers:PINHD_1x2_Female")
+		(at 116.84 52.07 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1ec43f7e-ac0d-4d29-a3d8-1934d10b5a9c")
+		(property "Reference" "J4"
+			(at 122.174 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right top)
+			)
+		)
+		(property "Value" "Power LED"
+			(at 120.904 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
+			(at 106.68 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5602,7 +3163,7 @@
 			)
 		)
 		(property "Description" "Pin Header female with pin space 2.54mm. Pin Count -2"
-			(at 196.85 66.04 0)
+			(at 116.84 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5627,16 +3188,16 @@
 	)
 	(symbol
 		(lib_id "PCM_SL_Pin_Headers:PINHD_1x5_Female")
-		(at 109.22 182.88 180)
+		(at 63.5 102.87 90)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "21226e21-7022-46e8-a76c-51967db30dca")
 		(property "Reference" "J1"
-			(at 108.965 171.45 0)
+			(at 74.93 103.125 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5644,7 +3205,7 @@
 			)
 		)
 		(property "Value" "PINHD_1x5_Female"
-			(at 108.965 173.99 0)
+			(at 72.39 103.125 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5652,7 +3213,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical"
-			(at 106.68 196.85 0)
+			(at 49.53 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5661,7 +3222,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 109.22 194.31 0)
+			(at 52.07 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5670,7 +3231,7 @@
 			)
 		)
 		(property "Description" "Pin Header female with pin space 2.54mm. Pin Count -5"
-			(at 109.22 182.88 0)
+			(at 63.5 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5703,16 +3264,18 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Omron_B3FS")
-		(at 73.66 185.42 0)
+		(lib_id "senso_lib:ESP32-PICO-V3")
+		(at 74.93 76.2 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "253b968a-bf40-40a1-8dbe-18630e03ecef")
-		(property "Reference" "Taster_Grün_2"
-			(at 73.66 188.722 0)
+		(fields_autoplaced yes)
+		(uuid "298c5597-a72b-4c52-8f4d-fcb64092d3ae")
+		(property "Reference" "ESP32-PICO-V1"
+			(at 50.8 76.2 0)
+			(do_not_autoplace yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5720,8 +3283,19 @@
 				(justify top)
 			)
 		)
-		(property "Value" "SW_Omron_B3FS"
-			(at 73.66 180.34 0)
+		(property "Value" "ESP32-PICO-V3"
+			(at 50.8 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify top)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "senso_lib:ESP32 pico v1"
+			(at 45.974 76.2 0)
+			(do_not_autoplace yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5729,8 +3303,9 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
-			(at 73.66 180.34 0)
+		(property "Datasheet" ""
+			(at 74.93 76.2 0)
+			(do_not_autoplace yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5738,8 +3313,9 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
-			(at 73.66 180.34 0)
+		(property "Description" ""
+			(at 74.93 76.2 0)
+			(do_not_autoplace yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5747,105 +3323,130 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
-			(at 73.66 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
+		(pin "37"
+			(uuid "2fe23c43-cd27-4dbc-9979-fcb33cdfb060")
 		)
-		(property "Sim.Pins" ""
-			(at 73.66 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
+		(pin "GND"
+			(uuid "9c15f982-df8a-4411-a0a5-bad9dd53e5b7")
 		)
-		(pin "1"
-			(uuid "1e29af48-fd07-4fb6-947e-6caf95ff85de")
+		(pin "Vcc"
+			(uuid "ca2f7f22-9ad2-47fc-94f2-9ab42931f44c")
+		)
+		(pin "21"
+			(uuid "979a4b95-d3bd-4b86-8996-6b789cb3c5ec")
+		)
+		(pin "RX0"
+			(uuid "0ba94b0e-1d2e-47e1-90b2-6d3bbbbff4af")
+		)
+		(pin "4"
+			(uuid "21cb3283-da62-401d-b3ef-c390711fa759")
+		)
+		(pin "VN"
+			(uuid "2f3357be-1f2c-4eef-833d-a340990d9142")
+		)
+		(pin "26"
+			(uuid "e648b8ec-295b-4bca-bdf6-c319673784ba")
+		)
+		(pin "9"
+			(uuid "ddfc0833-2bf9-460e-b4e0-cbe90c1fc3d7")
+		)
+		(pin "GND"
+			(uuid "7e1e801c-4447-4dc4-91fc-81f3e53ec5e7")
+		)
+		(pin "13"
+			(uuid "4c01d7de-3cc1-4da2-8d5a-e7e175916df1")
+		)
+		(pin "3v3"
+			(uuid "668cc5ca-b22a-4e2c-a0c6-45dcf766d722")
+		)
+		(pin "8"
+			(uuid "a9f3c45b-4729-4ddc-86c2-7639d586e5c2")
+		)
+		(pin "33"
+			(uuid "ae94122b-0bba-4025-9270-6a0fb67a38dc")
+		)
+		(pin "VP"
+			(uuid "02adf68e-d15d-426c-838f-a70b80e220c6")
+		)
+		(pin "22"
+			(uuid "6bd6bbdc-d3bb-4c58-b5c2-0e516b26edf8")
+		)
+		(pin "19"
+			(uuid "1162962a-e9cd-4740-8855-24846dc3da4a")
+		)
+		(pin "12"
+			(uuid "7879ed79-ff9e-47d2-a68d-57b5164ed596")
+		)
+		(pin "27"
+			(uuid "26604b97-c4bc-429c-a9b0-8c317314e288")
+		)
+		(pin "32"
+			(uuid "85278f45-914e-4a3e-853f-f635b45dd5b1")
+		)
+		(pin "20"
+			(uuid "30e6affa-8475-4370-b88e-b2e8c023a398")
+		)
+		(pin "GND"
+			(uuid "9454a65f-a6f9-4f62-a239-4a0ad10575cd")
+		)
+		(pin "15"
+			(uuid "8572cdf6-2288-4d68-9865-b2a0ff127273")
+		)
+		(pin "14"
+			(uuid "e66a560c-d93c-43dc-aa36-20b946c384d1")
+		)
+		(pin "0"
+			(uuid "fdb13b35-8c1e-49da-b0d0-2813a7a159cf")
+		)
+		(pin "EN"
+			(uuid "e9bb762c-ae05-4640-bf7f-ceb8c17badb7")
 		)
 		(pin "2"
-			(uuid "03c3114b-edd9-4d6d-8e8b-0a806f8a6575")
+			(uuid "992ac0c4-fbc3-413f-afae-307b6a59fd09")
 		)
-		(instances
-			(project "Senso V2"
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "Taster_Grün_2")
-					(unit 1)
-				)
-			)
+		(pin "D+"
+			(uuid "d24ab963-e23e-427f-97a5-7bc0d9df466f")
 		)
-	)
-	(symbol
-		(lib_id "Device:Speaker")
-		(at 176.53 95.25 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2fcffed5-5f3a-4aed-a456-47da0b06253f")
-		(property "Reference" "LS1"
-			(at 176.5299 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
+		(pin "7"
+			(uuid "f99884ad-5620-43a5-b036-76fe13cb2876")
 		)
-		(property "Value" "Speaker"
-			(at 179.0699 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
+		(pin "3v3"
+			(uuid "dff10a72-8b09-4b1b-b89c-b14a14dd897a")
 		)
-		(property "Footprint" ""
-			(at 181.61 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
+		(pin "38"
+			(uuid "efa8d7f8-37e9-4278-bc97-c6deea1445fa")
 		)
-		(property "Datasheet" "~"
-			(at 177.8 94.996 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
+		(pin "34"
+			(uuid "16497d2b-0dac-435d-969b-b3ac532aa7c6")
 		)
-		(property "Description" "Speaker"
-			(at 176.53 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
+		(pin "GND"
+			(uuid "b028d9c4-4c32-43e2-acc2-8e3ea71f63f4")
 		)
-		(pin "1"
-			(uuid "5775515d-7917-4ae1-aa61-f67b0fc921f4")
+		(pin "10"
+			(uuid "6a1d14a1-e629-42a4-8846-03dbb63512b5")
 		)
-		(pin "2"
-			(uuid "2b83d249-91b3-4f98-bf06-2c5a71f188a1")
+		(pin "25"
+			(uuid "d7c8f8d9-abee-45a0-9102-daad2496e538")
+		)
+		(pin "35"
+			(uuid "38bd992c-aac4-45ef-9e3a-b9098325af5b")
+		)
+		(pin "D-"
+			(uuid "8b4564ea-c46d-4a38-8132-17be04e23d48")
+		)
+		(pin "5"
+			(uuid "c543fca7-bc9c-46e0-b877-e678bc310a0e")
+		)
+		(pin "TX0"
+			(uuid "728b72f4-626e-483b-9639-101893cc8602")
+		)
+		(pin "5v"
+			(uuid "bdc2854f-c382-4ef8-8634-20d30da589be")
 		)
 		(instances
 			(project ""
 				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "LS1")
+					(reference "ESP32-PICO-V1")
 					(unit 1)
 				)
 			)
@@ -5853,7 +3454,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 116.84 177.8 270)
+		(at 60.96 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5861,7 +3462,7 @@
 		(dnp no)
 		(uuid "329bed0c-2df9-49df-aebd-5b58a0e64426")
 		(property "Reference" "R5"
-			(at 118.1101 180.34 0)
+			(at 63.5 92.7099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5871,15 +3472,15 @@
 			)
 		)
 		(property "Value" "10kΩ"
-			(at 116.84 177.8 90)
+			(at 60.96 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 116.84 176.022 90)
+		(property "Footprint" "senso_lib:Resistore"
+			(at 59.182 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5888,7 +3489,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 116.84 177.8 0)
+			(at 60.96 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5897,7 +3498,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 116.84 177.8 0)
+			(at 60.96 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5906,7 +3507,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 116.84 177.8 0)
+			(at 60.96 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5930,86 +3531,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Omron_B3FS")
-		(at 60.96 166.37 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "35084f53-5a9f-41c6-9e56-3f79a8cc6b15")
-		(property "Reference" "Taster_Rot_1"
-			(at 60.96 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify top)
-			)
-		)
-		(property "Value" "SW_Omron_B3FS"
-			(at 60.96 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 60.96 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
-			(at 60.96 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
-			(at 60.96 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 60.96 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2e8447c3-533f-4fb3-afb9-97fe3d8d29d2")
-		)
-		(pin "2"
-			(uuid "0ec46d40-46c5-4ae8-a3e8-a24f37a0a231")
-		)
-		(instances
-			(project "Senso V2"
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "Taster_Rot_1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 116.84 185.42 270)
+		(at 68.58 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6017,7 +3540,7 @@
 		(dnp no)
 		(uuid "37b79bc3-65dc-4022-a53d-c238df7f7c06")
 		(property "Reference" "R8"
-			(at 118.1101 187.96 0)
+			(at 71.12 92.7099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6027,15 +3550,15 @@
 			)
 		)
 		(property "Value" "10kΩ"
-			(at 116.84 185.42 90)
+			(at 68.58 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 116.84 183.642 90)
+		(property "Footprint" "senso_lib:Resistore"
+			(at 66.802 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6044,7 +3567,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 116.84 185.42 0)
+			(at 68.58 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6053,7 +3576,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 116.84 185.42 0)
+			(at 68.58 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6062,7 +3585,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 116.84 185.42 0)
+			(at 68.58 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6086,46 +3609,112 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:LMH6611")
-		(at 176.53 82.55 0)
-		(mirror y)
+		(lib_id "PCM_SL_Pin_Headers:PINHD_1x5_Female")
+		(at 91.44 52.07 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "41f1c155-75e0-4e39-8b9a-e8785bb66b92")
-		(property "Reference" "U3"
-			(at 166.37 84.2011 90)
+		(uuid "4821c0f2-9ec7-4cfb-acf5-0eb13d43937f")
+		(property "Reference" "J7"
+			(at 91.44 45.72 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "LMH6611"
-			(at 168.91 84.2011 90)
+		(property "Value" "PINHD_1x5_Female"
+			(at 91.44 48.26 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
-			(at 173.99 88.9 0)
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical"
+			(at 77.47 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 80.01 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Pin Header female with pin space 2.54mm. Pin Count -5"
+			(at 91.44 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "684aba65-8ffc-47e1-a4b7-42e6e8cc59e5")
+		)
+		(pin "1"
+			(uuid "28c56d5b-a336-48fe-b12f-882ecc609421")
+		)
+		(pin "5"
+			(uuid "11c7c18e-1b77-4af2-8a5e-d7cff42f8d39")
+		)
+		(pin "4"
+			(uuid "74904eda-f183-4826-b56c-d9fe3bc3aa14")
+		)
+		(pin "3"
+			(uuid "35454fb5-1d29-4f2b-8c79-6ed23b35cf6e")
+		)
+		(instances
+			(project ""
+				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
+					(reference "J7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 129.54 35.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "59f03bc5-d8ac-4cb8-acd1-151fd26c74a6")
+		(property "Reference" "H2"
+			(at 132.08 34.2899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lmh6612.pdf"
-			(at 172.72 78.74 0)
+		(property "Value" "MountingHole"
+			(at 132.08 36.8299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 129.54 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6133,8 +3722,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Single Supply, 345 MHz, Rail-to-Rail Output, Amplifier, TSOT-23-6"
-			(at 176.53 82.55 0)
+		(property "Datasheet" "~"
+			(at 129.54 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6142,71 +3731,54 @@
 				(hide yes)
 			)
 		)
-		(pin "6"
-			(uuid "e73f8a35-63e8-4dff-94bd-64261b39dc6e")
-		)
-		(pin "4"
-			(uuid "8b3bb610-6972-4da3-9348-a4fbfbed8a53")
-		)
-		(pin "3"
-			(uuid "596921ec-a635-4ea4-b669-35ee9d1453b2")
-		)
-		(pin "1"
-			(uuid "5d049f1b-610d-4058-977e-98e42f5b0531")
-		)
-		(pin "5"
-			(uuid "f343af51-3116-4f35-9921-ea7cd661fb62")
-		)
-		(pin "2"
-			(uuid "ce4090a5-94fa-4fa5-ab93-bef309246930")
+		(property "Description" "Mounting Hole without connection"
+			(at 129.54 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
 		(instances
 			(project ""
 				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "U3")
+					(reference "H2")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Omron_B3FS")
-		(at 48.26 154.94 0)
+		(lib_id "Mechanical:MountingHole")
+		(at 35.56 35.56 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "4dcacc6d-91ca-4bb5-98b2-a52599337ff1")
-		(property "Reference" "Taster_Gelb_1"
-			(at 48.26 156.21 0)
+		(fields_autoplaced yes)
+		(uuid "62893cab-55d6-466b-9cc7-8039240f889a")
+		(property "Reference" "H3"
+			(at 38.1 34.2899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify top)
+				(justify left)
 			)
 		)
-		(property "Value" "SW_Omron_B3FS"
-			(at 48.26 149.86 0)
+		(property "Value" "MountingHole"
+			(at 38.1 36.8299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 48.26 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
-			(at 48.26 149.86 0)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 35.56 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6214,8 +3786,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
-			(at 48.26 154.94 0)
+		(property "Datasheet" "~"
+			(at 35.56 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6223,242 +3795,54 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Pins" ""
-			(at 48.26 154.94 0)
+		(property "Description" "Mounting Hole without connection"
+			(at 35.56 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "1"
-			(uuid "2773f006-036c-4ef6-b270-f15df4420fc4")
-		)
-		(pin "2"
-			(uuid "f1469d68-ebbf-41d8-9a0a-a2ccfa9c7c56")
-		)
-		(instances
-			(project "Senso V2"
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "Taster_Gelb_1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Omron_B3FS")
-		(at 35.56 143.51 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "53714ab3-58d3-4d3b-ba2e-1cad6cce8997")
-		(property "Reference" "Taster_Blau_1"
-			(at 35.56 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify top)
-			)
-		)
-		(property "Value" "SW_Omron_B3FS"
-			(at 35.56 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 35.56 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
-			(at 35.56 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
-			(at 35.56 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 35.56 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b3937b90-a5b3-4c37-93f9-283be81eca13")
-		)
-		(pin "2"
-			(uuid "653a56ab-064a-4f69-843a-f4fd9056606b")
-		)
-		(instances
-			(project "Senso V2"
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "Taster_Blau_1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_SL_Pin_Headers:PINHD_1x7_Female")
-		(at 124.46 102.87 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "556a42e3-07f7-48e7-beea-dc61594e83fb")
-		(property "Reference" "J3"
-			(at 134.62 102.87 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		)
-		(property "Value" "PINHD_1x7_Female"
-			(at 134.62 102.616 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right top)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical"
-			(at 107.95 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 110.49 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Pin Header female with pin space 2.54mm. Pin Count -7"
-			(at 124.46 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "7"
-			(uuid "891ce634-b0af-49ac-8472-79202b3483a8")
-		)
-		(pin "6"
-			(uuid "56ed22df-50a0-40e2-b9e3-fff0a33b80b8")
-		)
-		(pin "1"
-			(uuid "a89ca046-47b7-43b8-8d18-5307c99fe0af")
-		)
-		(pin "5"
-			(uuid "edf2f5c4-bade-4197-b6c4-aee3148e94fb")
-		)
-		(pin "4"
-			(uuid "8e908a46-cf5c-43f3-92a4-722834143635")
-		)
-		(pin "2"
-			(uuid "9b7d7c38-487a-4f4e-97bf-c564102ffa3b")
-		)
-		(pin "3"
-			(uuid "726803e0-578a-426f-963f-1c1a1773742a")
 		)
 		(instances
 			(project ""
 				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "J3")
+					(reference "H3")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "senso_lib:neopixel_SK6812_RGBW")
-		(at 71.12 86.36 0)
-		(mirror x)
+		(lib_id "Mechanical:MountingHole")
+		(at 35.56 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "59ee323e-2960-449d-af5c-c7814e7b1a1d")
-		(property "Reference" "LED_Rot1"
-			(at 71.12 97.79 0)
+		(fields_autoplaced yes)
+		(uuid "7452c2b2-e6c4-4132-af63-d2282c5ddabb")
+		(property "Reference" "H4"
+			(at 38.1 102.8699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify bottom)
+				(justify left)
 			)
 		)
-		(property "Value" "neopixel_SK6812_RGBW"
-			(at 71.12 96.52 0)
+		(property "Value" "MountingHole"
+			(at 38.1 105.4099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify top)
+				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_SK6812_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 72.39 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/1138/SK6812+LED+datasheet+.pdf"
-			(at 73.66 76.835 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "RGB LED with integrated controller"
-			(at 71.12 86.36 0)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 35.56 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6466,8 +3850,8 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Pins" ""
-			(at 71.12 86.36 0)
+		(property "Datasheet" "~"
+			(at 35.56 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6475,178 +3859,19 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "c72882fd-2f31-4121-ae41-b5584e528ff5")
-		)
-		(pin "3"
-			(uuid "76be34a5-099f-49be-8d0b-63990f6c8f9d")
-		)
-		(pin "2"
-			(uuid "02d43c88-c744-42d2-998b-3bb1d6ecbd07")
-		)
-		(pin "4"
-			(uuid "bc33e161-ec8b-4859-ac42-6e8d276e3154")
+		(property "Description" "Mounting Hole without connection"
+			(at 35.56 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
 		(instances
 			(project ""
 				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "LED_Rot1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Omron_B3FS")
-		(at 35.56 151.13 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "677465d8-f2c2-469c-af15-f56a4efc327a")
-		(property "Reference" "Taster_Blau_2"
-			(at 35.56 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify top)
-			)
-		)
-		(property "Value" "SW_Omron_B3FS"
-			(at 35.56 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 35.56 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
-			(at 35.56 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
-			(at 35.56 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 35.56 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0ec059b4-de20-45ea-ba69-db6f915a21c8")
-		)
-		(pin "2"
-			(uuid "d0c31589-3121-4117-9189-50bdfca7a1a7")
-		)
-		(instances
-			(project ""
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "Taster_Blau_2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_SL_Pin_Headers:PINHD_1x5_Male")
-		(at 104.14 182.88 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6dbe9427-f818-4557-9f62-0b0f6dc59873")
-		(property "Reference" "J2"
-			(at 104.14 174.752 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "PINHD_1x5_Male"
-			(at 104.14 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
-			(at 102.87 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 104.14 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Pin Header male with pin space 2.54mm. Pin Count -5"
-			(at 104.14 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c9a6bba5-e8b5-42e8-84cc-b2fd63a2218a")
-		)
-		(pin "2"
-			(uuid "b7671c58-b3ea-47c4-8f55-748044f3f003")
-		)
-		(pin "3"
-			(uuid "4b48f342-451a-45c8-8a95-65b89006c0b4")
-		)
-		(pin "4"
-			(uuid "7cb0b56e-1a27-4aa7-97e4-768e689c4732")
-		)
-		(pin "5"
-			(uuid "bd8738e0-da6f-4991-b8b0-8d388ee186a4")
-		)
-		(instances
-			(project ""
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "J2")
+					(reference "H4")
 					(unit 1)
 				)
 			)
@@ -6654,7 +3879,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 116.84 110.49 180)
+		(at 53.34 58.42 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6662,7 +3887,7 @@
 		(dnp no)
 		(uuid "74d59241-57d6-4e51-9a00-68c6dc52aaf3")
 		(property "Reference" "R2"
-			(at 114.3 111.7601 0)
+			(at 50.8 59.6901 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6672,15 +3897,15 @@
 			)
 		)
 		(property "Value" "10kΩ"
-			(at 116.84 110.49 90)
+			(at 53.34 58.42 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 118.618 110.49 90)
+		(property "Footprint" "senso_lib:Resistore"
+			(at 55.118 58.42 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6689,7 +3914,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 116.84 110.49 0)
+			(at 53.34 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6698,7 +3923,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 116.84 110.49 0)
+			(at 53.34 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6707,7 +3932,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 116.84 110.49 0)
+			(at 53.34 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6731,188 +3956,35 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SL_Pin_Headers:PINHD_1x7_Male")
-		(at 124.46 97.79 90)
-		(mirror x)
+		(lib_id "Mechanical:MountingHole")
+		(at 129.54 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "7cdcaca8-a66a-4a3c-9454-f29fa81a4b45")
-		(property "Reference" "J10"
-			(at 134.62 97.79 90)
+		(fields_autoplaced yes)
+		(uuid "76cc7291-d240-4032-8c66-ed31d592ae4a")
+		(property "Reference" "H1"
+			(at 132.08 102.8699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right top)
+				(justify left)
 			)
 		)
-		(property "Value" "PINHD_1x7_Male"
-			(at 134.62 97.79 90)
+		(property "Value" "MountingHole"
+			(at 132.08 105.4099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right bottom)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical"
-			(at 109.22 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 110.49 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Pin Header male with pin space 2.54mm. Pin Count -7"
-			(at 124.46 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "3efda730-0420-4596-9ddc-e2c002f8c0aa")
-		)
-		(pin "7"
-			(uuid "8abeab5d-807f-4f63-a3bb-0a72e7f70e7d")
-		)
-		(pin "5"
-			(uuid "320c43fe-26ab-49ef-bd06-02d84328c171")
-		)
-		(pin "1"
-			(uuid "20f3e938-d388-40f6-8c55-789b5addcc61")
-		)
-		(pin "2"
-			(uuid "64cf4edb-420d-491d-a036-6ac404440546")
-		)
-		(pin "6"
-			(uuid "d89001bd-2050-45f1-a439-ade920e7930c")
-		)
-		(pin "3"
-			(uuid "0aeeddec-5ca1-4809-9ba4-48d8e262feca")
-		)
-		(instances
-			(project ""
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "J10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_SL_Pin_Headers:PINHD_1x2_Male")
-		(at 191.77 66.04 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "90b8e189-f7f4-4599-bd18-62f9b7c8f615")
-		(property "Reference" "J7"
-			(at 191.77 60.706 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		)
-		(property "Value" "PINHD_1x2_Male"
-			(at 191.77 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 193.04 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 191.77 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Pin Header male with pin space 2.54mm. Pin Count -2"
-			(at 191.77 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1368d280-9ada-43b2-a771-ed24de9e67a4")
-		)
-		(pin "2"
-			(uuid "fc5bf4f4-068b-4da2-af77-9ba982cac479")
-		)
-		(instances
-			(project "Senso V2"
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "J7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Battery")
-		(at 223.52 123.19 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "91228f5d-8936-4840-b212-ef5ea1e8b5bd")
-		(property "Reference" "BT1"
-			(at 220.98 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		)
-		(property "Value" "Battery"
-			(at 220.98 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right top)
-			)
-		)
-		(property "Footprint" ""
-			(at 223.52 121.666 90)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 129.54 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6921,7 +3993,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 223.52 121.666 90)
+			(at 129.54 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6929,292 +4001,19 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Multiple-cell battery"
-			(at 223.52 123.19 0)
+		(property "Description" "Mounting Hole without connection"
+			(at 129.54 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "1"
-			(uuid "3c5b302a-9ff4-4c79-aa01-ffc9008db5f7")
-		)
-		(pin "2"
-			(uuid "0f38eda4-b1c8-45de-84b9-3c5687271a2f")
 		)
 		(instances
 			(project ""
 				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "BT1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "senso_lib:ESP32-PICO-V3")
-		(at 138.43 127 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "99f2469e-941f-4ca5-92b2-b06db1faa201")
-		(property "Reference" "ESP32-PICO-V2"
-			(at 114.3 127 0)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify top)
-			)
-		)
-		(property "Value" "ESP32-PICO-V3"
-			(at 114.3 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify top)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "senso:ESP32-PICO-V3"
-			(at 109.474 127 0)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 138.43 127 0)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 138.43 127 0)
-			(do_not_autoplace yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "33"
-			(uuid "ad7ecda5-5142-4e81-9343-c74e6dd5b669")
-		)
-		(pin "32"
-			(uuid "3e59ad2a-afc7-40b8-b210-c1044d3cfe13")
-		)
-		(pin "15"
-			(uuid "6d5bab76-3806-4e73-9c92-54aa757c58a0")
-		)
-		(pin "13"
-			(uuid "3b8574a5-ff6e-4034-a343-4255535295b7")
-		)
-		(pin "D-"
-			(uuid "a3573b00-852e-47a7-bbaf-5644e7830f56")
-		)
-		(pin "Vcc"
-			(uuid "5cc74609-15d8-4bbd-865f-f6a0e035a23b")
-		)
-		(pin "9"
-			(uuid "bdd2eee8-5605-4504-aa1d-4707f43c22d5")
-		)
-		(pin "GND"
-			(uuid "7cb7d136-d473-4145-be2c-56143e0fc7bf")
-		)
-		(pin "21"
-			(uuid "751d9557-7d33-424c-84a0-62e67c99f55d")
-		)
-		(pin "3v3"
-			(uuid "aa974a9a-76ce-4d40-91bc-7551e0a8c734")
-		)
-		(pin "8"
-			(uuid "85d455de-e57f-4c57-a6bb-036c6628e870")
-		)
-		(pin "22"
-			(uuid "414c4198-441e-4876-81af-12ac6ae2363a")
-		)
-		(pin "27"
-			(uuid "544801b9-225f-4eae-996e-4f44303caf6d")
-		)
-		(pin "0"
-			(uuid "7ef27434-07c7-40e2-b0ad-64414cb09a09")
-		)
-		(pin "3v3"
-			(uuid "d2076bf2-396c-4829-b484-6439b0adee27")
-		)
-		(pin "D+"
-			(uuid "aacf9279-8d6b-4250-a826-3046cb2dc29b")
-		)
-		(pin "19"
-			(uuid "48cbba0a-cdc7-4d2c-a4bb-3f075fb5b832")
-		)
-		(pin "14"
-			(uuid "3ff2d413-84ee-41c1-ac3f-5ea2c4fb9abc")
-		)
-		(pin "2"
-			(uuid "3d754b4d-ad7b-43c3-bea8-dc94714fd0d0")
-		)
-		(pin "VN"
-			(uuid "332a59c9-bcf2-4e67-b589-51b01cb971f5")
-		)
-		(pin "TX0"
-			(uuid "072c8c3b-ceff-412e-99d4-6dd85646ed00")
-		)
-		(pin "34"
-			(uuid "f34354c6-3226-4037-a536-da08477b652d")
-		)
-		(pin "20"
-			(uuid "72a56674-8ec4-4796-bf00-f5d5bdab886d")
-		)
-		(pin "7"
-			(uuid "2ec5fb9c-2798-48e0-9a00-5b1bf697a99b")
-		)
-		(pin "10"
-			(uuid "bc581fd8-43bc-41ad-80bd-4c222afd1b3a")
-		)
-		(pin "25"
-			(uuid "5b319ffc-6642-4371-b3d8-4a769c906ff2")
-		)
-		(pin "35"
-			(uuid "0f4a9fbe-5295-48df-8815-c34a739db9d1")
-		)
-		(pin "26"
-			(uuid "f9ab442b-20ae-4250-9060-c9c75f89f2e6")
-		)
-		(pin "RX0"
-			(uuid "553d9133-a1d5-4503-8150-553a6b6197de")
-		)
-		(pin "37"
-			(uuid "20d7ffa7-4b98-4aa6-a5cc-b6fa99dd58d1")
-		)
-		(pin "EN"
-			(uuid "e3e27752-8cdd-4694-9aa4-4de31396bc78")
-		)
-		(pin "GND"
-			(uuid "39472924-6c7d-4d66-883d-40583c76e0be")
-		)
-		(pin "GND"
-			(uuid "e9f090d2-2fba-4449-81b6-1d8f20c4bab0")
-		)
-		(pin "5"
-			(uuid "4625877a-21a6-4a23-a636-816c97332b25")
-		)
-		(pin "VP"
-			(uuid "0b7d1a0c-abf5-4046-a2bb-0b8cabbee247")
-		)
-		(pin "5v"
-			(uuid "16310b6d-5ca4-4d96-89c6-2c4ede91a884")
-		)
-		(pin "12"
-			(uuid "49b1676f-8c66-4ac0-b7a9-3cc5e36cac2b")
-		)
-		(pin "38"
-			(uuid "f928d412-56b8-4718-8f0b-17bcfefe704b")
-		)
-		(pin "4"
-			(uuid "96dd05dd-ccd5-45ad-aa1f-86e0118e129c")
-		)
-		(pin "GND"
-			(uuid "a88a5093-8b37-4196-908d-185ced6f6f37")
-		)
-		(instances
-			(project ""
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "ESP32-PICO-V2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Omron_B3FS")
-		(at 48.26 162.56 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9b1f64a7-f8c7-4da1-b163-0dd4c11d821a")
-		(property "Reference" "Taster_Gelb_2"
-			(at 48.26 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify top)
-			)
-		)
-		(property "Value" "SW_Omron_B3FS"
-			(at 48.26 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 48.26 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
-			(at 48.26 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
-			(at 48.26 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 48.26 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5478ecd6-ea6a-48ac-acf2-2843dee7e2a5")
-		)
-		(pin "2"
-			(uuid "e42b897e-4923-418a-9e05-652117577037")
-		)
-		(instances
-			(project "Senso V2"
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "Taster_Gelb_2")
+					(reference "H1")
 					(unit 1)
 				)
 			)
@@ -7222,7 +4021,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 116.84 182.88 270)
+		(at 66.04 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7230,7 +4029,7 @@
 		(dnp no)
 		(uuid "ac3fc66f-0513-43ba-9bbf-a96d94930032")
 		(property "Reference" "R7"
-			(at 118.1101 185.42 0)
+			(at 68.58 92.7099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7240,15 +4039,15 @@
 			)
 		)
 		(property "Value" "10kΩ"
-			(at 116.84 182.88 90)
+			(at 66.04 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 116.84 181.102 90)
+		(property "Footprint" "senso_lib:Resistore"
+			(at 64.262 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7257,7 +4056,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 116.84 182.88 0)
+			(at 66.04 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7266,7 +4065,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 116.84 182.88 0)
+			(at 66.04 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7275,7 +4074,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 116.84 182.88 0)
+			(at 66.04 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7299,146 +4098,8 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_SL_Pin_Headers:PINHD_1x2_Male")
-		(at 193.04 123.19 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "aff06398-bbe7-4a99-8b3b-4f038a9f24ee")
-		(property "Reference" "J6"
-			(at 193.04 120.396 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right top)
-			)
-		)
-		(property "Value" "PINHD_1x2_Male"
-			(at 193.04 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 191.77 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 193.04 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Pin Header male with pin space 2.54mm. Pin Count -2"
-			(at 193.04 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "719d5257-4eb9-4a62-b546-a6efab5d2e23")
-		)
-		(pin "2"
-			(uuid "60f7f7e1-de27-4b98-903e-04774e380412")
-		)
-		(instances
-			(project ""
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_SL_Pin_Headers:PINHD_1x2_Male")
-		(at 191.77 82.55 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "cd6be53e-f972-49c7-8254-0cffbd007411")
-		(property "Reference" "J8"
-			(at 191.262 72.644 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right top)
-			)
-		)
-		(property "Value" "PINHD_1x2_Male"
-			(at 191.77 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 193.04 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 191.77 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Pin Header male with pin space 2.54mm. Pin Count -2"
-			(at 191.77 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a2d785ee-a52f-4d01-9e3d-e2908d1da4b8")
-		)
-		(pin "2"
-			(uuid "7f83687a-f7d3-4bcf-9f4b-5652ecb690c5")
-		)
-		(instances
-			(project "Senso V2"
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "J8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "PCM_SL_Pin_Headers:PINHD_1x2_Female")
-		(at 196.85 82.55 180)
+		(at 110.49 52.07 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7446,7 +4107,7 @@
 		(dnp no)
 		(uuid "deeb8958-39a3-4e42-ad07-01d19a085379")
 		(property "Reference" "J9"
-			(at 196.342 72.644 0)
+			(at 120.396 51.562 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7454,8 +4115,8 @@
 				(justify right bottom)
 			)
 		)
-		(property "Value" "PINHD_1x2_Female"
-			(at 196.85 75.946 0)
+		(property "Value" "Power Speaker"
+			(at 117.094 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7464,7 +4125,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
-			(at 194.31 92.71 0)
+			(at 100.33 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7473,7 +4134,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 196.85 90.17 0)
+			(at 102.87 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7482,7 +4143,7 @@
 			)
 		)
 		(property "Description" "Pin Header female with pin space 2.54mm. Pin Count -2"
-			(at 196.85 82.55 0)
+			(at 110.49 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7506,95 +4167,8 @@
 		)
 	)
 	(symbol
-		(lib_id "senso_lib:neopixel_SK6812_RGBW")
-		(at 71.12 66.04 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e2bdfc30-6ca4-4868-ac66-33c5c0d01be9")
-		(property "Reference" "LED_Gelb1"
-			(at 71.12 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Value" "neopixel_SK6812_RGBW"
-			(at 71.12 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_SK6812_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 69.85 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/1138/SK6812+LED+datasheet+.pdf"
-			(at 68.58 75.565 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "RGB LED with integrated controller"
-			(at 71.12 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 71.12 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "59d9f293-11d7-4d72-a87b-2db98e06c112")
-		)
-		(pin "3"
-			(uuid "7fe3f41d-d5be-4cd9-8c61-5e8ad83a2a1c")
-		)
-		(pin "2"
-			(uuid "6d08450f-a094-4207-8226-5731e33a828f")
-		)
-		(pin "4"
-			(uuid "07837c6f-0c63-4d1f-a184-e28c1e085793")
-		)
-		(instances
-			(project ""
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "LED_Gelb1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 119.38 110.49 180)
+		(at 55.88 58.42 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7602,7 +4176,7 @@
 		(dnp no)
 		(uuid "e690632f-d90b-48af-b87f-9b5351ade9aa")
 		(property "Reference" "R1"
-			(at 116.84 111.7601 0)
+			(at 53.34 59.6901 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7612,15 +4186,15 @@
 			)
 		)
 		(property "Value" "10kΩ"
-			(at 119.38 110.49 90)
+			(at 55.88 58.42 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 121.158 110.49 90)
+		(property "Footprint" "senso_lib:Resistore"
+			(at 57.658 58.42 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7629,7 +4203,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 119.38 110.49 0)
+			(at 55.88 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7638,7 +4212,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 119.38 110.49 0)
+			(at 55.88 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7647,7 +4221,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 119.38 110.49 0)
+			(at 55.88 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7671,251 +4245,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Omron_B3FS")
-		(at 105.41 123.19 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ecead353-33bd-433f-a7e5-b935082243c0")
-		(property "Reference" "Taster_Links1"
-			(at 105.41 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify top)
-			)
-		)
-		(property "Value" "SW_Omron_B3FS"
-			(at 105.41 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 105.41 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
-			(at 105.41 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
-			(at 105.41 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 105.41 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b1415874-0037-4de4-b6eb-67bc4eb6079b")
-		)
-		(pin "2"
-			(uuid "5f9dba60-7d42-45aa-b225-5cc6780da87d")
-		)
-		(instances
-			(project "Senso V2"
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "Taster_Links1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Omron_B3FS")
-		(at 73.66 177.8 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "edc96e73-f688-40de-868c-42efa0011566")
-		(property "Reference" "Taster_Grün_1"
-			(at 73.66 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify top)
-			)
-		)
-		(property "Value" "SW_Omron_B3FS"
-			(at 73.66 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 73.66 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
-			(at 73.66 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
-			(at 73.66 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 73.66 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9997fe76-5523-4402-92c5-79b4392f3caf")
-		)
-		(pin "2"
-			(uuid "79185638-3505-4da8-9620-98d148d84b79")
-		)
-		(instances
-			(project "Senso V2"
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "Taster_Grün_1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "senso_lib:neopixel_SK6812_RGBW")
-		(at 96.52 86.36 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "eddc3d6c-aa32-44dc-8554-e104323b3248")
-		(property "Reference" "LED_Grün1"
-			(at 96.52 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Value" "neopixel_SK6812_RGBW"
-			(at 96.52 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify top)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_SK6812_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 97.79 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://cdn-shop.adafruit.com/product-files/1138/SK6812+LED+datasheet+.pdf"
-			(at 99.06 76.835 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "RGB LED with integrated controller"
-			(at 96.52 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 96.52 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a57bc68f-7ce7-4ade-a975-dc00bcdc5464")
-		)
-		(pin "3"
-			(uuid "431b430a-d9ac-481c-822b-49778400d4a0")
-		)
-		(pin "2"
-			(uuid "e530dbb8-0a6d-42e6-a7bb-f0904dde75da")
-		)
-		(pin "4"
-			(uuid "fbff42e9-22fe-4c74-8497-4939bcca2b5c")
-		)
-		(instances
-			(project ""
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "LED_Grün1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 116.84 180.34 270)
+		(at 63.5 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7923,7 +4254,7 @@
 		(dnp no)
 		(uuid "f04ac36b-6e91-4ef4-b266-68d7915b84a0")
 		(property "Reference" "R6"
-			(at 118.1101 182.88 0)
+			(at 66.04 92.7099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7933,15 +4264,15 @@
 			)
 		)
 		(property "Value" "10kΩ"
-			(at 116.84 180.34 90)
+			(at 63.5 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 116.84 178.562 90)
+		(property "Footprint" "senso_lib:Resistore"
+			(at 61.722 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7950,7 +4281,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 116.84 180.34 0)
+			(at 63.5 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7959,7 +4290,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 116.84 180.34 0)
+			(at 63.5 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7968,7 +4299,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 116.84 180.34 0)
+			(at 63.5 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7986,173 +4317,6 @@
 			(project ""
 				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
 					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "senso_lib:charge_controller")
-		(at 247.65 123.19 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fd06e7ec-dc16-4ee3-996f-4aa0495f56a6")
-		(property "Reference" "U1"
-			(at 264.16 124.4601 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "~"
-			(at 264.16 64.7701 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 247.65 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 247.65 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 247.65 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin ""
-			(uuid "72240b7c-14b5-411e-ad1c-a2155e59b4c4")
-		)
-		(pin ""
-			(uuid "2d040083-b57b-4e67-90f2-d4ce85172bc1")
-		)
-		(pin ""
-			(uuid "48e15ca1-aa90-4562-8b58-847290b5c42e")
-		)
-		(pin ""
-			(uuid "5ce274dc-bc9f-4a34-99e4-92846ab5129a")
-		)
-		(pin ""
-			(uuid "59908005-7e64-48b4-917e-9774b8a759d1")
-		)
-		(pin ""
-			(uuid "1f9b32c9-2776-4eba-965f-faf7064e4559")
-		)
-		(pin ""
-			(uuid "abe96276-fbd5-411d-8631-80fcbb96c52a")
-		)
-		(pin ""
-			(uuid "75be6337-8056-4ee1-8de7-8fcdb0be4fa7")
-		)
-		(instances
-			(project ""
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Omron_B3FS")
-		(at 105.41 130.81 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fe1e983f-fd9a-4ca1-be8f-d0e58aad4de1")
-		(property "Reference" "Taster_Rechts1"
-			(at 105.41 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify top)
-			)
-		)
-		(property "Value" "SW_Omron_B3FS"
-			(at 105.41 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 105.41 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf"
-			(at 105.41 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Omron B3FS 6x6mm single pole normally-open tactile switch"
-			(at 105.41 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 105.41 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9689d707-7800-41e1-bebe-9a3f031e1d9f")
-		)
-		(pin "2"
-			(uuid "763c4066-5c08-4da2-9397-399997c71709")
-		)
-		(instances
-			(project "Senso V2"
-				(path "/0f469680-05f4-46eb-a3fb-391e58944d2b"
-					(reference "Taster_Rechts1")
 					(unit 1)
 				)
 			)

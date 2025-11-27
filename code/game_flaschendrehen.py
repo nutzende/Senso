@@ -1,6 +1,7 @@
 import time, random, menu, pin, display
 
 logondisplay = True
+
 # LED Funktionen
 def leds_off():
     pin.np[0] = (0,0,0)
@@ -11,14 +12,14 @@ def leds_off():
 
 def led(num):
     leds_off()
-    if num == 1: pin.np[1] = (0,255,0)
-    elif num == 2: pin.np[0] = (255,0,0)
-    elif num == 3: pin.np[2] = (255,255,0)
-    elif num == 4: pin.np[3] = (0,0,255)
+    if num == 1: pin.np[2] = (0,0,255)
+    elif num == 2: pin.np[1] = (255,0,0)
+    elif num == 3: pin.np[0] = (0,255,0)
+    elif num == 4: pin.np[3] = (255,255,0)
     pin.np.write()
 
 def spielerLeds(a):
-    x = [1,2,4,3]
+    x = [1,2,3,4]
 
     for i in range(4-a):
         x.pop()
@@ -70,14 +71,15 @@ def spiel2(spieler):
                     time.sleep(3)
                     menu.cleardisplay()
                     leds_off()
-                    menu.menutext("Neuer Versuch?", "center", "top", 0)
-                    menu.menutext("Blau: Ja", "center", "center", 0)
-                    menu.menutext("Rot: Nein", "center", "bottom", 0)
+                    menu.menu_ui.init_menu()
+                    menu.menutext("Neuer Versuch", "title", "title", 0)
+                    menu.menutext("Ja", "text", 1, 0)
+                    menu.menutext("Nein", "text", 2, 0)
             button = 0
-            while button != 4 or button != 2:
+            while button != 1 or button != 2:
                 button = menu.read_button(0)
                 print(button)
-                if button==4:
+                if button==1:
                     spiel2(spieler)
                 elif button==2:
                     break

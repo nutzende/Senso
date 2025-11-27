@@ -20,10 +20,19 @@ def log(msg):
             print(msg)
 
 def cleardisplay():
+    d.oled.clear_buffers()
     d.oled.clear()
-    
+
 def cleartext():
     d.oled.fill_rectangle(11,14,106,39,0)
+    d.oled.show()
+
+def cleararrows():
+    d.oled.fill_rectangle(11,14,106,39,0)
+    d.oled.show()
+
+def clearsymbols():
+    d.oled.fill_rectangle(1,16,8,51,0)
     d.oled.show()
 
 # Zeitdifferenz in ms
@@ -33,16 +42,14 @@ def differenz(ende):
     deadline = time.ticks_add(now, ms)
     return time.ticks_diff(deadline, now)
 
-# Button-Abfrage
 def read_button(sec):
     start = time.ticks_ms()
     while time.ticks_diff(time.ticks_add(start, sec * 1000), time.ticks_ms()) > 0 or sec == 0:
-        if pin.b_green.value(): return 1
+        if pin.b_blue.value(): return 1
         if pin.b_red.value(): return 2
-        if pin.b_yellow.value(): return 3
-        if pin.b_blue.value(): return 4
+        if pin.b_green.value(): return 3
+        if pin.b_yellow.value(): return 4
     menutext("Zeit abgelaufen", "center", "center", 2)
-    return 0
 
 # Menütext anzeigen
 def menutext(msg, xpos, ypos, sec=None):
@@ -98,20 +105,20 @@ def mainmenu():
     menutext("Senso", "text", 1, 0)
     menutext("Bottle spin", "text", 2, 0)
     menutext("Whac-A-Mole", "text", 3, 0)
-    menutext("Raction", "text", 4, 0)
+    menutext("Reaction", "text", 4, 0)
     eingabe = read_button(0)
     cleardisplay()
     if eingabe > 0:
         for p in ["", ".", "..", "..."]:
             menutext(f"Spiel startet{p}", "center", "center", 0.5)
             cleardisplay()
-        if eingabe == 4:
-            game_senso.pre_start_senso()
-        if eingabe == 3:
-            game_flaschendrehen.pre_start_flaschendrehen()
         if eingabe == 1:
-            game_whacamole.pre_start_whacamole()
+            game_senso.pre_start_senso()
         if eingabe == 2:
+            game_flaschendrehen.pre_start_flaschendrehen()
+        if eingabe == 3:
+            game_whacamole.pre_start_whacamole()
+        if eingabe == 4:
             game_reaction.pre_start_reaction()
     else:
         menutext("Falsche Eingabe", "center", "center", 1)
