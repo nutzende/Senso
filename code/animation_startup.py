@@ -56,7 +56,6 @@ def zeichne_blitz(blitz_nr):
 def start_animation():
     display.oled.clear_buffers()
     display.oled.show()
-
     # --- erster Blitzblock ---
     for blitz_nr in range(4):
         i = random.randint(0, 4 - 1)
@@ -103,7 +102,6 @@ def start_animation():
     for i in range(4):
         set_pixel(i, 0, 0, 0)
     pin.np.write()
-
     display.oled.clear_buffers()
     display.oled.show()
     time.sleep(0.5)
