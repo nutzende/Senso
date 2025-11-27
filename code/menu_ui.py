@@ -23,28 +23,50 @@ def draw_bitmap(x, y, data, width, height, transparent):
                 else:
                     display.oled.draw_pixel(x + col, y + row, 1)
 
-def init_progressbar(selectors):
+def init_progressbar(progress, maximum):
     width_blitz = 11
     x_min = 13
     x_max = 106
+    spacing = 13
 
     bar_width = x_max - x_min
 
-    for i in range(selectors):
-        x = x_min + (i * 13)
+    # -------------------------
+    # 1. Gefüllte Blitze
+    # -------------------------
+    for i in range(progress):
+        x = x_min + (i * spacing)
         if x <= x_max:
             y = 16
-            bitmap = bitmaps.blitz
-        elif x <= x_max + bar_width + 11:
-            x = x - bar_width - 11
+        elif x <= x_max + bar_width + spacing:
+            x -= bar_width + spacing - 2
             y = 32
-            bitmap = bitmaps.blitz_unfill
         else:
-            x = x - 2 * bar_width - 22
+            x -= 2 * bar_width + 2 * spacing - 4
             y = 48
-            bitmap = bitmaps.blitz_unfill
 
-        draw_bitmap(x, y, bitmap, width_blitz, height(bitmap), 0)
+        draw_bitmap(x, y, bitmaps.blitz, width_blitz, height(bitmaps.blitz), 0)
+
+    # Merke Gesamtanzahl gefüllter Blitze
+    filled = progress
+
+    # -------------------------
+    # 2. Ungefüllte Blitze
+    # -------------------------
+    for i in range(maximum - filled):
+        index = filled + i  # globaler Blitz-Index
+        x = x_min + (index * spacing)
+
+        if x <= x_max:
+            y = 16
+        elif x <= x_max + bar_width + spacing:
+            x -= bar_width + spacing - 2
+            y = 32
+        else:
+            x -= 2 * bar_width + 2 * spacing - 4
+            y = 48
+
+        draw_bitmap(x, y, bitmaps.blitz_unfill, width_blitz, height(bitmaps.blitz_unfill), 0)
 
     display.oled.show()
 def init_menu():
@@ -85,5 +107,34 @@ def init_menu():
     draw_bitmap(1, 34, bitmaps.indicator_button_green, width_indicator, height(bitmaps.indicator_button_green), 0)
     draw_bitmap(1, 43, bitmaps.indicator_button_yellow, width_indicator, height(bitmaps.indicator_button_yellow), 0)
     #draw_bitmap(119, 16, bitmaps.arrow, width_arrow, height(bitmaps.arrow), 0)
+    # Anzeigen
+    display.oled.show()
+
+def init_menu2():
+    #Hauptmenü aufbauen
+    width_hcircle = 4
+    width_cross = 3
+    width_indicator = 8
+    width_arrow = 9
+    #display.graphics.line(x1, y1, x2, y2, fill)
+    #linke Senkrechtlinie
+    display.oled.draw_line(10, 4, 10, 59)
+    #rechte Senkrechtlinie
+    display.oled.draw_line(117, 4, 117, 59)
+    #obere Horizontallinie
+    display.oled.draw_line(5, 12, 123, 12)
+    #schnörkel an den Linien im Menü darstellen
+    #Schnörkel oben links
+    draw_bitmap(1, 9, bitmaps.hcircle_l_up, width_hcircle, height(bitmaps.hcircle_l_up), 0)
+    #Schnörkel oben rechts
+    draw_bitmap(123, 9, bitmaps.hcircle_r_up, width_hcircle, height(bitmaps.hcircle_r_up), 0)
+    #Kreuz oben links
+    draw_bitmap(9, 1, bitmaps.cross, width_cross, height(bitmaps.cross), 0)
+    #Kreuz oben rechts
+    draw_bitmap(116, 1, bitmaps.cross, width_cross, height(bitmaps.cross), 0)
+    #Kreuz unten links
+    draw_bitmap(9, 59, bitmaps.cross, width_cross, height(bitmaps.cross), 0)
+    #Kreuz unten rechts
+    draw_bitmap(116, 59, bitmaps.cross, width_cross, height(bitmaps.cross), 0)
     # Anzeigen
     display.oled.show()

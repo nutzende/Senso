@@ -170,6 +170,21 @@ def spiel():
 def next_round():
     global player_index, seq_index, runde, led_on, led_timer, numspieler
     if gamemode in (0,3):
+        if gamemode == 0:
+            if len(sequence) == 0:
+                menu.cleardisplay()
+                menu.menu_ui.init_menu2()
+                menu.menutext("Progress", "title", "title", 0)
+            end_bedingungen = {
+                    1: 8,
+                    2: 14,
+                    3: 20,
+                    4: 31
+                }
+            if end_bedingungen[skilllevel.skill_level] > 20:
+                menu.menutext(f"{len(sequence)} of {len(sequence)}", "center", "center", 0)
+            else:
+                menu.menu_ui.init_progressbar(len(sequence), end_bedingungen[skilllevel.skill_level])
         sequence.append(random.randint(1, 4))
     elif gamemode == 1:
         sequence.append(random.choice(list(player_color.values())))
