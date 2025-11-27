@@ -41,13 +41,14 @@ def differenz(ende):
     deadline = time.ticks_add(now, ms)
     return time.ticks_diff(deadline, now)
 
-# Button lesen
-def read_button():
-    if pin.b_blue.value(): return 1
-    if pin.b_red.value(): return 2
-    if pin.b_green.value(): return 3
-    if pin.b_yellow.value(): return 4
-    return 0
+def read_button(sec):
+    start = time.ticks_ms()
+    while time.ticks_diff(time.ticks_add(start, sec * 1000), time.ticks_ms()) > 0 or sec == 0:
+        if pin.b_blue.value(): return 1
+        if pin.b_red.value(): return 2
+        if pin.b_green.value(): return 3
+        if pin.b_yellow.value(): return 4
+    menutext("Zeit abgelaufen", "center", "center", 2)
 
 # Menütext anzeigen
 def menutext(msg, xpos, ypos, sec=None):
@@ -104,7 +105,7 @@ def mainmenu():
     menutext("Bottle spin", "text", 2, 0)
     menutext("Whac-A-Mole", "text", 3, 0)
     menutext("Reaction", "text", 4, 0)
-    eingabe = read_button(0)
+    eingabe = read_button()
     cleardisplay()
     if eingabe > 0:
         for p in ["", ".", "..", "..."]:

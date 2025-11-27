@@ -4,7 +4,7 @@ import neopixel
 import random
 import ssd1309
 
-LED_PIN = 15
+LED_PIN = 22
 LED_COUNT = 4
 np = neopixel.NeoPixel(Pin(LED_PIN), LED_COUNT)
 
