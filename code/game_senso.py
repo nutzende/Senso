@@ -197,10 +197,10 @@ def pre_start_senso():
         pre_start_game_senso()
     elif eingabe == 2:
         gamemode = 1
-        pre_start_choosecolor()
+        pre_start_playeradds()
     elif eingabe == 3:
         gamemode = 2
-        pre_start_playeradds()
+        pre_start_choosecolor()
     else:
         pre_start_senso()
     menu.cleardisplay()
